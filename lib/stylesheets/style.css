@@ -1,0 +1,29 @@
+/* utils */
+/* colors */
+/* line 18, ../sass/style.scss */
+#top-nav {
+  margin: 0.9375em auto 1.875em auto;
+  text-align: right;
+  color: #5e8dae;
+}
+
+/* line 25, ../sass/style.scss */
+#menu-navigation a {
+  color: #788288;
+  text-transform: uppercase;
+  padding: 0.9375em 0.625em;
+}
+/* line 31, ../sass/style.scss */
+#menu-navigation a:hover {
+  color: white;
+  background-color: #c4c4c4;
+}
+/* line 37, ../sass/style.scss */
+#menu-navigation li {
+  float: left;
+  list-style-type: none;
+}
+/* line 43, ../sass/style.scss */
+#menu-navigation .sub-menu {
+  display: none;
+}

@@ -1,0 +1,46 @@
+/* utils */
+@import "compass";
+
+$em-base: 16px !default;
+
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+/* colors */
+
+$blue: #5E8DAE;
+$grey: #788288;
+$light-grey: #C4C4C4;
+$white: #FFFFFF;
+
+#top-nav {
+	margin: emCalc(15px) auto emCalc(30px) auto;
+	text-align: right;
+	color: $blue;
+}
+
+#menu-navigation {
+	a {
+		color: $grey;
+		text-transform: uppercase;
+		padding: emCalc(15px) emCalc(10px);
+	}
+	
+	a:hover {
+		color: $white;
+		background-color: $light-grey;
+	}
+
+
+	li {
+		float: left;
+		list-style-type: none;
+		
+	}
+
+	.sub-menu {
+		display: none;
+	}
+}
