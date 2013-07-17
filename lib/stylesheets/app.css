@@ -1970,7 +1970,7 @@ p.lead {
 /* line 115, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #c4d5e1;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -2041,7 +2041,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
-  color: #222222;
+  color: #5e8dae;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -2050,7 +2050,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 191, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #c4d5e1;
   line-height: 0;
 }
 
@@ -2214,7 +2214,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125em;
-  color: #555555;
+  color: #a2bdd0;
 }
 /* line 319, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote cite:before {
@@ -2223,14 +2223,14 @@ blockquote cite:before {
 /* line 324, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #a2bdd0;
 }
 
 /* line 330, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #c4d5e1;
 }
 
 /* Microformats */
@@ -8219,7 +8219,7 @@ p.lead {
 /* line 115, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #c4d5e1;
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -8290,7 +8290,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
-  color: #222222;
+  color: #5e8dae;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -8299,7 +8299,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 191, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #c4d5e1;
   line-height: 0;
 }
 
@@ -8463,7 +8463,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125em;
-  color: #555555;
+  color: #a2bdd0;
 }
 /* line 319, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote cite:before {
@@ -8472,14 +8472,14 @@ blockquote cite:before {
 /* line 324, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #a2bdd0;
 }
 
 /* line 330, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #c4d5e1;
 }
 
 /* Microformats */
