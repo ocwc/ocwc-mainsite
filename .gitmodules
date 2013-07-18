@@ -1,0 +1,3 @@
+[submodule "lib/cmb"]
+	path = lib/cmb
+	url = https://github.com/ocwc/Custom-Meta-Boxes.git
