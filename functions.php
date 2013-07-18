@@ -5,7 +5,8 @@ add_theme_support( 'post-thumbnails' );
 function mainsite_init() {
 	register_mainsite_nav_menu();
 	register_mainsite_slideshow();
-
+	register_mainsite_sidebars();
+	
 	add_image_size( 'slideshow-image-large', 820, 420, true);
 }
 add_action( 'init', 'mainsite_init' );
@@ -36,6 +37,18 @@ function get_slideshow_posts() {
 			));
 
 	return $query;
+}
+
+function register_mainsite_sidebars() {
+	register_sidebar( array(
+	   'name' => __( 'Footer'),
+	   'id' => 'footer',
+	   'description' => __( 'Footer area', 'mainsite' ),
+	   'before_widget' => '<div class="small-3 columns"><aside id="%1$s" class="widget %2$s">',
+	   'after_widget' => "</aside></div>",
+	   'before_title' => '<h3 class="footer-title">',
+	   'after_title' => '</h3>',
+	) );
 }
 
 ?>

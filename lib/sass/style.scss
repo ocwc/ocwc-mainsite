@@ -83,8 +83,8 @@ $slideshow-height: emCalc(420px);
 
 #call-to-action {
     background-color: $cta-grey;
-    padding: emCalc(50px) 0;
-    margin-bottom: emCalc(50px);
+    padding: emCalc(50px) 0 emCalc(15px) 0;
+    margin-bottom: emCalc(20px);
 
     .large-3 {
         background-color: $white;
@@ -118,6 +118,9 @@ $slideshow-height: emCalc(420px);
         padding: 0 emCalc(4px) 0 0;
     }
 
+    p {
+        font-size: emCalc(12px);
+    }
 }
 
 .ocwc-statistics {
@@ -147,8 +150,69 @@ $slideshow-height: emCalc(420px);
         display: inline-block;
         border-bottom: 1px solid $light-blue;
     }
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.in-the-news {
+    p { 
+        display: inline-block; 
+        width: 100%;
+        margin-bottom: emCalc(10px);
+    }
+    .date, .link { 
+        display: inline-block;
+        font-size: emCalc(12px);
+    }
+    .date { float: left;  }
+    .link { float: right; }
+}
+
+.home-courses {
+    border-bottom: 1px solid $light-blue;
+    margin-bottom: emCalc(20px);
+    h1 {
+        float: left;
+        font-size: emCalc(18px);
+        line-height: 1;
+    }
+    a.readmore {
+        float: right;
+    }
+}
+
+.courses-image-listing {
+    .large-3 {
+        padding-bottom: emCalc(15px);
+    }
+
+    .title {
+        font-weight: bold;
+        line-height: 1.6;
+    }
 }
 
 #footer-wrapper {
+    margin-top: 50px;
     background-color: $footer-grey;
+
+    .widget {
+        border-left: 1px solid $white;
+        margin-top: emCalc(15px);
+        padding: 0 0 0 emCalc(10px);
+    }
+    h3 {
+        color: $white;
+        text-transform: uppercase;
+        font-size: emCalc(16px);
+    }
+    li { list-style-type: none; }
+    li a {
+        color: $white;
+        font-size: emCalc(14px);
+    }
+    .sub-menu { display: none; }
+    
 }

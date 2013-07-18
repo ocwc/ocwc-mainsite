@@ -70,16 +70,24 @@
 		</div>
 	</div>
 
-	<div class="large-4 columns widget-listing">
+	<div class="large-4 columns widget-listing in-the-news">
 		<div class="header">
 			<h1>In the News</h1>
 			<a class="read-more" href="#">+ read more</a>
 		</div>
 		<ul>
-			<li>Lorem ipsum something or other</li>
-			<li>Lorem ipsum something or other</li>
-			<li>Lorem ipsum something or other</li>
-			<li>Lorem ipsum something or other</li>
+			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
+				<p>Lorem ipsum something or other</p>
+			</li>
+			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
+				<p>Lorem ipsum something or other</p>
+			</li>
+			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
+				<p>Lorem ipsum something or other</p>
+			</li>
+			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
+				<p>Lorem ipsum something or other</p>
+			</li>
 		</ul>
 	</div>
 
@@ -87,6 +95,47 @@
 		<div class="header">
 			<h1>Announcements</h1>
 			<a class="read-more" href="#">+ read more</a>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns home-courses">
+		<h1>Featured courses</h1>
+		<a class="readmore" href="#">+ read more</a>
+	</div>
+	<div class="large-12 columns courses-image-listing">
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>	
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
+		</div>
+		<div class="large-3 columns">
+			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
+			<a class="title" href="#">Course title</a>
 		</div>
 	</div>
 </div>

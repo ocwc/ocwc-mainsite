@@ -67,8 +67,8 @@
 /* line 84, ../sass/style.scss */
 #call-to-action {
   background-color: #f0f0f0;
-  padding: 3.125em 0;
-  margin-bottom: 3.125em;
+  padding: 3.125em 0 0.9375em 0;
+  margin-bottom: 1.25em;
 }
 /* line 89, ../sass/style.scss */
 #call-to-action .large-3 {
@@ -102,38 +102,118 @@
   font-size: 3.5em;
   padding: 0 0.25em 0 0;
 }
+/* line 121, ../sass/style.scss */
+#call-to-action p {
+  font-size: 0.75em;
+}
 
-/* line 123, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .ocwc-statistics {
   padding: 0.9375em 0;
   color: #7d9aae;
   font-size: 1.5em;
 }
-/* line 125, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .ocwc-statistics i {
   font-size: 1.625em;
   padding-left: 0.3125em;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .widget-listing h1 {
   font-size: 1.125em;
   margin-bottom: 0;
   float: left;
 }
-/* line 140, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .widget-listing .read-more {
   float: right;
   line-height: 2;
 }
-/* line 145, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .widget-listing .header {
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #7d9aae;
 }
+/* line 154, ../sass/style.scss */
+.widget-listing li {
+  list-style-type: none;
+}
 
-/* line 152, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
+.in-the-news p {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.625em;
+}
+/* line 165, ../sass/style.scss */
+.in-the-news .date, .in-the-news .link {
+  display: inline-block;
+  font-size: 0.75em;
+}
+/* line 169, ../sass/style.scss */
+.in-the-news .date {
+  float: left;
+}
+/* line 170, ../sass/style.scss */
+.in-the-news .link {
+  float: right;
+}
+
+/* line 173, ../sass/style.scss */
+.home-courses {
+  border-bottom: 1px solid #7d9aae;
+  margin-bottom: 1.25em;
+}
+/* line 176, ../sass/style.scss */
+.home-courses h1 {
+  float: left;
+  font-size: 1.125em;
+  line-height: 1;
+}
+/* line 181, ../sass/style.scss */
+.home-courses a.readmore {
+  float: right;
+}
+
+/* line 187, ../sass/style.scss */
+.courses-image-listing .large-3 {
+  padding-bottom: 0.9375em;
+}
+/* line 191, ../sass/style.scss */
+.courses-image-listing .title {
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* line 197, ../sass/style.scss */
 #footer-wrapper {
+  margin-top: 50px;
   background-color: #949c9f;
+}
+/* line 201, ../sass/style.scss */
+#footer-wrapper .widget {
+  border-left: 1px solid white;
+  margin-top: 0.9375em;
+  padding: 0 0 0 0.625em;
+}
+/* line 206, ../sass/style.scss */
+#footer-wrapper h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+/* line 211, ../sass/style.scss */
+#footer-wrapper li {
+  list-style-type: none;
+}
+/* line 212, ../sass/style.scss */
+#footer-wrapper li a {
+  color: white;
+  font-size: 0.875em;
+}
+/* line 216, ../sass/style.scss */
+#footer-wrapper .sub-menu {
+  display: none;
 }
