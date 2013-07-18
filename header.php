@@ -9,20 +9,20 @@
   	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/style.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
   	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
 
+	<meta name="google-translate-customization" content="d3bf6f511902d7f2-750e02196618cb43-gadc8982319c58076-15"></meta>
   	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 	
 	<div class="row" id="top-nav">
-		<div class="large-2 push-7 columns">
-			<form>
-				<select>
-					<option value="en">English</option>
-					<option value="fr">French</option>
-				</select>
-			</form>
+		<div class="large-2 push-9 columns">
+			<div id="google_translate_element"></div><script type="text/javascript">
+			function googleTranslateElementInit() {
+			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+			}
+			</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        
 		</div>
-		<div class="large-4 columns">
+		<div class="large-3 push-2 columns">
 			<a href="#">MEMBER LOGIN</a> | <a href="#">HELP</a>
 		</div>
 	</div>
@@ -32,10 +32,10 @@
 			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="OpenCourseWare Consortium logo" /></a>
 		</div>
 		<div class="large-4 columns">
-			<form>
+			<form id="header-search">
 				<input placeholder="Search for courses and site content">
 			</form>
-			<a href="#">ADVANCED SEARCH</a>
+			<!-- <a href="#">ADVANCED SEARCH</a> -->
 		</div>
 	</div>
 

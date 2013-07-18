@@ -18,10 +18,23 @@ $footer-grey: #949C9F;
 $cta-grey: #F0F0F0;
 $white: #FFFFFF;
 
+#header-search {
+    border-radius: 5px;
+    border: 1px solid $light-grey;
+    input {
+        border: none;
+        width: 95%;
+        height: emCalc(40px);
+        margin: 0 emCalc(10px);
+        padding: 0 emCalc(10px);
+    }
+}
+
 #top-nav {
     margin: emCalc(15px) auto emCalc(30px) auto;
     text-align: right;
     color: $blue;
+    font-size: emCalc(12px);
 }
 
 #menu-navigation {
