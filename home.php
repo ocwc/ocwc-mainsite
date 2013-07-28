@@ -1,22 +1,6 @@
 <?php get_header() ?>
 
-<div id="slideshow">
-	<div class="row">
-		<?php
-			$slideshow_posts = get_slideshow_posts();
-			while ($slideshow_posts->have_posts()) {
-				$slideshow_posts->the_post();
-
-				$image_list = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'slideshow-image-large' );
-				if (count($image_list) > 0) {
-					$image_src = $image_list[0];
-				}
-				echo '<li class="slide"><div class="overlay"></div><img src="'.$image_src.'" /></li>';
-
-			}
-		?>
-	</div>
-</div>
+<?php get_template_part('partials/home_slideshow'); ?>
 
 <div id="call-to-action">
 	<div class="row">
