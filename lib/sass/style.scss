@@ -18,6 +18,18 @@ $footer-grey: #949C9F;
 $cta-grey: #F0F0F0;
 $white: #FFFFFF;
 
+/* general styles */
+
+li {
+    list-style-position: inside;
+}
+
+article {
+    h1 { font-size: emCalc(24px); }
+    h2 { font-size: emCalc(20px); }
+    h3 { font-size: emCalc(16px); }
+}
+
 #header-search {
     border-radius: 5px;
     border: 1px solid $light-grey;
