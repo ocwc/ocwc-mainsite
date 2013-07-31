@@ -34,4 +34,19 @@ function get_slideshow_posts() {
 	return $query;
 }
 
+function get_newslink_posts() {
+	$query = new WP_Query( array(
+				'post_type' => 'newslink',
+				'posts_per_page' => 5
+		));
+	return $query;
+}
+
+function get_announcements_posts() {
+	$query = new WP_Query( array(
+				'post_type' => 'post',
+				'posts_per_page' => 5
+		));
+	return $query;
+}
 ?>

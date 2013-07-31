@@ -57,29 +57,27 @@
 	<div class="large-4 columns widget-listing in-the-news">
 		<div class="header">
 			<h1>In the News</h1>
-			<a class="read-more" href="#">+ read more</a>
 		</div>
 		<ul>
-			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
-				<p>Lorem ipsum something or other</p>
-			</li>
-			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
-				<p>Lorem ipsum something or other</p>
-			</li>
-			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
-				<p>Lorem ipsum something or other</p>
-			</li>
-			<li><span class="date">Tue 02 Jul 2013</span> <a class="link" href="#">3rd party blog</a>
-				<p>Lorem ipsum something or other</p>
-			</li>
+			<?php $posts = get_newslink_posts(); ?>
+			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+				<li><span class="date"><?php the_time('F j, Y'); ?></span> <a class="link" href="<?php the_field('newslink_url'); ?>" target="_blank"><?php the_field('newslink_alias'); ?></a>
+				<p><?php echo $post->post_title; ?></p>
+				</li>
+			<?php endwhile; endif; ?>
 		</ul>
 	</div>
 
 	<div class="large-4 columns widget-listing">
 		<div class="header">
-			<h1>Announcements</h1>
-			<a class="read-more" href="#">+ read more</a>
+			<h1><a href="/news/">Announcements</a></h1>
 		</div>
+		<ul>
+			<?php $posts = get_announcements_posts(); ?>
+			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
+				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			<?php endwhile; endif; ?>
+		</ul>
 	</div>
 </div>
 

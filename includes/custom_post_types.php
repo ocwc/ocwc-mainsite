@@ -71,7 +71,7 @@ function mainsite_newslink() {
 		'menu_position'       => 5,
 		'menu_icon'           => '',
 		'can_export'          => true,
-		'has_archive'         => false,
+		'has_archive'         => true,
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
 		'rewrite'             => false,
