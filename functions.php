@@ -6,6 +6,8 @@ require('includes/sidebars.php');
 require('courses/functions.php');
 
 add_theme_support( 'post-thumbnails' );
+add_filter( 'https_local_ssl_verify', '__return_false' );
+add_filter( 'block_local_requests', '__return_false' );
 
 function mainsite_init() {
 	mainsite_slideshow();

@@ -12,7 +12,7 @@ function mainsite_url_rewrite_templates() {
 
 function mainsite_courses_rewrites_init() {
     add_rewrite_rule(
-        'courses/view/([0-9]+)/?$',
+        'courses/view/(\w+)/?$',
         'index.php?course_id=$matches[1]',
     	'top' );
 }
@@ -26,12 +26,10 @@ function mainsite_courses_query_vars($query_vars){
 
 function get_course_detail() {
 	$course_id = get_query_var('course_id');
-
-	$object = array(
-		'title' => 'test',
-		'id' => $course_id
-	);
-
+	$url = 'http://mainsite.fey:8000/course/view/'.$course_id.'/?format=json';
+	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	
+	$object = json_decode($response);
 	return $object;
 }
 
