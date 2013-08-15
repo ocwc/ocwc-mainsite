@@ -134,8 +134,11 @@ $slideshow-height: emCalc(420px);
     .large-3 {
         background-color: $white;
         height: emCalc(200px);
-        border-right: solid $cta-grey emCalc(5px);
         border-bottom: solid $blue emCalc(5px);
+
+        margin-right: 1%;
+        width: 24%;
+        &:last-child { margin-right: 0; }
     }
 
     .cta-header {
@@ -198,6 +201,13 @@ $slideshow-height: emCalc(420px);
 
     li {
         list-style-type: none;
+
+        a {
+            font-size: emCalc(12px);
+            line-height: emCalc(14px);
+            color: black;
+        }
+        a:hover { color: $blue; }
     }
 }
 

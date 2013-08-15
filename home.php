@@ -49,9 +49,14 @@
 <div class="row">
 	<div class="large-4 columns widget-listing">
 		<div class="header">
-			<h1>Upcoming Events</h1>
-			<a class="read-more" href="#">+ read more</a>
+			<h1><a href="/courses/">Latest courses</a></h1>
 		</div>
+		<ul>
+			<?php $course_list = get_latest_courses(); ?>
+			<?php foreach ($course_list as $course) : ?>
+				<li><a href="/courses/view/<?php echo $course->linkhash; ?>/"><?php echo $course->title; ?></a></li>
+			<?php endforeach; ?>
+		</ul>
 	</div>
 
 	<div class="large-4 columns widget-listing in-the-news">
@@ -81,6 +86,7 @@
 	</div>
 </div>
 
+<?php /* ?>
 <div class="row">
 	<div class="large-12 columns home-courses">
 		<h1>Featured courses</h1>
@@ -121,5 +127,6 @@
 		</div>
 	</div>
 </div>
+*/ ?>
 
 <?php get_footer() ?>

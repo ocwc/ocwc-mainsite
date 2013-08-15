@@ -51,4 +51,13 @@ function get_announcements_posts() {
 		));
 	return $query;
 }
+
+function get_latest_courses() {
+	$url = DATA_API_URL.'/course/latest/?format=json';
+	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	
+	$object = json_decode($response);
+	return $object;
+}
+
 ?>

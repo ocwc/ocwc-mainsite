@@ -130,147 +130,162 @@ article h3 {
 #call-to-action .large-3 {
   background-color: white;
   height: 12.5em;
-  border-right: solid #f0f0f0 0.3125em;
   border-bottom: solid #5e8dae 0.3125em;
+  margin-right: 1%;
+  width: 24%;
 }
 /* line 141, ../sass/style.scss */
+#call-to-action .large-3:last-child {
+  margin-right: 0;
+}
+/* line 144, ../sass/style.scss */
 #call-to-action .cta-header {
   padding-top: 0.9375em;
   clear: both;
 }
-/* line 146, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 #call-to-action h1 {
   font-size: 1.75em;
   line-height: 1.2;
   display: block;
   margin: 0;
 }
-/* line 153, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #call-to-action h2 {
   display: inline-block;
   font-size: 0.75em;
   text-transform: uppercase;
 }
-/* line 159, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #call-to-action .cta-header i {
   color: #5e8dae;
   float: left;
   font-size: 3.5em;
   padding: 0 0.25em 0 0;
 }
-/* line 166, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #call-to-action p {
   font-size: 0.75em;
 }
 
-/* line 171, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 .ocwc-statistics {
   padding: 0.9375em 0;
   color: #7d9aae;
   font-size: 1.5em;
 }
-/* line 173, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .ocwc-statistics i {
   font-size: 1.625em;
   padding-left: 0.3125em;
 }
 
-/* line 182, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .widget-listing h1 {
   font-size: 1.125em;
   margin-bottom: 0;
   float: left;
 }
-/* line 188, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .widget-listing .read-more {
   float: right;
   line-height: 2;
 }
-/* line 193, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .widget-listing .header {
   width: 100%;
   display: inline-block;
   border-bottom: 1px solid #7d9aae;
 }
-/* line 199, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .widget-listing li {
   list-style-type: none;
 }
-
 /* line 205, ../sass/style.scss */
+.widget-listing li a {
+  font-size: 0.75em;
+  line-height: 0.875em;
+  color: black;
+}
+/* line 210, ../sass/style.scss */
+.widget-listing li a:hover {
+  color: #5e8dae;
+}
+
+/* line 215, ../sass/style.scss */
 .in-the-news p {
   font-size: 0.75em;
   display: inline-block;
   width: 100%;
   margin-bottom: 0.625em;
 }
-/* line 211, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .in-the-news .date, .in-the-news .link {
   display: inline-block;
   font-size: 0.75em;
 }
-/* line 215, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .in-the-news .date {
   float: left;
 }
-/* line 216, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .in-the-news .link {
   float: right;
 }
 
-/* line 219, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .home-courses {
   border-bottom: 1px solid #7d9aae;
   margin-bottom: 1.25em;
 }
-/* line 222, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .home-courses h1 {
   float: left;
   font-size: 1.125em;
   line-height: 1;
 }
-/* line 227, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .home-courses a.readmore {
   float: right;
 }
 
-/* line 233, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .courses-image-listing .large-3 {
   padding-bottom: 0.9375em;
 }
-/* line 237, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .courses-image-listing .title {
   font-weight: bold;
   line-height: 1.6;
 }
 
-/* line 243, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #footer-wrapper {
   margin-top: 50px;
   background-color: #949c9f;
 }
-/* line 247, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 #footer-wrapper .widget {
   border-left: 1px solid white;
   margin-top: 0.9375em;
   padding: 0 0 0 0.625em;
 }
-/* line 252, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 #footer-wrapper h3 {
   color: white;
   text-transform: uppercase;
   font-size: 1em;
 }
-/* line 257, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 #footer-wrapper li {
   list-style-type: none;
 }
-/* line 258, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 #footer-wrapper li a {
   color: white;
   font-size: 0.875em;
 }
-/* line 262, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 #footer-wrapper .sub-menu {
   display: none;
 }
