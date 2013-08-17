@@ -21,7 +21,7 @@
 			<?php foreach ($results['results'] as $course) : ?>
 				<tr>
 					<td><a href="<?php echo $course->link; ?>" target="_blank"><?php echo $course->title; ?></a></td>
-					<td><a href="/courses/view/<?php echo $course->linkhash; ?>/" target="_blank">Details</a></td>
+					<td><a href="/courses/view/<?php echo $course->id; ?>/" target="_blank">Details</a></td>
 					<td><?php echo $course->source; ?></td>
 					<td><?php echo $course->language; ?></td>
 				</tr>
