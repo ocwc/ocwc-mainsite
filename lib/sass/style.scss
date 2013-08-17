@@ -48,6 +48,10 @@ pre {
     }
 }
 
+#google_translate_element {
+    height: 24px; /* prevents page reflow on load */
+}
+
 #top-nav {
     margin: emCalc(15px) auto emCalc(30px) auto;
     text-align: right;
@@ -60,24 +64,45 @@ pre {
     a {
         color: $grey;
         text-transform: uppercase;
-        padding: emCalc(15px) emCalc(10px);
         font-weight: bold;
     }
 
     a:hover {
         color: $white;
-        background-color: $light-grey;
     }
-
 
     li {
         float: left;
-        list-style-type: none;      
+        list-style-type: none;
+        position: relative;
+        background-color: $white;
+        padding: emCalc(15px) emCalc(10px);
+    }
+    li:hover {
+        background-color: $light-grey;
+    }
+    
+    li:hover .sub-menu {
+        display: block;
     }
 
-    .sub-menu {
-        display: none;
+    .sub-menu { 
+        display: none; 
+
+        position: absolute;
+        margin-left: 0;
+        top: 55px;
+        left: 0;
+        z-index: 100;
+        
+        li { 
+            clear: left; 
+            padding: emCalc(5px) emCalc(10px);
+            width: 100%;
+        }
     }
+
+    
 }
 
 $slideshow-height: emCalc(420px);
@@ -294,3 +319,4 @@ $slideshow-height: emCalc(420px);
         font-weight: bold;
     }
 }
+
