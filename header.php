@@ -32,8 +32,8 @@
 			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="OpenCourseWare Consortium logo" /></a>
 		</div>
 		<div class="large-4 columns">
-			<form id="header-search">
-				<input placeholder="Search for courses and site content">
+			<form id="header-search" method="GET" action="/courses/search/">
+				<input placeholder="Search for courses and site content" name="q">
 			</form>
 			<!-- <a href="#">ADVANCED SEARCH</a> -->
 		</div>
