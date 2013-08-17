@@ -272,3 +272,19 @@ $slideshow-height: emCalc(420px);
     .sub-menu { display: none; }
     
 }
+
+/* sidebars */
+
+.page-sidebar {
+    li {
+        list-style-type: none;
+    }
+
+    
+    li.page_item { padding-left: emCalc(10px); }
+    li.current_page_parent.page_item { padding-left: 0; }
+
+    .current_page_item {
+        font-weight: bold;
+    }
+}

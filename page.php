@@ -1,16 +1,21 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
 <div class="row">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<div class="entry-meta">
-			</div>
-		</header>
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div>
-	</article>
-</div>
+	<?php if ( have_posts() ) : ?>	
+		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="large-3 columns">
+			<ul class="page-sidebar">
+			    <?php wp_list_pages( array('title_li'=>'','include'=>get_post_top_ancestor_id()) ); ?>
+			    <?php wp_list_pages( array('title_li'=>'','depth'=>1,'child_of'=>get_post_top_ancestor_id()) ); ?>
+			</ul>
+		</div>
+		<div class="large-9 columns">
+				<?php get_template_part('partials/content', get_post_format()); ?>
+		</div>
+		<?php endwhile; ?>
+	<?php else : ?>
+		<h1>404 Not found</h1>
+	<?php endif; ?>
+</div>	
 
-<?php get_footer(); ?>
+<?php get_footer() ?>

@@ -3,6 +3,9 @@
 ?>
 <?php get_header(); ?>
 <div class="row">
+	<div class="large-3 columns">
+		<?php dynamic_sidebar('sidebar-courses'); ?>
+	</div>
 	<div class="large-9 columns">
 		<h1><?php echo $course->title; ?></h1>
 		<p><?php echo $course->description; ?></p>
