@@ -30,6 +30,12 @@ article {
     h3 { font-size: emCalc(16px); }
 }
 
+pre {
+    background: $cta-grey;
+    padding: emCalc(10px);
+    margin: emCalc(10px) 0;
+}
+
 #header-search {
     border-radius: 5px;
     border: 1px solid $light-grey;
