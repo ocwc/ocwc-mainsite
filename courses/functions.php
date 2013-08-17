@@ -55,7 +55,7 @@ function get_search_results() {
 		return array(
 			'results' => $object,
 			'count' => sizeof($object),
-			'query' => wp_kses($q)
+			'query' => wp_kses($q, '')
 		);
 	}
 }
