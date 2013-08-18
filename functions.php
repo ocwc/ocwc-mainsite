@@ -79,6 +79,7 @@ if(!function_exists('get_post_top_ancestor_id')){
 	    }
 	    
 	    return $post->ID;
-	}}
+	}
+}
 
 ?>

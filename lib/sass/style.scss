@@ -10,7 +10,7 @@ $em-base: 16px !default;
 
 /* colors */
 
-$blue: #5E8DAE;
+$blue: #436c89;
 $light-blue: #7D9AAE;
 $grey: #788288;
 $light-grey: #C4C4C4;
@@ -19,22 +19,6 @@ $cta-grey: #F0F0F0;
 $white: #FFFFFF;
 
 /* general styles */
-
-li {
-    list-style-position: inside;
-}
-
-article {
-    h1 { font-size: emCalc(24px); }
-    h2 { font-size: emCalc(20px); }
-    h3 { font-size: emCalc(16px); }
-}
-
-pre {
-    background: $cta-grey;
-    padding: emCalc(10px);
-    margin: emCalc(10px) 0;
-}
 
 #header-search {
     border-radius: 5px;
@@ -57,52 +41,6 @@ pre {
     text-align: right;
     color: $blue;
     font-size: emCalc(12px);
-}
-
-#menu-navigation {
-    padding: emCalc(50px) 0 emCalc(17px) emCalc(80px);
-    a {
-        color: $grey;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-
-    a:hover {
-        color: $white;
-    }
-
-    li {
-        float: left;
-        list-style-type: none;
-        position: relative;
-        background-color: $white;
-        padding: emCalc(15px) emCalc(10px);
-    }
-    li:hover {
-        background-color: $light-grey;
-    }
-    
-    li:hover .sub-menu {
-        display: block;
-    }
-
-    .sub-menu { 
-        display: none; 
-
-        position: absolute;
-        margin-left: 0;
-        top: 55px;
-        left: 0;
-        z-index: 100;
-        
-        li { 
-            clear: left; 
-            padding: emCalc(5px) emCalc(10px);
-            width: 100%;
-        }
-    }
-
-    
 }
 
 $slideshow-height: emCalc(420px);

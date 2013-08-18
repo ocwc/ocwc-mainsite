@@ -5,7 +5,11 @@
 	<meta charset="utf-8" />
 
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
   	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/ocwc.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
   	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/style.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
   	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
 
@@ -38,7 +42,7 @@
 			<!-- <a href="#">ADVANCED SEARCH</a> -->
 		</div>
 	</div>
-
+	<?php if (!is_page('styles') ) : ?>
 	<div class="row">
 		<div class="large-12 columns">
 			<ul>
@@ -48,3 +52,4 @@
 			</ul>
 		</div>
 	</div>
+	<?php endif; ?>
