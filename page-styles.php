@@ -118,15 +118,15 @@
       </div>
         <div class="large-6 columns">
 	    <h2>Images</h2>
-	    <p><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"></p>
+	    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"></p>
       </div>
         <div class="large-6 columns">
 	    <h2>Image Left</h2>
-	    <p> <img src="img/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+	    <p> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       </div>
         <div class="large-6 columns">
           <h2>Image Right</h2>
-          <p> <img src="img/Layer29.png" alt="" width="111" height="82" align="right" class="imgthumb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="right" class="imgthumb">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
 </div>
 <!--Tables!-->
@@ -178,21 +178,21 @@
 </div>
 <div class="row">
   <h2>Courses</h2>
-	<div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+	<div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
-    <p></div><div class="large-3 columns"><img src="img/course.jpg" width="245" height="145" class="coursethumb">
+    <p></div><div class="large-3 columns"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.jpg" width="245" height="145" class="coursethumb">
 	  <h4>Course Title</h4>
     <p></div>
 </div>

@@ -187,7 +187,7 @@ table tfoot {
 	margin: 2px;
 	color: #999
 }
-#toplevel a:hover {
+#toplevel a:hover, #toplevel li.current_page_item a {
 	background-color: #CCC;
 	list-style-type: none;
 	color: white;
