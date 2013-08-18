@@ -54,14 +54,6 @@ function get_announcements_posts() {
 	return $query;
 }
 
-function get_latest_courses() {
-	$url = DATA_API_URL.'/course/latest/?format=json';
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
-	
-	$object = json_decode($response);
-	return $object;
-}
-
 if(!function_exists('get_post_top_ancestor_id')){
 	/**
 	 * Gets the id of the topmost ancestor of the current page. Returns the current

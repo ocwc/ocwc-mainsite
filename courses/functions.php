@@ -36,9 +36,17 @@ function mainsite_courses_rewrites_init() {
 
 /* Queries */
 
+function get_latest_courses() {
+	$url = DATA_API_URL.'/courses/latest/?format=json';
+	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	
+	$object = json_decode($response);
+	return $object;
+}
+
 function get_course_detail() {
 	$course_id = get_query_var('course_id');
-	$url = DATA_API_URL.'/course/view/'.$course_id.'/?format=json';
+	$url = DATA_API_URL.'/courses/view/'.$course_id.'/?format=json';
 	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
 	
 	$object = json_decode($response);
@@ -48,7 +56,7 @@ function get_course_detail() {
 function get_search_results() {
 	if ( get_query_var('q') ) {
 		$q = get_query_var('q');
-		$url = DATA_API_URL.'/course/search/?q='.$q;
+		$url = DATA_API_URL.'/courses/search/?q='.$q;
 		$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
 		
 		$object = json_decode($response);
