@@ -6,7 +6,7 @@
 		<div class="large-3 columns">
 			<ul id="toplevel">
 			    <?php wp_list_pages( array('title_li'=>'','include'=>get_post_top_ancestor_id()) ); ?>
-			    <?php wp_list_pages( array('title_li'=>'','depth'=>1,'child_of'=>get_post_top_ancestor_id()) ); ?>
+			    <?php wp_list_pages( array('title_li'=>'','depth'=>3,'child_of'=>get_post_top_ancestor_id()) ); ?>
 			</ul>
 		</div>
 		<div class="large-9 columns">
