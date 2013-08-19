@@ -33,7 +33,7 @@ function get_linear_gradient($hex) {
   	$style .= " background-image: -webkit-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
   	$style .= " background-image: -moz-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
   	$style .= " background-image: -o-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
-  	$style .= "background-image: linear-gradient(to left, $hex 0%, $rgba 50%, $rgba 70%, $hex 100%);";
+  	$style .= "background-image: linear-gradient(to left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
 
   return $style;
 }
