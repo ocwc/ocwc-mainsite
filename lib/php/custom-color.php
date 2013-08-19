@@ -30,10 +30,10 @@ function get_linear_gradient($hex) {
 	$style = '';
 
   	$style .= "background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $hex), color-stop(30%, rgba(151, 78, 58, 0)), color-stop(70%, rgba(151, 78, 58, 0)), color-stop(100%, $hex));";
-  	$style .= " background-image: -webkit-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
-  	$style .= " background-image: -moz-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
-  	$style .= " background-image: -o-linear-gradient(left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
-  	$style .= "background-image: linear-gradient(to left, $hex 0%, $rgba 30%, $rgba 70%, $hex 100%);";
+  	$style .= " background-image: -webkit-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
+  	$style .= " background-image: -moz-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
+  	$style .= " background-image: -o-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
+  	$style .= "background-image: linear-gradient(to left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
 
   return $style;
 }
