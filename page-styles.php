@@ -1,6 +1,3 @@
-<?php 
-	Template: Styles
-?>
 <?php get_header(); ?>
 
 
