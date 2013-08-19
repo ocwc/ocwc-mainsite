@@ -36,13 +36,6 @@ $white: #FFFFFF;
     height: 24px; /* prevents page reflow on load */
 }
 
-#top-nav {
-    margin: emCalc(15px) auto emCalc(30px) auto;
-    text-align: right;
-    color: $blue;
-    font-size: emCalc(12px);
-}
-
 $slideshow-height: emCalc(420px);
 #slideshow {
     // background-color: #974E3A;
@@ -194,67 +187,3 @@ $slideshow-height: emCalc(420px);
     .date { float: left;  }
     .link { float: right; }
 }
-
-.home-courses {
-    border-bottom: 1px solid $light-blue;
-    margin-bottom: emCalc(20px);
-    h1 {
-        float: left;
-        font-size: emCalc(18px);
-        line-height: 1;
-    }
-    a.readmore {
-        float: right;
-    }
-}
-
-.courses-image-listing {
-    .large-3 {
-        padding-bottom: emCalc(15px);
-    }
-
-    .title {
-        font-weight: bold;
-        line-height: 1.6;
-    }
-}
-
-#footer-wrapper {
-    margin-top: 50px;
-    background-color: $footer-grey;
-
-    .widget {
-        border-left: 1px solid $white;
-        margin-top: emCalc(15px);
-        padding: 0 0 0 emCalc(10px);
-    }
-    h3 {
-        color: $white;
-        text-transform: uppercase;
-        font-size: emCalc(16px);
-    }
-    li { list-style-type: none; }
-    li a {
-        color: $white;
-        font-size: emCalc(14px);
-    }
-    .sub-menu { display: none; }
-    
-}
-
-/* sidebars */
-
-.page-sidebar {
-    li {
-        list-style-type: none;
-    }
-
-    
-    li.page_item { padding-left: emCalc(10px); }
-    li.current_page_parent.page_item { padding-left: 0; }
-
-    .current_page_item {
-        font-weight: bold;
-    }
-}
-

@@ -331,3 +331,32 @@ table tfoot {
 .breadcrumb li a:hover:after {
 	border-left-color: hsla(0,0%,80%,1)
 }
+
+.footer-wrapper { 
+    margin-top: 50px;
+    background-color: #949C9F;
+}
+
+.footer-wrapper .widget {
+    border-left: 1px solid white;
+    margin-top: 15px;
+    padding: 0 0 0 10px;
+}
+
+.footer-wrapper h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.footer-wrapper li {
+    list-style-type: none;
+}
+
+.footer-wrapper li a {
+    color: white;
+    font-size: 14px;
+}
+.footer-wrapper .sub-menu {
+    display: none
+}
