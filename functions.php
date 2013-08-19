@@ -10,6 +10,10 @@ add_filter( 'https_local_ssl_verify', '__return_false' );
 add_filter( 'block_local_requests', '__return_false' );
 
 add_filter('show_admin_bar', '__return_false');
+add_filter('the_generator', '__return_false');
+
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
 
 function mainsite_init() {
 	mainsite_slideshow();
@@ -22,6 +26,14 @@ function mainsite_init() {
 }
 add_action( 'init', 'mainsite_init' );
 
+function mainsite_scripts() {
+	if ( is_home() ) {
+		wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', false);
+	}
+	wp_enqueue_script('script', get_template_directory_uri().'/lib/javascripts/script.js', array('jquery'), '', false);
+}
+add_action( 'wp', 'mainsite_scripts');
+
 /* courses hooks */
 
 add_action( 'init', 'mainsite_courses_rewrites_init' );
@@ -32,7 +44,7 @@ function get_slideshow_posts() {
 	$query = new WP_Query( array( 
 				'post_type' => 'slideshow', 
 				'ignore_sticky_posts' => 1,
-				'posts_per_page' => 1
+				'posts_per_page' => 3
 			));
 
 	return $query;

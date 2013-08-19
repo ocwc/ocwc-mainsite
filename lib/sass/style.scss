@@ -36,10 +36,42 @@ $white: #FFFFFF;
     height: 24px; /* prevents page reflow on load */
 }
 
-$slideshow-height: emCalc(420px);
-#slideshow {
-    // background-color: #974E3A;
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
 
+.rslides .slideshow {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  }
+
+.rslides > div:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+$slideshow-height: emCalc(420px);
+.slideshow {
+    
     li {
         list-style-type: none;
         text-align: center;
@@ -87,6 +119,7 @@ $slideshow-height: emCalc(420px);
         } 
     }
 }
+
 
 #call-to-action {
     background-color: $cta-grey;
