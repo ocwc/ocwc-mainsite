@@ -113,6 +113,60 @@
 	    <h2>Paragraph</h2>
 	    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       </div>
+<div class="large-6 columns">
+	    <h2>Emphasis</h2>
+		<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+		<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+		<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+		<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+		<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+      </div>
+<div class="large-6 columns">
+	    <h2>Bullets</h2>
+	    <ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>
+Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+  </div><div class="large-6 columns">
+	    <h2>Blockquote Styles</h2>
+	    <blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+<blockquote class="pull-right">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+      </div><div class="large-6 columns">
+	    <h2>Ordered Styles</h2>
+	<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+      </div><div class="large-6 columns">
+	    <h2>Bullets</h2>
+	    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+</div>
         <div class="large-6 columns">
 	    <h2>Images</h2>
 	    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Layer29.png" alt="" width="111" height="82" align="left" class="imgthumb"></p>
@@ -193,5 +247,15 @@
 	  <h4>Course Title</h4>
     <p></div>
 </div>
+<div class="row">
+	<div class="large-6 columns">
+	    <h2>Forms</h2>
+	<input type="text"/>
+      </div>
+<div class="large-6 columns">
+	    <h2>Buttons</h2>
+<button type="submit" class="button">Submit</button>
+      </div>
+ </div>
 
 <?php get_footer(); ?>
