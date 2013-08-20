@@ -22,7 +22,7 @@ function mainsite_init() {
 	register_mainsite_nav_menu();
 	register_mainsite_sidebars();
 	
-	add_image_size( 'slideshow-image-large', 920, 420, true);
+	add_image_size( 'slideshow-image-large', 1050, 420, true);
 }
 add_action( 'init', 'mainsite_init' );
 
