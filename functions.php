@@ -9,7 +9,7 @@ add_theme_support( 'post-thumbnails' );
 add_filter( 'https_local_ssl_verify', '__return_false' );
 add_filter( 'block_local_requests', '__return_false' );
 
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 add_filter('the_generator', '__return_false');
 
 remove_action('wp_head', 'rsd_link');
