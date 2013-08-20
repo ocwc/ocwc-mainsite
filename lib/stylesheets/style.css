@@ -114,7 +114,7 @@
 /* line 124, ../sass/style.scss */
 #call-to-action {
   background-color: #f0f0f0;
-  padding: 3.125em 0 0.9375em 0;
+  padding:1.925em 0 0.9375em;
   margin-bottom: 1.25em;
 }
 /* line 129, ../sass/style.scss */
@@ -122,8 +122,9 @@
   background-color: white;
   height: 12.5em;
   border-bottom: solid #436c89 0.3125em;
-  margin-right: 1%;
-  width: 24%;
+  margin-right: 0.5%;
+  width: 24.5%;
+  box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.2);
 }
 /* line 136, ../sass/style.scss */
 #call-to-action .large-3:last-child {
