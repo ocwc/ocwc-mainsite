@@ -12,8 +12,6 @@ function mainsite_courses_query_vars($query_vars){
 function mainsite_url_rewrite_templates() {
 	global $wp_query;
 
-	// var_dump($wp_query);
-	echo get_query_var( 'provider_id' );
 	if ( get_query_var( 'course_id' ) ) {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/courses/course_detail.php';
