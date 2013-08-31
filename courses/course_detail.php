@@ -13,7 +13,7 @@
 		<p>
 			<strong>Author:</strong> <?php echo $course->author; ?><br />
 			<strong>Link:</strong> <a href="<?php echo $course->linkurl; ?>"><?php echo $course->linkurl; ?></a><br />
-			<strong>Source:</strong> <?php echo $course->source; ?>
+			<strong>Provider:</strong> <a href="/providers/<?php echo $course->provider; ?>/"><?php echo $course->provider_name; ?></a>
 		</p>
 		</div>
 	</div>
