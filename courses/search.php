@@ -6,7 +6,7 @@
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
 	<div class="large-9 columns">
-		<p>Search results for <strong><?php echo $results['query']; ?></strong></p>
+		<h1>Search results for <?php echo $results['query']; ?></h1>
 
 		<?php get_template_part('courses/course_search'); ?>	
 		
