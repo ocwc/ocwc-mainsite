@@ -93,4 +93,11 @@ function get_search_results() {
 	}
 }
 
+function get_api_results($endpoint) {
+	$url = DATA_API_URL.$endpoint;
+	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );	
+
+	return json_decode($response);
+}
+
 ?>
