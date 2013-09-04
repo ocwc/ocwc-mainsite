@@ -5,7 +5,7 @@
 function mainsite_courses_query_vars($query_vars){
 	$query_vars[] = 'course_id';
 	$query_vars[] = 'provider_id';
-	$query_vars[] = 'q';
+	$query_vars[] = 'search';
 	return $query_vars;
 }
 
@@ -79,8 +79,8 @@ function get_provider_courses() {
 }
 
 function get_search_results() {
-	if ( get_query_var('q') ) {
-		$q = get_query_var('q');
+	if ( get_query_var('search') ) {
+		$q = get_query_var('search');
 		$url = DATA_API_URL."/courses/search/?q=$q";
 		$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
 		
@@ -99,5 +99,3 @@ function get_api_results($endpoint) {
 
 	return json_decode($response);
 }
-
-?>
