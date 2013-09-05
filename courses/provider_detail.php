@@ -9,22 +9,29 @@
 	</div>
 	<div class="large-9 columns">
 		<h1><?php echo $provider->name; ?></h1>
-	
-		<?php if ( count($provider_courses) ) : ?>
+
+		<?php if ( $provider_courses->count ) : ?>
 			<table>
 				<thead>
 					<th class="tableblue">Course Title</th>
 					<th>Details</th>
 					<th>Language</th>
 				</thead>
-				<?php foreach ($provider_courses as $course) : ?>
+				<?php foreach ($provider_courses->results as $course) : ?>
 					<tr>
 						<td class="tableblue"><a href="<?php echo $course->linkurl; ?>" target="_blank"><?php echo $course->title; ?></a></td>
 						<td><a href="/courses/view/<?php echo $course->id; ?>/" target="_blank">Details</a></td>
 						<td><?php echo $course->language; ?></td>
 					</tr>
 				<?php endforeach; ?>
-			</table>			
+			</table>
+			<?php $page = (get_query_var('page')) ? get_query_var('page') : 1; ?>
+			<?php if ( $provider_courses->previous ) : ?>
+				<a href="?page=<?php echo $page-1; ?>">« Previous Page</a>
+			<?php endif; ?>
+			<?php if ( $provider_courses->next ) : ?>
+				<a href="?page=<?php echo $page+1; ?>">Next Page »</a>
+			<?php endif; ?>						
 		<?php endif; ?>
 	</div>
 </div>

@@ -72,7 +72,8 @@ function get_provider_detail() {
 
 function get_provider_courses() {
 	$provider_id = get_query_var('provider_id');
-	$url = DATA_API_URL."/providers/$provider_id/courses/?format=json";
+	$page = (get_query_var('page')) ? get_query_var('page') : 1;
+	$url = DATA_API_URL."/providers/$provider_id/courses/?page=$page&format=json";
 	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
 
 	return json_decode($response);	
