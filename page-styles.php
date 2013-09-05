@@ -222,7 +222,13 @@ Nulla volutpat aliquam velit
 
                 </tr>
               </tbody>
-            </table>
+      </table>
+      <div class="pagination">
+          <a href="#" class="previous-page">« Previous Page</a>
+          <a href="#" class="next-page">Next Page »</a>
+              
+      </div>      
+
 	</div>
 </div>
 <!--Courses!-->
