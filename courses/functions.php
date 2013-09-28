@@ -3,9 +3,14 @@
 /* Setup Wordpress URLs */
 
 function mainsite_courses_query_vars($query_vars){
+	/* courses */
 	$query_vars[] = 'course_id';
 	$query_vars[] = 'provider_id';
 	$query_vars[] = 'search';
+
+	/* members */
+	$query_vars[] = 'members_country_name';
+
 	return $query_vars;
 }
 
@@ -26,6 +31,18 @@ function mainsite_url_rewrite_templates() {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/courses/search.php';
 		});
+	}	
+
+	if ( get_query_var( 'members_country_name' ) ) {
+		add_filter( 'template_include', function() {
+			return get_template_directory() . '/members/country_list.php';
+		});
+	}
+
+	if ( $wp_query->query['pagename'] === 'members/member-list' ) {
+		add_filter( 'template_include', function() {
+			return get_template_directory() . '/members/member-list.php';
+		});
 	}
 }
 
@@ -41,6 +58,11 @@ function mainsite_courses_rewrites_init() {
     add_rewrite_rule(
     	'courses/search/$',
     	'index.php?course_search=1',
+    	'top' );
+
+    add_rewrite_rule(
+    	'members/country/([\w|\W]+)/?$',
+    	'index.php?members_country_name=$matches[1]',
     	'top' );
 }
 

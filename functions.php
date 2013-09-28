@@ -4,6 +4,7 @@ require('includes/custom_post_types.php');
 require('includes/widgets.php');
 require('includes/sidebars.php');
 require('courses/functions.php');
+require('members/functions.php');
 
 add_theme_support( 'post-thumbnails' );
 add_filter( 'https_local_ssl_verify', '__return_false' );
