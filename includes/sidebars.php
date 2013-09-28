@@ -30,6 +30,17 @@ function register_mainsite_sidebars() {
 	   'before_title' => '<h3 class="footer-title">',
 	   'after_title' => '</h3>',
 	) );
+
+	register_sidebar( array(
+	   'name' => __( 'Members sidebar'),
+	   'id' => 'sidebar-members',
+	   'description' => __( 'Members sidebar', 'mainsite' ),
+	   'before_widget' => '<div class="large-3 columns"><aside id="%1$s" class="widget %2$s">',
+	   'after_widget' => "</aside></div>",
+	   'before_title' => '<h3 class="footer-title">',
+	   'after_title' => '</h3>',
+	) );
+
 }
 
 function register_mainsite_nav_menu() {

@@ -37,7 +37,7 @@
 		</div>
 		<div class="large-4 columns">
 			<form id="header-search" method="GET" action="/courses/search/">
-				<input placeholder="Search for courses and site content" name="q">
+				<input placeholder="Search for courses and site content" name="search">
 			</form>
 			<!-- <a href="#">ADVANCED SEARCH</a> -->
 		</div>

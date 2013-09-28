@@ -14,8 +14,8 @@
 			<table>
 				<thead>
 					<th class="tableblue">Course Title</th>
-					<th>Details</th>
 					<th>Language</th>
+					<th>Details</th>
 				</thead>
 				<?php foreach ($provider_courses->results as $course) : ?>
 					<tr>
