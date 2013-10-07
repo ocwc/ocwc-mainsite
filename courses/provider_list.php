@@ -1,9 +1,9 @@
 <?php
 /*
-	Template name: Page Course
+	Template name: Page Courses - Providers List
 */
 
-	$stats = get_api_results("/courses/stats/");
+	$providers = get_api_results("/providers/");
 ?>
 <?php get_header(); ?>
 <div class="row">
@@ -16,8 +16,11 @@
 				<?php get_template_part('partials/content', get_post_format()); ?>
 			<?php endwhile; ?>
 
-			<p>We are currently indexing <strong><?php echo $stats->courses ?> courses</strong> from <strong><?php echo $stats->providers; ?> providers</strong>.</p>
-			<?php get_template_part('courses/course_search'); ?>
+			<ul>
+			<?php foreach ($providers as $provider) : ?>
+				<li><a href="/providers/<?php echo $provider->id; ?>/"><?php echo $provider->name; ?></a></li>
+			<?php endforeach; ?>
+			</ul>
 		</div>
 	<?php endif; ?>
 </div>	
