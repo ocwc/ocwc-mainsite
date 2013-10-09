@@ -3,7 +3,15 @@
 ?>
 <?php get_header(); ?>
 	<div class="row">
+		<div class="large-3 columns">
+			<?php get_template_part('partials/members-sidebar'); ?>
+		</div>
+
 		<div class="large-9 columns">
+			<header class="entry-header">
+				<h1 class="entry-title">Members in <?php echo str_replace('%20', ' ', get_query_var('members_country_name')); ?></h1>
+				<div class="entry-meta"></div>
+			</header>
 			<table>
 			<?php foreach ($members as $member) : ?>
 				<tr>

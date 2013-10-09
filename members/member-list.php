@@ -4,8 +4,11 @@
 ?>
 <?php get_header(); ?>
 	<div class="row">
+		<div class="large-3 columns">
+			<?php get_template_part('partials/members-sidebar'); ?>
+		</div>
+
 		<div class="large-9 columns">
-			
 			<?php foreach ($member_list as $group_name => $members) : ?>
 				<h2><?php echo $group_name ?></h2>
 				<table>
