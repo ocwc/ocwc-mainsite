@@ -403,7 +403,7 @@ table tfoot {
 
 textarea, input, .uneditable-input {
   border-radius: 3px;
-  color: #eee;
+  color: #777;
 }
 
 /* Button */
@@ -433,4 +433,17 @@ textarea, input, .uneditable-input {
 }
 .country-list li {
 	list-style-type: none;
+}
+
+/* ninja forms overrides */
+.entry-content .ninja-forms-form-wrap .ninja-forms-form .field-wrap.label-left .ninja-forms-field {
+	margin-left: 0;
+}
+
+.entry-content .ninja-forms-form-wrap .ninja-forms-form .list-radio-wrap.label-left ul {
+	clear: both;
+}
+
+.entry-content .ninja-forms-form-wrap .ninja-forms-form .list-radio-wrap.label-left ul li {
+	float: none;
 }

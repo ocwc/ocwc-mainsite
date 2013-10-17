@@ -87,4 +87,10 @@ if(!function_exists('get_post_top_ancestor_id')){
 	}
 }
 
+/* styling ninja forms */
+function mainsite_ninja_forms_form_class($form_class) {
+	return $form_class . "large-8 columns";
+}
+add_filter('ninja_forms_form_class', 'mainsite_ninja_forms_form_class')
+
 ?>
