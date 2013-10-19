@@ -447,3 +447,7 @@ textarea, input, .uneditable-input {
 .entry-content .ninja-forms-form-wrap .ninja-forms-form .list-radio-wrap.label-left ul li {
 	float: none;
 }
+
+.hide_label-wrap label {
+	display: none;
+}

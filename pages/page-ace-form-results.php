@@ -36,6 +36,7 @@
 							endforeach;
 						?>
 						<p>
+
 						<?php foreach ($fields as $field_id => $field) : ?>
 							<?php $user_value = $user_values[$field['id']]; ?>
 							<?php if ($user_value AND $field['type'] === '_upload') : ?>
@@ -43,6 +44,8 @@
 								<strong><?php echo $field['data']['label']; ?>:</strong> <a href="<?php echo $user_value['file_url']; ?>" target="_blank"><?php echo $user_value['user_file_name']; ?></a> <br />
 							<?php elseif ($field['type'] === '_desc') : ?>
 								<h3><?php echo $field['data']['label']; ?></h3>
+							<?php elseif ($field['type'] === '_submit' ) :  ?>
+								<?php // do nothing ?>
 							<?php else : ?>
 								<strong><?php echo $field['data']['label']; ?>:</strong> <?php echo $user_value; ?> <br />
 							<?php endif; ?>
