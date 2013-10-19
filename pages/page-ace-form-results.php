@@ -38,10 +38,13 @@
 						<p>
 						<?php foreach ($fields as $field_id => $field) : ?>
 							<?php $user_value = $user_values[$field['id']]; ?>
-							<?php if ( $user_value && $field['type'] !== '_desc' ) : ?>
-								<strong><?php echo $field['data']['label']; ?>:</strong> <?php echo $user_value; ?> <br />
+							<?php if ($user_value AND $field['type'] === '_upload') : ?>
+								<?php $user_value = reset($user_value); ?>
+								<strong><?php echo $field['data']['label']; ?>:</strong> <a href="<?php echo $user_value['file_url']; ?>" target="_blank"><?php echo $user_value['user_file_name']; ?></a> <br />
 							<?php elseif ($field['type'] === '_desc') : ?>
 								<h3><?php echo $field['data']['label']; ?></h3>
+							<?php else : ?>
+								<strong><?php echo $field['data']['label']; ?>:</strong> <?php echo $user_value; ?> <br />
 							<?php endif; ?>
 						<?php endforeach; ?>
 						</p>
