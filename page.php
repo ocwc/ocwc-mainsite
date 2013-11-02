@@ -3,6 +3,11 @@
 <div class="row">
 	<?php if ( have_posts() ) : ?>	
 		<?php while ( have_posts() ) : the_post(); ?>
+
+		<div class="large-12 columns">
+			<?php get_template_part('partials/header_image', get_post_format()); ?>
+		</div>
+
 		<div class="large-3 columns">
 			<ul id="toplevel">
 				<?php get_template_part('partials/sidebar', get_post_format()); ?>

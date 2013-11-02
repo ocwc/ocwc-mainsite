@@ -87,6 +87,21 @@ if(!function_exists('get_post_top_ancestor_id')){
 	}
 }
 
+function mainsite_get_closest_header_image() {
+	global $post;
+
+	$header_image = get_field('header_image', $post->ID);
+	if ($header_image === false) {
+		$ancestors = get_post_ancestors($post->ID);
+		foreach ($ancestors as $id => $ancestor) {
+			$header_image = get_field('header_image', $ancestor);
+			if ($header_image) { return $header_image; }
+		}
+	}
+
+	return $header_image;
+}
+
 /* styling ninja forms */
 function mainsite_ninja_forms_form_class($form_class) {
 	return $form_class . "large-8 columns";

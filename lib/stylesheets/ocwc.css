@@ -5,14 +5,21 @@ body {
 	line-height: 1;	
 }
 /*Link Styles */
+
 a {
   color: #446a88;
   text-decoration: none;
-  line-height: inherit; }
-  a:hover, a:focus {
-    color: #3c5d77; }
-  a img {
-    border: none; }
+  line-height: inherit; 
+}
+
+a:hover, a:focus {
+    color: #3c5d77; 
+}
+
+a img {
+    border: none; 
+}
+
 /* Custom paragraph styles */
 p {
   font-size: .88em;
@@ -40,6 +47,7 @@ blockquote cite {
 .text-success {
   color:#468847;
 }
+
 /* Header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: Metrophobic, sans-ser1if;
@@ -47,23 +55,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1pt;
   color: #436c89;
 }
-h1 {
-  font-size: 2.125em; }
 
-h2 {
-  font-size: 1.6875em; }
-
-h3 {
-  font-size: 1.250em; }
-
-h4 {
-  font-size: 1.125em; }
-
-h5 {
-  font-size: 1.025em; }
-
-h6 {
-  font-size: 1em; }
+h1 { font-size: 2.125em; }
+h2 { font-size: 1.6875em; }
+h3 { font-size: 1.250em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1.025em; }
+h6 { font-size: 1em; }
 
 /* Custom Tables */
 .tableblue {
@@ -71,6 +69,7 @@ h6 {
 	border-left-style: solid;
 	border-left-color: #5c8db0;
 }
+
 table {
 	background: white;
 	margin-bottom: 0em;
@@ -78,6 +77,7 @@ table {
 	border-collapse: separate;
     border-spacing: 2px;
 }
+
 table thead,
 table tfoot {
 	font-weight: bold;
@@ -112,6 +112,7 @@ table tfoot {
 	display: table-cell;
 	line-height: 2em;
 }
+
 /* Image OCWC */
 .imgthumb {
 	padding: 2px;
@@ -131,6 +132,7 @@ table tfoot {
 	margin: 10 10 0 10;
 	box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.75);
 }
+
 /* Main Menu */
 #menu-navigation {
 	padding-top: 1.125em;
@@ -177,7 +179,9 @@ table tfoot {
   z-index: 100;
 }
 #menu-navigation .sub-menu a {
-	color: white}
+	color: white
+}
+
 #menu-navigation .sub-menu li {
   clear: left;
   padding: 0.3125em 0.625em;
@@ -189,6 +193,7 @@ table tfoot {
 #menu-navigation .sub-menu li:hover {
 	background-color: #849bad;
 }
+
 /* Navigation Menu1 */
 #toplevel ul
 {
