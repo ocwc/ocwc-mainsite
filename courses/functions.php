@@ -33,7 +33,8 @@ function mainsite_url_rewrite_templates() {
 			return get_template_directory() . '/courses/course_language_list.php';
 		});
 	}
-	if ( $wp_query->query['pagename'] === 'courses/search' ) {
+	if ( array_key_exists('pagename', $wp_query->query) AND 
+		 $wp_query->query['pagename'] === 'courses/search' ) {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/courses/search.php';
 		});
@@ -45,7 +46,8 @@ function mainsite_url_rewrite_templates() {
 		});
 	}
 
-	if ( $wp_query->query['pagename'] === 'members/member-list' ) {
+	if ( array_key_exists('pagename', $wp_query->query) AND 
+		 $wp_query->query['pagename'] === 'members/member-list' ) {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/members/member-list.php';
 		});
@@ -80,7 +82,8 @@ function mainsite_courses_rewrites_init() {
 
 function get_latest_courses() {
 	$url = DATA_API_URL.'/courses/latest/?format=json';
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 	
 	$object = json_decode($response);
 	return $object;
@@ -89,7 +92,8 @@ function get_latest_courses() {
 function get_course_detail() {
 	$course_id = get_query_var('course_id');
 	$url = DATA_API_URL."/courses/view/$course_id/?format=json";
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 	
 	return json_decode($response);
 }
@@ -97,7 +101,8 @@ function get_course_detail() {
 function get_provider_detail() {
 	$provider_id = get_query_var('provider_id');
 	$url = DATA_API_URL."/providers/$provider_id/?format=json";
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 
 	return json_decode($response);
 }
@@ -106,7 +111,8 @@ function get_provider_courses() {
 	$provider_id = get_query_var('provider_id');
 	$page = (get_query_var('page')) ? get_query_var('page') : 1;
 	$url = DATA_API_URL."/providers/$provider_id/courses/?page=$page&format=json";
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 
 	return json_decode($response);
 }
@@ -116,7 +122,8 @@ function get_language_courses() {
 	$page = (get_query_var('page')) ? get_query_var('page') : 1;
 
 	$url = DATA_API_URL."/languages/$language_name/courses/?page=$page&format=json";
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 
 	return json_decode($response);
 }
@@ -125,7 +132,8 @@ function get_search_results() {
 	if ( get_query_var('search') ) {
 		$q = get_query_var('search');
 		$url = DATA_API_URL."/courses/search/?q=$q";
-		$response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+		$result = wp_remote_get( $url );
+		$response = wp_remote_retrieve_body( $result );
 		
 		$object = json_decode($response);
 		return array(
@@ -138,7 +146,8 @@ function get_search_results() {
 
 function get_api_results($endpoint) {
 	$url = DATA_API_URL.$endpoint;
-	$response = wp_remote_retrieve_body( wp_remote_get( $url ) );	
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
 
 	return json_decode($response);
 }

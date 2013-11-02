@@ -3,7 +3,7 @@
 <div class="row">
 	<?php if ( have_posts() ) : ?>	
 		<div class="large-3 columns">
-			<?php dynamic_sidebar('sidebar-general'); ?>
+			<?php get_template_part('partials/sidebar', get_post_format()); ?>
 		</div>
 		<div class="large-9 columns">
 			<?php while ( have_posts() ) : the_post(); ?>
