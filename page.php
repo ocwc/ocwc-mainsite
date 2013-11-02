@@ -5,8 +5,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class="large-3 columns">
 			<ul id="toplevel">
-			    <?php wp_list_pages( array('title_li'=>'','include'=>get_post_top_ancestor_id()) ); ?>
-			    <?php wp_list_pages( array('title_li'=>'','depth'=>3,'child_of'=>get_post_top_ancestor_id()) ); ?>
+				<?php get_template_part('partials/sidebar', get_post_format()); ?>
 			</ul>
 		</div>
 		<div class="large-9 columns">
