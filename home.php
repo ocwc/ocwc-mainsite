@@ -51,7 +51,7 @@
 		</div>
 		
 		<div class="large-12 columns ocwc-statistics">
-			<i class="icon-file-text"></i> 256 Modules <i class="icon-bookmark"></i> 200 Universities <i class="icon-user"></i> 5 Billion students <i class="icon-globe"></i> 100 Countries <i class="icon-comments-alt"></i> 22 Languages
+			<i class="icon-file-text"></i> 30&nbsp;000+ Modules <i class="icon-bookmark"></i> 280+ Organizations <i class="icon-globe"></i> 40 Countries <i class="icon-comments-alt"></i> 29 Languages
 		</div>
 	</div>
 </div>
