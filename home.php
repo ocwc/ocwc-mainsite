@@ -6,40 +6,50 @@
 	<div class="row">
 		<div class="large-3 columns">
 			<div class="cta-header">
-				<i class="icon-book"></i>
-				<h1>Learn</h1>
-				<h2>Free courses</h2>
+				<a href="/courses/">
+					<i class="icon-book"></i>
+					<h1>Courses</h1>
+					<h2>Learn</h2>
+				</a>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			<a href="#">+ read more</a>
+			<p>Discover Courses from Institutions around the world</p>
+			<a href="/courses/">+ search courses</a>
 		</div>
 		<div class="large-3 columns">
 			<div class="cta-header">
-				<i class="icon-download-alt"></i>
-				<h1>Create</h1>
-				<h2>Your OER resources</h2>
+				<a href="/about-ocw/">
+					<i class="icon-question-sign"></i>
+					<h1>About</h1>
+					<h2>Open Education</h2>
+				</a>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			<a href="#">+ read more</a>			
+			<p>What is OpenCourseWare and how it empowers Open Education movement</p>
+			<a href="/about-ocw/">+ learn more</a>
 		</div>
 		<div class="large-3 columns">
 			<div class="cta-header">
-				<i class="icon-group"></i>
-				<h1>Collaborate</h1>
-				<h2>Be a member</h2>
+				<a href="/projects/">
+					<i class="icon-group"></i>
+					<h1>Collaborate</h1>
+					<h2>Our Projects</h2>
+				</a>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			<a href="#">+ read more</a>			
+			<p>We host and organize a number of projects and events to help spread the open education movement.</p>
+			<a href="/projects/">+ join us</a>			
 		</div>
+		
 		<div class="large-3 columns">
 			<div class="cta-header">
-				<i class="icon-list-alt"></i>
-				<h1>Donate</h1>
-				<h2>For a couse</h2>
+				<a href="http://conference.ocwconsortium.org/">
+					<i class="icon-globe"></i>
+					<h1>OCWC Global</h1>
+					<h2>Our Annual Event</h2>
+				</a>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
-			<a href="#">+ read more</a>			
+			<p>Join scholars and practioners as we discuss this years theme - Open Education for a Multicultural World.</p>
+			<a href="http://conference.ocwconsortium.org/">+ join us</a>			
 		</div>
+		
 		<div class="large-12 columns ocwc-statistics">
 			<i class="icon-file-text"></i> 256 Modules <i class="icon-bookmark"></i> 200 Universities <i class="icon-user"></i> 5 Billion students <i class="icon-globe"></i> 100 Countries <i class="icon-comments-alt"></i> 22 Languages
 		</div>
