@@ -79,6 +79,42 @@
     </ul>
   </div>
 
+  <div class="large-6 columns" style="clear:left;">
+    <h3>Sidebar</h3>
+    <ul class="sidebar">
+      <li class="page_item page-item-2365 current_page_ancestor current_page_parent"><a href="http://mainsite.fey/about-ocwc/">About OCWC</a></li>
+      <li class="page_item page-item-2396 current_page_item"><a href="http://mainsite.fey/about-ocwc/board-of-directors/">Board of Directors</a>
+      <ul class="children">
+        <li class="page_item page-item-2586"><a href="http://mainsite.fey/about-ocwc/board-of-directors/dr-bakary-diallo/">Dr Bakary Diallo</a></li>
+        <li class="page_item page-item-2576"><a href="http://mainsite.fey/about-ocwc/board-of-directors/haruo-takemura/">Haruo Takemura</a></li>
+        <li class="page_item page-item-2579"><a href="http://mainsite.fey/about-ocwc/board-of-directors/ignasi-labastida/">Ignasi Labastida</a></li>
+        <li class="page_item page-item-2599"><a href="http://mainsite.fey/about-ocwc/board-of-directors/james-glapa-grossklag/">James Glapa-Grossklag</a></li>
+        <li class="page_item page-item-2566"><a href="http://mainsite.fey/about-ocwc/board-of-directors/larry-cooperman/">Larry Cooperman</a></li>
+        <li class="page_item page-item-2569"><a href="http://mainsite.fey/about-ocwc/board-of-directors/lee-wei-i/">Lee Wei-l</a></li>
+        <li class="page_item page-item-2572"><a href="http://mainsite.fey/about-ocwc/board-of-directors/mary-lee/">Mary Lee</a></li>
+        <li class="page_item page-item-2597"><a href="http://mainsite.fey/about-ocwc/board-of-directors/mary-lou-forward/">Mary Lou Forward</a></li>
+        <li class="page_item page-item-2583"><a href="http://mainsite.fey/about-ocwc/board-of-directors/murilo-matos-mendonca/">Murilo Matos Mendonca</a></li>
+        <li class="page_item page-item-2593"><a href="http://mainsite.fey/about-ocwc/board-of-directors/sorel-reisman/">Sorel Reisman</a></li>
+        <li class="page_item page-item-2589"><a href="http://mainsite.fey/about-ocwc/board-of-directors/willem-van-valkenburg/">Willem Van Valkenburg</a></li>
+      </ul>
+      </li>
+      <li class="page_item page-item-2441"><a href="http://mainsite.fey/about-ocwc/committees/">Committees</a></li>
+      <li class="page_item page-item-2399"><a href="http://mainsite.fey/about-ocwc/member-listing/">Member listing</a></li>
+      <li class="page_item page-item-2393"><a href="http://mainsite.fey/about-ocwc/staff/">Staff</a>
+      <ul class="children">
+        <li class="page_item page-item-2552"><a href="http://mainsite.fey/about-ocwc/staff/igor-lesko/">Igor Lesko</a></li>
+        <li class="page_item page-item-2558"><a href="http://mainsite.fey/about-ocwc/staff/jure-cuhalev/">Jure Cuhalev</a></li>
+        <li class="page_item page-item-2549"><a href="http://mainsite.fey/about-ocwc/staff/marcela-morales/">Marcela Morales</a></li>
+        <li class="page_item page-item-2539"><a href="http://mainsite.fey/about-ocwc/staff/mary-lou-forward/">Mary Lou Forward</a></li>
+        <li class="page_item page-item-2542"><a href="http://mainsite.fey/about-ocwc/staff/meena-hwang/">Meena Hwang</a></li>
+        <li class="page_item page-item-2561"><a href="http://mainsite.fey/about-ocwc/staff/noriaki-castillo/">Noriaki Castillo</a></li>
+        <li class="page_item page-item-2546"><a href="http://mainsite.fey/about-ocwc/staff/terri-bays/">Terri Bays</a></li>
+        <li class="page_item page-item-2555"><a href="http://mainsite.fey/about-ocwc/staff/una-daly/">Una Daly</a></li>
+      </ul>
+      </li>
+    </ul>
+  </div>  
+
 </div>
 <div class="row">
 	<div class="large-12 columns">

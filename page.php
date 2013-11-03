@@ -9,7 +9,8 @@
 		</div>
 
 		<div class="large-3 columns">
-			<ul id="toplevel">
+			<p class="sidebar-title">Navigation</p>
+			<ul class="sidebar">
 				<?php get_template_part('partials/sidebar', get_post_type()); ?>
 			</ul>
 		</div>

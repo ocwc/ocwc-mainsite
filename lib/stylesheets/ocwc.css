@@ -63,6 +63,12 @@ h4 { font-size: 1.125em; }
 h5 { font-size: 1.025em; }
 h6 { font-size: 1em; }
 
+h1.entry-title {
+	color: #547D9B;
+	border-bottom: 1px solid #547D9B;
+	font-size: 16px;
+}
+
 /* Custom Tables */
 .tableblue {
 	border-left-width: 3px;
@@ -212,6 +218,40 @@ table tfoot {
 	background-color: #849bad;
 }
 
+/* Sidebar */
+
+.sidebar-title {
+	color: #547D9B;
+	border-bottom: 1px solid #547D9B;
+	font-size: 16px;
+}
+
+.sidebar, .sidebar li {
+	list-style: none;
+}
+
+.sidebar .current_page_item .children,
+.sidebar .current_page_parent .children {
+	display: block;
+}
+
+.sidebar .children {
+	display: none;
+}
+
+.sidebar a {
+	color: #5A5A5A;
+	font-size: 14px;
+}
+
+.sidebar a:hover {
+	color: #446a88;
+}
+
+.sidebar .current_page_item > a {
+	font-weight: 700;
+}
+
 /* Navigation Menu1 */
 #toplevel ul
 {
@@ -256,10 +296,18 @@ table tfoot {
 	padding-bottom: 0.3125em;
 	padding-left: 0.025em;
 }
+
 #toplevel .children {
   padding-left: .5em;
   margin-left: 0;
- }
+
+  display: none;
+}
+
+#toplevel .current_page_item .children {
+	display: block;
+}
+
 #toplevel .children li.current_page_item {
 	clear: left;
 	font-size: .95em;
@@ -269,9 +317,8 @@ table tfoot {
 	padding-right: 0.625em;
 	padding-bottom: 0.3125em;
 	padding-left: 0.025em;
-
-
 }
+
 /* Navigation Menu2 */
 #toplevel2 ul
 {
