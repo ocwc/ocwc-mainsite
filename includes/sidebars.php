@@ -7,7 +7,7 @@ function register_mainsite_sidebars() {
 	   'description' => __( 'General sidebar that is used on most inside pages', 'mainsite' ),
 	   'before_widget' => '<div class="large-12 columns"><aside id="%1$s" class="widget %2$s">',
 	   'after_widget' => "</aside></div>",
-	   'before_title' => '<h3 class="footer-title">',
+	   'before_title' => '<h3 class="sidebar-title">',
 	   'after_title' => '</h3>',
 	) );
 
@@ -15,9 +15,9 @@ function register_mainsite_sidebars() {
 	   'name' => __( 'Courses sidebar'),
 	   'id' => 'sidebar-courses',
 	   'description' => __( 'Courses sidebar', 'mainsite' ),
-	   'before_widget' => '<div class="large-12 columns"><aside id="%1$s" class="widget %2$s">',
+	   'before_widget' => '<div class="large-12 columns"><aside id="%1$s" class="widget %2$s sidebar">',
 	   'after_widget' => "</aside></div>",
-	   'before_title' => '<h3 class="footer-title">',
+	   'before_title' => '<h3 class="sidebar-title">',
 	   'after_title' => '</h3>',
 	) );
 
@@ -37,7 +37,7 @@ function register_mainsite_sidebars() {
 	   'description' => __( 'Members sidebar', 'mainsite' ),
 	   'before_widget' => '<div class="large-3 columns"><aside id="%1$s" class="widget %2$s">',
 	   'after_widget' => "</aside></div>",
-	   'before_title' => '<h3 class="footer-title">',
+	   'before_title' => '<h3 class="sidebar-title">',
 	   'after_title' => '</h3>',
 	) );
 

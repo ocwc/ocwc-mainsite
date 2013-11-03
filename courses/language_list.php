@@ -6,7 +6,7 @@
 	$languages = get_api_results("/languages/");
 ?>
 <?php get_header(); ?>
-<div class="row">
+<div class="row main-wrapper">
 	<div class="large-3 columns">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>

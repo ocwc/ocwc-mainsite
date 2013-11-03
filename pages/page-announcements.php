@@ -6,7 +6,7 @@
 	
 <?php get_header() ?>
 
-<div class="row">
+<div class="row main-wrapper">
 	<?php if ( have_posts() ) : ?>	
 		<div class="large-3 columns">
 			<?php get_template_part('partials/sidebar', get_post_type()); ?>

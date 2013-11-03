@@ -2,7 +2,7 @@
 	$language_courses = get_language_courses();
 ?>
 <?php get_header(); ?>
-<div class="row">
+<div class="row main-wrapper">
 	<div class="large-3 columns">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>

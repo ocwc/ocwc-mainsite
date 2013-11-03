@@ -7,14 +7,14 @@
 	// var_dump($member_list);
 ?>
 <?php get_header(); ?>
-	<div class="row">
+	<div class="row main-wrapper">
 		<div class="large-3 columns">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
 		<div class="large-9 columns">
 			
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part('partials/content', get_post_format()); ?>
+				<?php get_template_part('partials/content', get_post_type()); ?>
 			<?php endwhile; ?>
 
 			<p><i class="icon-star"></i> = Sustaining Member</p>			

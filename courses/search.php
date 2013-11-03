@@ -1,7 +1,7 @@
 <?php
 	$results = get_search_results();
 ?><?php get_header(); ?>
-<div class="row">
+<div class="row main-wrapper">
 	<div class="large-3 columns">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>

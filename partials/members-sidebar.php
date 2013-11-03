@@ -1,6 +1,6 @@
-<h2>Member Lists</h2>
+<p class="sidebar-title">Member Lists</p>
 
-<ul class="country-list">
+<ul class="country-list sidebar">
 	<?php $country_list = get_member_country_list(); ?>
 	<li class="all-members"><a href="/members/all/">All Members</a></li>
 	<li><h2>Countries/Regions</h2></li>

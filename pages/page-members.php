@@ -27,7 +27,7 @@ add_action('wp_head', 'mainsite_members_custom_head');
 ?>
 
 <?php get_header(); ?>
-<div class="row">
+<div class="row main-wrapper">
 	<div class="large-12 columns">
 		<div id="map"></div>
 	</div>
@@ -37,9 +37,11 @@ add_action('wp_head', 'mainsite_members_custom_head');
 
 	</div>
 	<?php if ( have_posts() ) : ?>
+		<div class="large-9 columns">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part('partials/content', get_post_format()); ?>
+			<?php get_template_part('partials/content', get_post_type()); ?>
 		<?php endwhile; ?>
+		</div>
 	<?php endif; ?>
 </div>
 

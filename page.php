@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="row">
+<div class="row main-wrapper">
 	<?php if ( have_posts() ) : ?>	
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -9,10 +9,7 @@
 		</div>
 
 		<div class="large-3 columns">
-			<p class="sidebar-title">Navigation</p>
-			<ul class="sidebar">
-				<?php get_template_part('partials/sidebar', get_post_type()); ?>
-			</ul>
+			<?php get_template_part('partials/sidebar', get_post_type()); ?>
 		</div>
 		<div class="large-9 columns">
 				<?php get_template_part('partials/content', get_post_type()); ?>

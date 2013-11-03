@@ -63,7 +63,9 @@ h4 { font-size: 1.125em; }
 h5 { font-size: 1.025em; }
 h6 { font-size: 1em; }
 
-h1.entry-title {
+h1.entry-title,
+.sidebar-title
+ {
 	color: #547D9B;
 	border-bottom: 1px solid #547D9B;
 	font-size: 16px;
@@ -219,12 +221,6 @@ table tfoot {
 }
 
 /* Sidebar */
-
-.sidebar-title {
-	color: #547D9B;
-	border-bottom: 1px solid #547D9B;
-	font-size: 16px;
-}
 
 .sidebar, .sidebar li {
 	list-style: none;

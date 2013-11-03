@@ -7,15 +7,15 @@
 	<?php if ( have_posts() ) : ?>	
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( post_password_required( $post ) ) : ?>
-				<div class="row">
+				<div class="row main-wrapper">
 					<div class="large-6 columns">
-						<?php get_template_part('partials/content', get_post_format()); ?>
+						<?php get_template_part('partials/content', get_post_type()); ?>
 					</div>
 				</div>
 			<?php else : ?>
-				<div class="row">
+				<div class="row main-wrapper">
 					<div class="large-6 columns">
-					<?php get_template_part('partials/content', get_post_format()); ?>
+					<?php get_template_part('partials/content', get_post_type()); ?>
 					</div>
 				</div>
 				<div class="row">
