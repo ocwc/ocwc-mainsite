@@ -197,10 +197,12 @@ $slideshow-height: emCalc(420px);
 
     li {
         list-style-type: none;
+        line-height: 1.2;
+        padding-bottom: 5px;
 
         a {
             font-size: emCalc(12px);
-            line-height: emCalc(14px);
+            // line-height: emCalc(14px);
             color: black;
         }
         a:hover { color: $blue; }

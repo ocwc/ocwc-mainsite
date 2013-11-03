@@ -76,8 +76,8 @@
 		<ul>
 			<?php $posts = get_newslink_posts(); ?>
 			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-				<li><span class="date"><?php the_time('F j, Y'); ?></span> <a class="link" href="<?php the_field('newslink_url'); ?>" target="_blank"><?php the_field('newslink_alias'); ?></a>
-				<p><?php echo $post->post_title; ?></p>
+				<li>
+					<a href="<?php the_field('newslink_url'); ?>" target="_blank"><?php echo $post->post_title; ?></a>
 				</li>
 			<?php endwhile; endif; ?>
 		</ul>
