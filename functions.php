@@ -46,7 +46,8 @@ function get_slideshow_posts() {
 	$query = new WP_Query( array( 
 				'post_type' => 'slideshow', 
 				'ignore_sticky_posts' => 1,
-				'posts_per_page' => 3
+				'posts_per_page' => 5,
+				'orderby' => 'rand'
 			));
 
 	return $query;
