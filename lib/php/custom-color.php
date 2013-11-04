@@ -25,21 +25,21 @@ function hex2rgba_str($hex) {
 	return "rgba($rgb[0], $rgb[1], $rgb[2], 0)";
 }
 
-function get_linear_gradient($hex) {
+function get_linear_gradient($hex, $first_stop = "30%", $second_stop = "70%", $right_offset = "0%") {
 	$rgba = hex2rgba_str($hex);
 	$style = '';
 
-  	$style .= "background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $hex), color-stop(30%, rgba(151, 78, 58, 0)), color-stop(70%, rgba(151, 78, 58, 0)), color-stop(100%, $hex));";
-  	$style .= " background-image: -webkit-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
-  	$style .= " background-image: -moz-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
-  	$style .= " background-image: -o-linear-gradient(left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
-  	$style .= "background-image: linear-gradient(to left, $hex 0%, $rgba 20%, $rgba 80%, $hex 100%);";
+  	// $style .= "background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, $hex), color-stop($first_stop, rgba(151, 78, 58, 0)), color-stop($second_stop, rgba(151, 78, 58, 0)), color-stop(100%, $hex));";
+  	$style .= " background-image: -webkit-linear-gradient(left, $hex $right_offset, $rgba $first_stop, $rgba $second_stop, $hex 100%);";
+  	$style .= "    background-image: -moz-linear-gradient(left, $hex $right_offset, $rgba $first_stop, $rgba $second_stop, $hex 100%);";
+  	$style .= "      background-image: -o-linear-gradient(left, $hex $right_offset, $rgba $first_stop, $rgba $second_stop, $hex 100%);";
+  	$style .= "      background-image: linear-gradient(to left, $hex $right_offset, $rgba $first_stop, $rgba $second_stop, $hex 100%);";
 
   return $style;
 }
 
-function the_linear_gradient($hex) {
-	echo get_linear_gradient($hex);
+function the_linear_gradient($hex, $first_stop = "30%", $second_stop = "70%", $right_offset = "0%") {
+	echo get_linear_gradient($hex, $first_stop, $second_stop, $right_offset);
 }
 
 function get_box_background($hex, $transparency) {

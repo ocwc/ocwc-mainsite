@@ -96,11 +96,17 @@ function mainsite_get_closest_header_image() {
 		$ancestors = get_post_ancestors($post->ID);
 		foreach ($ancestors as $id => $ancestor) {
 			$header_image = get_field('header_image', $ancestor);
-			if ($header_image) { return $header_image; }
+			if ($header_image) { 
+				return array(
+					"image" => $header_image,
+					"post_id" => $ancestor
+				);
+			}
 		}
 	}
 
-	return $header_image;
+	return array("image" => $header_image,
+				 "post_id" => $post->ID);
 }
 
 /* styling ninja forms */

@@ -223,3 +223,34 @@ $slideshow-height: emCalc(420px);
     .date { float: left;  }
     .link { float: right; }
 }
+
+/* Header image */
+.header-image-wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    height: 130px;
+
+    .page-title {
+        color: #FFFFFF;
+        font-size: 32px;
+        position: absolute;
+        right: 15px;
+        z-index: 20;
+        top: 50px;
+    }
+
+    .overlay {
+        z-index: 10;
+        height: 130px;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+    }
+
+    img {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+    }
+}

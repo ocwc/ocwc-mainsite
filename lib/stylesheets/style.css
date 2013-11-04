@@ -225,3 +225,34 @@
 .in-the-news .link {
   float: right;
 }
+
+/* Header image */
+/* line 228, ../sass/style.scss */
+.header-image-wrapper {
+  margin-bottom: 30px;
+  position: relative;
+  height: 130px;
+}
+/* line 233, ../sass/style.scss */
+.header-image-wrapper .page-title {
+  color: #FFFFFF;
+  font-size: 32px;
+  position: absolute;
+  right: 15px;
+  z-index: 20;
+  top: 50px;
+}
+/* line 242, ../sass/style.scss */
+.header-image-wrapper .overlay {
+  z-index: 10;
+  height: 130px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+/* line 251, ../sass/style.scss */
+.header-image-wrapper img {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+}
