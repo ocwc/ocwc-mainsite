@@ -489,6 +489,10 @@ textarea, input, .uneditable-input {
 
 }
 
+/* Header image */
+.header-image-wrapper {
+	margin-bottom: 30px;
+}
 
 /* Members pages  */
 
