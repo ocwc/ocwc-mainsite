@@ -24,7 +24,7 @@ function mainsite_init() {
 	register_mainsite_sidebars();
 	
 	add_image_size( 'slideshow-image-large', 1050, 420, true);
-	add_image_size( 'header-image', 1080, 160, true);
+	add_image_size( 'header-image', 1080, 130, true);
 }
 add_action( 'init', 'mainsite_init' );
 
