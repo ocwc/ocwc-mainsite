@@ -3,7 +3,7 @@
 	$slideshow_posts = get_slideshow_posts(); 
 ?>
 
-<div class="rslides-wrapper">
+<div class="rslides-wrapper hide-for-small">
 	<div class="rslides">
 	<?php while ( $slideshow_posts->have_posts() ) : $slideshow_posts->the_post(); ?>
 		<?php if ( get_field('slideshow_background') AND strlen(get_field('slideshow_description')) > 10 ) : ?>

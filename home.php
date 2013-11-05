@@ -2,7 +2,7 @@
 
 <?php get_template_part('partials/home_slideshow'); ?>
 
-<div id="call-to-action">
+<div id="call-to-action" class="hide-for-small">
 	<div class="row">
 		<div class="large-3 columns">
 			<div class="cta-header">

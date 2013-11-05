@@ -25,16 +25,16 @@
 			}
 			</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        
 		</div>
-		<div class="large-2 columns member-portal-wrapper">
+		<div class="large-2 columns hide-for-small member-portal-wrapper">
 			<a href="http://members.ocwconsortium.org" class="member-portal">Members portal</a>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="large-4 columns">
+		<div class="large-4 small-6 columns">
 			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="OpenCourseWare Consortium logo" /></a>
 		</div>
-		<div class="large-4 columns">
+		<div class="large-4 small-12 columns">
 			<form id="header-search" method="GET" action="/courses/search/">
 				<input placeholder="Search for open courses ..." name="search">
 				<i class="icon-search header-search-icon"></i>
