@@ -173,8 +173,13 @@ table tfoot {
   color: #788288;
   text-transform: uppercase;
   font-family: Metrophobic, sans-serif;
- 
+  line-height: 41px;
+
+  display: inline-block;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
+
 #menu-navigation a:hover {
   color: white;
 }
@@ -182,11 +187,8 @@ table tfoot {
 	float: left;
 	list-style-type: none;
 	position: relative;
-	padding-top: 0.5em;
-	padding-right: 1.5em;
-	padding-bottom: 0.5em;
-	padding-left: 1.5em;
 }
+
 #menu-navigation hover,
 #menu-navigation li:hover {
 	background-color: #cecece;
@@ -205,17 +207,19 @@ table tfoot {
   z-index: 100;
 }
 #menu-navigation .sub-menu a {
-	color: white
+	color: white;
+	line-height: 31px;
 }
 
 #menu-navigation .sub-menu li {
   clear: left;
-  padding: 0.3125em 0.625em;
+  padding: 0;
   width: 300px;
   font-size: .9em;
   color: white;
   background-color: #cecece;
 }
+
 #menu-navigation .sub-menu li:hover {
 	background-color: #849bad;
 }
