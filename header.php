@@ -18,15 +18,15 @@
 <body <?php body_class(); ?>>
 	
 	<div class="row" id="top-nav">
-		<div class="large-2 push-7 columns">
+		<div class="large-2 columns">
 			<div id="google_translate_element"></div><script type="text/javascript">
 			function googleTranslateElementInit() {
 			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
 			}
 			</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        
 		</div>
-		<div class="large-3 columns">
-			<a href="#">MEMBER LOGIN</a> | <a href="#">HELP</a>
+		<div class="large-2 columns member-portal-wrapper">
+			<a href="http://members.ocwconsortium.org" class="member-portal">Members portal</a>
 		</div>
 	</div>
 
@@ -36,9 +36,9 @@
 		</div>
 		<div class="large-4 columns">
 			<form id="header-search" method="GET" action="/courses/search/">
-				<input placeholder="Search for courses and site content" name="search">
+				<input placeholder="Search for open courses ..." name="search">
+				<i class="icon-search header-search-icon"></i>
 			</form>
-			<!-- <a href="#">ADVANCED SEARCH</a> -->
 		</div>
 	</div>
 	<?php if (!is_page('styles') ) : ?>

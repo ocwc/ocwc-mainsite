@@ -20,20 +20,46 @@ $white: #FFFFFF;
 
 /* general styles */
 
+#top-nav {
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+
+.member-portal-wrapper {
+  text-align: right;
+}
+
+.member-portal {
+  text-transform: uppercase;
+  // font-size: 16px;
+  line-height: 24px;
+}
+
 #header-search {
     border-radius: 5px;
     border: 1px solid $light-grey;
+    margin-top: 5px;
+    position: relative;
+
     input {
         border: none;
         width: 95%;
-        height: emCalc(40px);
+        height: emCalc(35px);
         margin: 0 emCalc(10px);
         padding: 0 emCalc(10px);
+    }
+
+    .header-search-icon {
+      float: right;
+      position: absolute;
+      font-size: 16px;
+      top: 9px;
+      right: 8px;
     }
 }
 
 #google_translate_element {
-    height: 24px; /* prevents page reflow on load */
+    height: 20px; /* prevents page reflow on load */
 }
 
 .rslides-wrapper {
