@@ -1,0 +1,1 @@
+<li><a href="<?php the_field('newslink_url'); ?>" target="_blank"><?php the_title(); ?></li>

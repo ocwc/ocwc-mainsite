@@ -1,6 +1,6 @@
 <?php
 /*
-	Template name: Announcements page
+	Template name: In The News page
 */
 ?>
 	
@@ -14,20 +14,17 @@
 		</div>
 		<div class="large-9 columns">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php //get_template_part('partials/content', get_post_type()); ?>
-			<?php endwhile; ?>
-
-			<?php $latest_announcments = new WP_Query(array(
-														'posts_per_page' => 5,
-														'post_type' => 'post'
-										));
-			?>
-			<?php while ( $latest_announcments->have_posts() ) : $latest_announcments->the_post(); ?>
 				<?php get_template_part('partials/content', get_post_type()); ?>
 			<?php endwhile; ?>
 
-			<h1>Announcements Archives</h1>
-			<?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 3 ) ); ?>
+			<?php $latest_newslink = new WP_Query(array(
+														'posts_per_page' => 30,
+														'post_type' => 'newslink'
+										));
+			?>
+			<?php while ( $latest_newslink->have_posts() ) : $latest_newslink->the_post(); ?>
+				<?php get_template_part('partials/content', get_post_type()); ?>
+			<?php endwhile; ?>
 		</div>
 	<?php else : ?>
 		<h1>404 Not found</h1>
