@@ -15,13 +15,23 @@
 				</div>
 			</div>
 		<?php elseif ( get_field('slideshow_background') ) : ?>
-			<div class="slideshow" style="background-color: <?php the_field('slideshow_background'); ?>;">
-				<div class="row">
-					<?php if ( get_field('slideshow_image') ) : ?>
-						<li data-attr="2" class="slide"><a href="<?php the_field('slideshow_url'); ?>"><div class="overlay" style="<?php the_linear_gradient(get_field('slideshow_background')); ?>"></div></a><img src="<?php echo get_field('slideshow_image')['sizes']['slideshow-image-large']; ?>" /></li>
-					<?php endif; ?>
+			<?php if ( get_field('slideshow_has_gradient') ) : ?>
+				<div class="slideshow" style="background-color: <?php the_field('slideshow_background'); ?>;">
+					<div class="row">
+						<?php if ( get_field('slideshow_image') ) : ?>
+							<li data-attr="2" class="slide"><a href="<?php the_field('slideshow_url'); ?>"><div class="overlay" style="<?php the_linear_gradient(get_field('slideshow_background')); ?>"></div></a><img src="<?php echo get_field('slideshow_image')['sizes']['slideshow-image-large']; ?>" /></li>
+						<?php endif; ?>
+					</div>
 				</div>
-			</div>
+			<?php else : ?>
+				<div class="slideshow" style="background-color: <?php the_field('slideshow_background'); ?>;">
+					<div class="row">
+						<?php if ( get_field('slideshow_image') ) : ?>
+							<li data-attr="2" class="slide"><a href="<?php the_field('slideshow_url'); ?>"><img src="<?php echo get_field('slideshow_image')['sizes']['slideshow-image-large']; ?>" /></a></li>
+						<?php endif; ?>
+					</div>
+				</div>
+			<?php endif; ?>
 		<?php else : ?>
 			<div class="slideshow">
 				<div class="row">
