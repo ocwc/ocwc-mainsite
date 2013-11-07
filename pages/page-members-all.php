@@ -24,7 +24,7 @@
 					<h2>Institutions of Higher Education</h2>
 				<?php foreach ($member_list->{'Institutions of Higher Education'} as $member) : ?>
 					<li>
-						<a href="#">
+						<a href="/members/view/<?php echo $member->id; ?>/">
 							<?php if ($member->membership_status === 'Sustaining' ) : ?><i class="icon-star"></i><?php endif; ?>
 							<?php echo $member->name; ?>
 						</a>
@@ -38,7 +38,7 @@
 					<h2><?php echo $key; ?></h2>
 					<?php foreach ($member_list->$key as $member) : ?>
 						<li>
-							<a href="#">
+							<a href="/members/view/<?php echo $member->id; ?>/">
 								<?php if ($member->membership_status === 'Sustaining' ) : ?><i class="icon-star"></i><?php endif; ?>
 								<?php echo $member->name; ?>
 							</a>

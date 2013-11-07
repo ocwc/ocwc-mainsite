@@ -6,8 +6,10 @@ function mainsite_courses_query_vars($query_vars){
 	/* courses */
 	$query_vars[] = 'course_id';
 	$query_vars[] = 'provider_id';
+	$query_vars[] = 'member_id';
 	$query_vars[] = 'language_name';
 	$query_vars[] = 'search';
+
 
 	/* members */
 	$query_vars[] = 'members_country_name';
@@ -40,6 +42,12 @@ function mainsite_url_rewrite_templates() {
 		});
 	}
 
+	if ( get_query_var( 'member_id' ) ) {
+		add_filter( 'template_include', function() {
+			return get_template_directory() . '/members/member_detail.php';
+		});
+	}	
+
 	if ( get_query_var( 'members_country_name' ) ) {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/members/country_list.php';
@@ -55,6 +63,7 @@ function mainsite_url_rewrite_templates() {
 }
 
 function mainsite_courses_rewrites_init() {
+	/* don't forget to register new query_var on top */
     add_rewrite_rule(
         'courses/view/(\w+)/?$',
         'index.php?course_id=$matches[1]',
@@ -71,7 +80,10 @@ function mainsite_courses_rewrites_init() {
     	'courses/search/$',
     	'index.php?course_search=1',
     	'top' );
-
+    add_rewrite_rule(
+        'members/view/(\w+)/?$',
+        'index.php?member_id=$matches[1]',
+    	'top' );    
     add_rewrite_rule(
     	'members/country/([\w|\W]+)/?$',
     	'index.php?members_country_name=$matches[1]',

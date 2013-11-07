@@ -15,7 +15,7 @@
 			<table>
 			<?php foreach ($members as $member) : ?>
 				<tr>
-					<td class="tableblue"><?php echo $member->name; ?></td>
+					<td class="tableblue"><a href="/members/view/<?php echo $member->id; ?>/"><?php echo $member->name; ?></a></td>
 					<td><?php echo $member->membership_type; ?></td>
 					<td><?php echo $member->associate_consortium; ?></td>
 				</tr>

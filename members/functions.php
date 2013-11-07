@@ -23,4 +23,14 @@ function get_member_list() {
 	return json_decode($response);	
 }
 
+function get_member_detail() {
+	$member_id = get_query_var('member_id');
+	
+	$url = MEMBERS_API_URL."/organization/view/$member_id/?format=json";
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
+
+	return json_decode($response);
+}
+
 ?>
