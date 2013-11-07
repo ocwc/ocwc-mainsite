@@ -8,6 +8,7 @@
 ?>
 <?php get_header(); ?>
 	<div class="row main-wrapper">
+		<?php get_template_part('partials/header_image', get_post_type()); ?>
 		<div class="large-3 columns">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
