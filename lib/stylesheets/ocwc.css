@@ -48,6 +48,11 @@ blockquote cite {
   color:#468847;
 }
 
+ul {
+	list-style-position: inside;
+	font-size: .88em;
+}
+
 /* Header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: Metrophobic, sans-ser1if;
