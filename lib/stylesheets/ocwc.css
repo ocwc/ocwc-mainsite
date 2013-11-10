@@ -235,8 +235,8 @@ table tfoot {
 	list-style: none;
 }
 
-.sidebar .current_page_item .children,
-.sidebar .current_page_parent .children {
+.sidebar .current_page_item > .children,
+.sidebar .current_page_parent > .children {
 	display: block;
 }
 
