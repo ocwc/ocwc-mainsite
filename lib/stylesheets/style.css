@@ -317,8 +317,9 @@
   right: 15px;
   z-index: 20;
   top: 50px;
+  text-shadow: 1px 1px 1px #757575;
 }
-/* line 312, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 .header-image-wrapper .overlay {
   z-index: 10;
   height: 130px;
@@ -326,7 +327,7 @@
   position: absolute;
   top: 0;
 }
-/* line 321, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .header-image-wrapper img {
   z-index: 5;
   position: absolute;
