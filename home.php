@@ -28,7 +28,7 @@
 		</div>
 		<div class="large-3 columns">
 			<div class="cta-header">
-				<a href="/projects/">
+				<a href="/resources/webinars/">
 					<i class="icon-group"></i>
 					<h1>Learn</h1>
 					<h2>Our Webinars</h2>
