@@ -30,12 +30,12 @@
 			<div class="cta-header">
 				<a href="/projects/">
 					<i class="icon-group"></i>
-					<h1>Collaborate</h1>
-					<h2>Our Projects</h2>
+					<h1>Learn</h1>
+					<h2>Our Webinars</h2>
 				</a>
 			</div>
-			<p>We host and organize a number of projects and events to help spread the open education movement.</p>
-			<a href="/projects/">+ join us</a>			
+			<p>We host and organize online webinars featuring leaders in the open education movement.</p>
+			<a href="/resources/webinars/">+ watch and learn</a>			
 		</div>
 		
 		<div class="large-3 columns">
