@@ -5,8 +5,8 @@ function register_mainsite_sidebars() {
 	   'name' => __( 'General sidebar'),
 	   'id' => 'sidebar-general',
 	   'description' => __( 'General sidebar that is used on most inside pages', 'mainsite' ),
-	   'before_widget' => '<div class="large-12 columns"><aside id="%1$s" class="widget %2$s">',
-	   'after_widget' => "</aside></div>",
+	   'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	   'after_widget' => "</aside>",
 	   'before_title' => '<h3 class="sidebar-title">',
 	   'after_title' => '</h3>',
 	) );
@@ -15,8 +15,8 @@ function register_mainsite_sidebars() {
 	   'name' => __( 'Courses sidebar'),
 	   'id' => 'sidebar-courses',
 	   'description' => __( 'Courses sidebar', 'mainsite' ),
-	   'before_widget' => '<div class="large-12 columns"><aside id="%1$s" class="widget %2$s sidebar">',
-	   'after_widget' => "</aside></div>",
+	   'before_widget' => '<aside id="%1$s" class="widget %2$s sidebar">',
+	   'after_widget' => "</aside>",
 	   'before_title' => '<h3 class="sidebar-title">',
 	   'after_title' => '</h3>',
 	) );

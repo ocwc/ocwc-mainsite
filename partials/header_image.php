@@ -10,7 +10,7 @@
 ?>
 
 <?php if ($header_image) : ?>
-<div class="header-image-wrapper" style="background: <?php echo the_field('header_image_background_color', $post_id); ?>">
+<div class="header-image-wrapper hide-for-small" style="background: <?php echo the_field('header_image_background_color', $post_id); ?>">
 	<div class="row">
 		<div class="large-12 columns">
 			<span class="page-title"><?php the_title(); ?></span>

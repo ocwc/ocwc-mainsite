@@ -9,6 +9,7 @@
 <div class="row main-wrapper">
 	<?php get_template_part('partials/header_image', get_post_type()); ?>
 	<div class="large-3 columns">
+		<p class="sidebar-title">Navigation</p>
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
 	<?php if ( have_posts() ) : ?>	
