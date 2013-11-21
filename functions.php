@@ -3,6 +3,7 @@
 require('includes/custom_post_types.php');
 require('includes/widgets.php');
 require('includes/sidebars.php');
+require('includes/images.php');
 require('courses/functions.php');
 require('members/functions.php');
 
