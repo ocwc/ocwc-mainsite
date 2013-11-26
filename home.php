@@ -9,7 +9,7 @@
 				<a href="/courses/">
 					<i class="icon-book"></i>
 					<h1>Courses</h1>
-					<h2>Learn</h2>
+					<h2>Study</h2>
 				</a>
 			</div>
 			<p>Discover Courses from Institutions around the world</p>
