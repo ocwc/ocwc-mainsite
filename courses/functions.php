@@ -142,7 +142,7 @@ function get_language_courses() {
 
 function get_search_results() {
 	if ( get_query_var('search') ) {
-		$q = get_query_var('search');
+		$q = urlencode(get_query_var('search'));
 		$url = DATA_API_URL."/courses/search/?q=$q";
 		$result = wp_remote_get( $url );
 		$response = wp_remote_retrieve_body( $result );
