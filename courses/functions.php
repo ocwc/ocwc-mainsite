@@ -35,6 +35,11 @@ function mainsite_url_rewrite_templates() {
 			return get_template_directory() . '/courses/course_language_list.php';
 		});
 	}
+	if ( get_query_var( 'category_name' ) ) {
+		add_filter( 'template_include', function() {
+			return get_template_directory() . '/courses/course_category_list.php';
+		});
+	}
 	if ( array_key_exists('pagename', $wp_query->query) AND 
 		 $wp_query->query['pagename'] === 'courses/search' ) {
 		add_filter( 'template_include', function() {
@@ -71,6 +76,10 @@ function mainsite_courses_rewrites_init() {
     add_rewrite_rule(
         'courses/language/([\w|\W]+)/?$',
         'index.php?language_name=$matches[1]',
+    	'top' );
+    add_rewrite_rule(
+        'courses/category/([\w|\W]+)/?$',
+        'index.php?category_name=$matches[1]',
     	'top' );
     add_rewrite_rule(
         'providers/(\w+)/?$',
@@ -138,6 +147,17 @@ function get_language_courses() {
 	$response = wp_remote_retrieve_body( $result );
 
 	return json_decode($response);
+}
+
+function get_category_courses() {
+	$category_name = get_query_var('category_name');
+	$page = (get_query_var('page')) ? get_query_var('page') : 1;
+
+	$url = DATA_API_URL."/categories/$category_name/?page=$page&format=json";
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
+
+	return json_decode($response);	
 }
 
 function get_search_results() {

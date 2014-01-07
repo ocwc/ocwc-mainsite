@@ -15,7 +15,6 @@
 			<strong>Link:</strong> <a href="<?php echo $course->linkurl; ?>"><?php echo $course->linkurl; ?></a><br />
 			<strong>Provider:</strong> <a href="/providers/<?php echo $course->provider; ?>/"><?php echo $course->provider_name; ?></a>
 		</p>
-		</div>
 	</div>
 </div>
 <?php get_footer(); ?>
