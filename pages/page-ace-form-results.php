@@ -4,6 +4,14 @@
 */
 ?>
 <?php get_header(); ?>
+	<style type="text/css">
+		.field_id-21, 
+		.field_id-22, 
+		.field_id-23 { 
+			display: none; 
+		}
+
+	</style>
 	<?php if ( have_posts() ) : ?>	
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( post_password_required( $post ) ) : ?>
@@ -36,9 +44,13 @@
 							endforeach;
 						?>
 						<p>
-
+						<ul>
 						<?php foreach ($fields as $field_id => $field) : ?>
+							<span class="field_id-<?php echo $field_id ?>">
 							<?php $user_value = $user_values[$field['id']]; ?>
+							<?php if ($user_value == '') : ?>
+								<?php continue; ?>
+							<?php endif; ?>
 							<?php if ($user_value AND $field['type'] === '_upload') : ?>
 								<?php $user_value = reset($user_value); ?>
 								<strong><?php echo $field['data']['label']; ?>:</strong> <a href="<?php echo $user_value['file_url']; ?>" target="_blank"><?php echo $user_value['user_file_name']; ?></a> <br />
@@ -47,9 +59,24 @@
 							<?php elseif ($field['type'] === '_submit' ) :  ?>
 								<?php // do nothing ?>
 							<?php else : ?>
-								<strong><?php echo $field['data']['label']; ?>:</strong> <?php echo $user_value; ?> <br />
+								<strong><?php echo $field['data']['label']; ?>:</strong> 
+									<?php if (substr($user_value, 0, 4) === 'http') : ?>
+										<?php if (strlen($user_value) > 69) : ?>
+											<br /><a href="<?php echo $user_value; ?>"><?php echo (substr($user_value, 0, 65)); ?>[..]</a><br />
+										<?php else : ?>	
+											<br /><a href="<?php echo $user_value; ?>"><?php echo $user_value; ?></a><br />
+										<?php endif ;?>
+									<?php else : ?>
+										<?php if (is_string($user_value)) : ?>
+											<?php echo nl2br($user_value); ?> <br />
+										<?php else : ?>
+											<br />
+										<?php endif; ?>
+									<?php endif; ?>
 							<?php endif; ?>
+							</span>
 						<?php endforeach; ?>
+						</ul>
 						</p>
 						</div>
 					<?php endforeach; ?>
