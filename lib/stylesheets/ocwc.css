@@ -153,6 +153,7 @@ table tfoot {
 
 .noborder {
 	box-shadow: none;
+	border: none;
 }
 
 .wp-caption-text {
