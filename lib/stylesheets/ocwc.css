@@ -151,6 +151,10 @@ table tfoot {
 	float: left;	
 }
 
+.noborder {
+	box-shadow: none;
+}
+
 .wp-caption-text {
 	margin: 0;
 }
