@@ -71,20 +71,11 @@
 									continue;
 								}
 
-								// if ( $field['type'] === '_upload' ) {
-								// 	$submission_data[] = array(
-								// 		"label" => $field['data']['label'],
-								// 		"file_url" => $field['file_url'],
-								// 		"filename" => $user_value['user_file_name'],
-								// 		"type" => $field['type']
-								// 	);
-								// } else {
 								$submission_data[] = array(
 									"label" => $field['data']['label'],
 									"value" => $user_value,
 									"type" => $field['type']
 								);
-								// }
 							}
 
 							$json_data[] = array(
