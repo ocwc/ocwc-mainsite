@@ -33,4 +33,16 @@ function get_member_detail() {
 	return json_decode($response);
 }
 
+function get_election_candidates() {
+	global $post;
+
+	$key = get_post_meta($post->ID, 'election_view_key', true);
+	$url = ELECTIONS_API_URL."/candidate/list/$key/?format=json";
+
+	$result = wp_remote_get( $url );
+	$response = wp_remote_retrieve_body( $result );
+
+	return json_decode($response);	
+}
+
 ?>
