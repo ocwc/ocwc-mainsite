@@ -10,7 +10,7 @@
 
 		<div class="large-9 columns">
 			<h1><?php echo $member->name; ?></h1>
-			<p class="large-8 columns"><?php echo $member->description; ?></p>
+			<p class="large-8 columns"><?php echo nl2br($member->description); ?></p>
 			<?php if ( $member->logo_small ) : ?>
 				<p class="large-4 columns"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" /></p>
 			<?php endif; ?>
