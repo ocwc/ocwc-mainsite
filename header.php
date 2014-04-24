@@ -32,7 +32,7 @@
 
 	<div class="row">
 		<div class="large-4 small-6 columns">
-			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="OpenCourseWare Consortium logo" /></a>
+			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-oe.png" alt="Open Education Consortium" /></a>
 		</div>
 		<div class="large-4 small-12 columns">
 			<form id="header-search" method="GET" action="/courses/search/">
