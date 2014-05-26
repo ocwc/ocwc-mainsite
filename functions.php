@@ -120,16 +120,26 @@ function mainsite_ninja_forms_form_class($form_class) {
 add_filter('ninja_forms_form_class', 'mainsite_ninja_forms_form_class');
 
 function filter_wp_title( $title ) {
-	global $page, $paged;
+	global $page, $paged, $custom_title;
 
 	if ( is_feed() )
 		return $title;
 
 	$site_description = get_bloginfo( 'description' );
+	$name = get_bloginfo( 'name' );
 
-	$filtered_title = $title . get_bloginfo( 'name' );
-	$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
-	$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) ) : '';
+	if ( get_query_var('search') ) {
+		$filtered_title = 'Search results for: ' . get_query_var('search') . ' | ' . $name;
+	} elseif ( get_query_var('course_id') ) {
+		$filtered_title = $custom_title . ' | ' . $name;
+	} else {
+
+		$filtered_title = $title . $name;
+		$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
+		$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) ) : '';
+
+	}
+
 
 	return $filtered_title;
 }

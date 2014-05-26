@@ -42,9 +42,12 @@ function mainsite_url_rewrite_templates() {
 	}
 	if ( array_key_exists('pagename', $wp_query->query) AND 
 		 $wp_query->query['pagename'] === 'courses/search' ) {
-		add_filter( 'template_include', function() {
-			return get_template_directory() . '/courses/search.php';
-		});
+			$wp_query->is_404 = false;
+			status_header( '200' );
+
+			add_filter( 'template_include', function() {
+				return get_template_directory() . '/courses/search.php';
+			});
 	}
 
 	if ( get_query_var( 'member_id' ) ) {

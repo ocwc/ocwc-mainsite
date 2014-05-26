@@ -1,5 +1,7 @@
 <?php
 	$course = get_course_detail();
+	global $custom_title;
+	$custom_title = $course->title . ' | ' . $course->provider_name;
 ?>
 <?php get_header(); ?>
 <div class="row main-wrapper">
