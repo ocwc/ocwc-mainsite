@@ -1,7 +1,6 @@
 <?php
 
-function mainsite_slideshow() {
-
+function oec_posttype_slideshow() {
 	$labels = array(
 		'name'                => 'Slideshows',
 		'singular_name'       => 'Slideshow',
@@ -38,10 +37,10 @@ function mainsite_slideshow() {
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'slideshow', $args );
-
 }
+add_action( 'init', 'oec_posttype_slideshow', 0 );
 
-function mainsite_newslink() {
+function oec_posttype_newslink() {
 	$labels = array(
 		'name'                => 'News links',
 		'singular_name'       => 'Newslink',
@@ -79,5 +78,6 @@ function mainsite_newslink() {
 	);
 	register_post_type( 'newslink', $args );	
 }
+add_action( 'init', 'oec_posttype_newslink', 0 );
 
 ?>

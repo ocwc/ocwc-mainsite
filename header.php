@@ -7,13 +7,10 @@
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700|Metrophobic:400' rel='stylesheet' type='text/css'>
 
-  	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/ocwc.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
-  	<link href="<?php echo get_stylesheet_directory_uri(); ?>/lib/stylesheets/style.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
-  	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
-
 	<meta name="google-translate-customization" content="d3bf6f511902d7f2-750e02196618cb43-gadc8982319c58076-15"></meta>
   	<?php wp_head(); ?>
+
+  	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
 </head>
 <body <?php body_class(); ?>>
 	

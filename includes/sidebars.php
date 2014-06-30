@@ -1,6 +1,6 @@
 <?php
 
-function register_mainsite_sidebars() {
+function oec_register_sidebars() {
 	register_sidebar( array(
 	   'name' => __( 'General sidebar'),
 	   'id' => 'sidebar-general',
@@ -42,10 +42,12 @@ function register_mainsite_sidebars() {
 	) );
 
 }
+add_action( 'init', 'oec_register_sidebars', 0 );
 
-function register_mainsite_nav_menu() {
+function oec_register_nav_menu() {
   register_nav_menu('navigation-menu',__( 'Navigation Menu' ));
 }
+add_action( 'init', 'oec_register_nav_menu', 0 );
 
 class PageTitleWalker extends Walker_page {
 	function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) {

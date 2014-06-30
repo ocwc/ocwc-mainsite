@@ -1,40 +1,34 @@
 <?php
 
-require('includes/custom_post_types.php');
-require('includes/widgets.php');
-require('includes/sidebars.php');
-require('includes/images.php');
-require('courses/functions.php');
-require('members/functions.php');
+function oec_setup() {
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
 
-add_theme_support( 'post-thumbnails' );
-add_filter( 'https_local_ssl_verify', '__return_false' );
-add_filter( 'block_local_requests', '__return_false' );
+	add_filter( 'https_local_ssl_verify', '__return_false' );
+	add_filter( 'block_local_requests', '__return_false' );
 
-// add_filter('show_admin_bar', '__return_false');
-add_filter('the_generator', '__return_false');
+	// add_filter('show_admin_bar', '__return_false');
+	add_filter('the_generator', '__return_false');
 
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
 
-function mainsite_init() {
-	mainsite_slideshow();
-	mainsite_newslink();
-
-	register_mainsite_nav_menu();
-	register_mainsite_sidebars();
-	
 	add_image_size( 'slideshow-image-large', 1050, 420, true);
 	add_image_size( 'header-image', 1080, 130, true);
 }
-add_action( 'init', 'mainsite_init' );
+add_action( 'after_setup_theme', 'oec_setup' );
 
 function mainsite_scripts() {
+	wp_enqueue_style( 'oec-app', get_template_directory_uri(). '/lib/stylesheets/app.css' );
+	wp_enqueue_style( 'oec-ocwc', get_template_directory_uri(). '/lib/stylesheets/ocwc.css' );
+	wp_enqueue_style( 'oec-style', get_template_directory_uri(). '/lib/stylesheets/style.css' );
+
 	if ( is_home() ) {
-		wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', false);
+		wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
 	}
-	wp_enqueue_script('angular', get_template_directory_uri().'/lib/javascripts/vendor/angular.min.js', array('jquery'), '', false);
-	wp_enqueue_script('angular-sanitize', get_template_directory_uri().'/lib/javascripts/vendor/angular-sanitize.min.js', array('angular'), '', false);
+
+	// wp_enqueue_script('angular', get_template_directory_uri().'/lib/javascripts/vendor/angular.min.js', array('jquery'), '', true);
+	// wp_enqueue_script('angular-sanitize', get_template_directory_uri().'/lib/javascripts/vendor/angular-sanitize.min.js', array('angular'), '', true);
 	wp_enqueue_script('script', get_template_directory_uri().'/lib/javascripts/script.js', array('jquery'), '', false);
 }
 add_action( 'wp', 'mainsite_scripts');
@@ -140,10 +134,14 @@ function filter_wp_title( $title ) {
 
 	}
 
-
 	return $filtered_title;
 }
 add_filter( 'wp_title', 'filter_wp_title' );
 
+require get_template_directory() . '/includes/custom_post_types.php';
+require get_template_directory() . '/includes/widgets.php';
+require get_template_directory() . '/includes/sidebars.php';
+require get_template_directory() . '/includes/images.php';
 
-?>
+require get_template_directory() . '/courses/functions.php';
+require get_template_directory() . '/members/functions.php';
