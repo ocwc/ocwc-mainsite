@@ -18,6 +18,9 @@ module.exports = function (grunt) {
 
     watch: {
       grunt: { files: ['Gruntfile.js'] },
+      options: {
+        livereload: true,
+      },
 
       sass: {
         files: ['assets/scss/*.scss', 'Gruntfile.js'],

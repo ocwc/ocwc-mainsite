@@ -12,40 +12,40 @@
 
   	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
 </head>
-<body <?php body_class(); ?>>
-	
-	<div class="row" id="top-nav">
-		<div class="large-2 columns">
-			<div id="google_translate_element"></div><script type="text/javascript">
-			function googleTranslateElementInit() {
-			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, autoDisplay: false}, 'google_translate_element');
-			}
-			</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        
+<body <?php body_class(); ?> >
+	<header>
+		<div class="row header-row">
+			<div class="show-for-medium-up medium-2 columns right text-center tab members">
+				<a href="http://members.oeconsortium.org" class="member-portal">Members Portal</a>
+			</div>
+			<div class="show-for-medium-up medium-3 large-2 columns tab right translation">
+				<div id="google_translate_element"></div><script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true, autoDisplay: false}, 'google_translate_element');
+				}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>        
+			</div>
 		</div>
-		<div class="large-2 columns hide-for-small member-portal-wrapper">
-			<a href="http://members.ocwconsortium.org" class="member-portal">Members portal</a>
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="large-4 small-6 columns">
-			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-oe.png" alt="Open Education Consortium" /></a>
+		<div class="row collapse">
+			<div class="small-12 medium-4 left columns">
+				<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="The Open Education Consortium" class="logo" /></a>
+			</div>
+			<div class="small-12 medium-3 right columns">
+				<form class="header-search" method="GET" action="/courses/search/">
+					<input placeholder="Search for open courses ..." name="search">
+					<i class="icon-search header-search-icon"></i>
+				</form>
+			</div>
 		</div>
-		<div class="large-4 small-12 columns">
-			<form id="header-search" method="GET" action="/courses/search/">
-				<input placeholder="Search for open courses ..." name="search">
-				<i class="icon-search header-search-icon"></i>
-			</form>
-		</div>
-	</div>
-	<?php if (!is_page('styles') ) : ?>
-	<div class="row">
-		<div class="large-12 columns">
-			<ul>
+
+		<?php if (!is_page('styles') ) : ?>
+		<div class="row collapse">
+			<div class="small-12 columns navigation">
 				<?php wp_nav_menu(array(
 					'theme_location' => 'navigation-menu'
-				)); ?>				
-			</ul>
+				)); ?>
+			</div>
 		</div>
-	</div>
-	<?php endif; ?>
+		<?php endif; ?>
+	</header>

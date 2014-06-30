@@ -1,3 +1,4 @@
+@import "_colors";
 @import "settings";
 // @import "foundation";
 
@@ -5,7 +6,7 @@
 @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+  "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -13,8 +14,8 @@
 //   "foundation/components/dropdown",
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
-//   "foundation/components/forms",
-  "foundation/components/grid";
+  "foundation/components/forms",
+  "foundation/components/grid",
 //   "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",
@@ -30,11 +31,15 @@
 //   "foundation/components/split-buttons",
 //   "foundation/components/sub-nav",
 //   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
+  "foundation/components/tables",
+  "foundation/components/tabs",
+  "foundation/components/thumbs",
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+  "foundation/components/type",
+// "foundation/components/offcanvas",
+  "foundation/components/visibility";
+
+@import "_style";
+@import "_home";
+@import "_rslides";

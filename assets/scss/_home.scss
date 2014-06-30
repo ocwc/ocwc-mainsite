@@ -1,0 +1,144 @@
+// $blue: #436c89;
+$light-blue: #7D9AAE;
+$grey: #788288;
+$light-grey: #C4C4C4;
+$footer-grey: #949C9F;
+$cta-grey: #F0F0F0;
+$white: #FFFFFF;
+
+#call-to-action {
+    background-color: $cta-grey;
+    padding: emCalc(30px) 0 emCalc(15px) 0;
+    margin-bottom: emCalc(20px);
+
+    .large-3 {
+        background-color: $white;
+        height: emCalc(200px);
+        border-bottom: solid $blue emCalc(5px);
+
+        margin-right: .5%;
+        width: 24.5%;
+        &:last-child { margin-right: 0; }
+        box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.2);
+    }
+
+    .cta-header {
+        padding-top: emCalc(15px);
+        clear: both;
+    }
+
+    h1 { 
+        font-size: emCalc(28px);
+        line-height: 1.2;
+        display: block;
+        margin: 0;
+    }
+
+    h2 { 
+        display: inline-block;
+        font-size: emCalc(12px); 
+        text-transform: uppercase;
+    }
+    
+    .cta-header i {
+        color: $blue;
+        float: left;
+        font-size: emCalc(56px);
+        padding: 0 emCalc(4px) 0 0;
+    }
+
+    p {
+        font-size: emCalc(12px);
+    }
+}
+
+.ocwc-statistics {
+    padding: emCalc(15px) 0;
+    i {
+        font-size: emCalc(26px);
+        padding-left: emCalc(5px);
+    }
+    color: $light-blue;
+    font-size: emCalc(24px);
+}
+
+.widget-listing {
+    h1 {
+        font-size: emCalc(18px);
+        margin-bottom: 0;
+        float: left;
+    }
+
+    .read-more {
+        float: right;
+        line-height: 2;
+    }
+
+    .header {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px solid $light-blue;
+    }
+
+    li {
+        list-style-type: none;
+        line-height: 1.2;
+        padding-bottom: 5px;
+
+        a {
+            font-size: emCalc(12px);
+            // line-height: emCalc(14px);
+            color: black;
+        }
+        a:hover { color: $blue; }
+    }
+}
+
+.in-the-news {
+    p { 
+        font-size: emCalc(12px);
+        display: inline-block; 
+        width: 100%;
+        margin-bottom: emCalc(10px);
+    }
+    .date, .link { 
+        display: inline-block;
+        font-size: emCalc(12px);
+    }
+    .date { float: left;  }
+    .link { float: right; }
+}
+
+/* Header image */
+.header-image-wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    height: 130px;
+
+    .page-title {
+        color: #FFFFFF;
+        font-size: 32px;
+        position: absolute;
+        right: 15px;
+        z-index: 20;
+        top: 50px;
+
+        text-shadow: 1px 1px 1px #757575;
+        width: 80%;
+    }
+
+    .overlay {
+        z-index: 10;
+        height: 130px;
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+    }
+
+    img {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+    }
+}
