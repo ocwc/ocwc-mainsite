@@ -1,4 +1,5 @@
 <?php 
+	/*
 	require_once(get_template_directory() . '/lib/php/custom-color.php');
 	$closest_header_image = mainsite_get_closest_header_image();
 	if ($closest_header_image['image']) {
@@ -7,9 +8,10 @@
 	} else {
 		return;
 	}
+	*/
 ?>
 
-<?php if ($header_image) : ?>
+<?php /* if ($header_image) : ?>
 <div class="header-image-wrapper hide-for-small" style="background: <?php echo the_field('header_image_background_color', $post_id); ?>">
 	<div class="row">
 		<div class="large-12 columns">
@@ -19,4 +21,4 @@
 		</div>
 	</div>
 </div>
-<?php endif;?>
+<?php endif; */ ?>

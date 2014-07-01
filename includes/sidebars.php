@@ -25,7 +25,17 @@ function oec_register_sidebars() {
 	   'name' => __( 'Footer'),
 	   'id' => 'footer',
 	   'description' => __( 'Footer area', 'mainsite' ),
-	   'before_widget' => '<div class="large-3 columns"><aside id="%1$s" class="widget %2$s">',
+	   'before_widget' => '<div class="small-12 medium-2 columns"><aside id="%1$s" class="widget %2$s">',
+	   'after_widget' => "</aside></div>",
+	   'before_title' => '<h3 class="footer-title">',
+	   'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+	   'name' => __( 'Footer Wide'),
+	   'id' => 'footer-wide',
+	   'description' => __( 'Footer area', 'mainsite' ),
+	   'before_widget' => '<div class="small-12 medium-4 columns"><aside id="%1$s" class="widget %2$s">',
 	   'after_widget' => "</aside></div>",
 	   'before_title' => '<h3 class="footer-title">',
 	   'after_title' => '</h3>',

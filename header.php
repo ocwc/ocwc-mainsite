@@ -13,7 +13,7 @@
   	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
 </head>
 <body <?php body_class(); ?> >
-	<header>
+	<div class="header">
 		<div class="row header-row">
 			<div class="show-for-medium-up medium-2 columns right text-center tab members">
 				<a href="http://members.oeconsortium.org" class="member-portal">Members Portal</a>
@@ -27,11 +27,11 @@
 			</div>
 		</div>
 
-		<div class="row collapse">
+		<div class="row">
 			<div class="small-12 medium-4 left columns">
 				<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="The Open Education Consortium" class="logo" /></a>
 			</div>
-			<div class="small-12 medium-3 right columns">
+			<div class="small-12 medium-3 right columns search-form-row">
 				<form class="header-search" method="GET" action="/courses/search/">
 					<input placeholder="Search for open courses ..." name="search">
 					<i class="icon-search header-search-icon"></i>
@@ -48,4 +48,4 @@
 			</div>
 		</div>
 		<?php endif; ?>
-	</header>
+	</div>
