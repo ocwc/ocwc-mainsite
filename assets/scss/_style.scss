@@ -1,3 +1,9 @@
+/* general */
+
+h1, h2, h3, h4, h5, p {
+	-webkit-font-smoothing: antialiased;
+}
+
 /* header */
 
 /** top row **/
@@ -99,8 +105,7 @@
 
 	a { 
 		display: inline-block;
-		width: 100%;
-
+		
 		padding-left: rem-calc(32);
 		padding-right: rem-calc(32);
 
@@ -128,9 +133,11 @@
 	}
 
 	#menu-navigation > li {
-		font-size: rem-calc(16);
 		display: inline-block;
+
+		font-size: rem-calc(16);
 		list-style: none;
+		height: 36px;
 	}
 }
 
@@ -183,5 +190,104 @@
 
 	aside {
 		padding-top: rem-calc(16);
+	}
+}
+
+/** home **/
+.home-stats {
+    padding: rem-calc(60) 0;
+    font-size: rem-calc(24);
+    line-height: 2;
+    color: $green;
+
+    span { 
+        padding-right: rem-calc(32);
+    }
+    span:last-child {
+        padding-right: 0;
+    }
+}
+
+.cta-row {
+	margin: rem-calc(-28) 0 0 0;
+}
+
+.cta-box {
+	$cta-box-height: 220px;
+
+	@include grid-column($columns:3, $collapse:true);
+	
+	z-index: 10;
+	position: relative;
+	padding-bottom: rem-calc(50);
+	cursor: pointer;
+
+	a { 
+		display: block;
+		color: $grey; 
+	}
+
+	h1, h3 { 
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	h1 { 
+		font-size: rem-calc(30);
+		font-weight: bold;
+	}
+	h3 { font-size: rem-calc(20); }
+	
+	.wrapper {
+		background-color: #F2F2F2;
+		margin-right: 10px;
+		// height: rem-calc($cta-box-height);
+
+		display: block;
+		height: 220px;
+
+		padding: 20px;
+	}
+	&:last-child .wrapper {
+		margin-right: 0;
+	}
+	
+	.wrapper:hover {
+		background-color: $green;
+		h1, h3, p, a, .more { color: #FFFFFF; }
+	}
+
+	.more {
+		position: absolute;
+		top: $cta-box-height - 30px;
+		font-weight: 600;
+	}
+}
+
+.widget-listing {
+	h1 {
+		display: inline-block;
+		width: 100%;
+		border-bottom: 1px solid $blue;
+
+		font-size: rem-calc(16);
+
+		iframe { float: right; }
+	}
+
+	ul {
+		margin-left: 0;
+		list-style: none;
+	}
+
+	li {
+		margin-bottom: rem-calc(8);
+		line-height: 1.4;
+		font-size: rem-calc(15);
+	}
+
+	.rstw_comma { display: none; }
+	.twitter-timestamp {
+		display: block;
+		font-size: rem-calc(12);
 	}
 }

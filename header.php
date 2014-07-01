@@ -5,12 +5,16 @@
 	<meta charset="utf-8" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700|Metrophobic:400' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700|Metrophobic:400' rel='stylesheet' type='text/css'> -->
 
-	<meta name="google-translate-customization" content="d3bf6f511902d7f2-750e02196618cb43-gadc8982319c58076-15"></meta>
+	<meta name="google-translate-customization" content="d3bf6f511902d7f2-750e02196618cb43-gadc8982319c58076-15">
   	<?php wp_head(); ?>
 
-  	<script src="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/respond.min.js"></script>
+  	<!--[if lt IE 9]>
+  		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+  		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/respond/dest/respond.min.js"></script>
+	<![endif]-->
+
 </head>
 <body <?php body_class(); ?> >
 	<div class="header">
@@ -43,7 +47,7 @@
 		<div class="row collapse">
 			<div class="small-12 columns navigation">
 				<?php wp_nav_menu(array(
-					'theme_location' => 'navigation-menu'
+					'theme_location' => 'navigation-menu',
 				)); ?>
 			</div>
 		</div>

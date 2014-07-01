@@ -2,91 +2,49 @@
 
 <?php get_template_part('partials/home_slideshow'); ?>
 
-<div id="call-to-action" class="hide-for-small">
-	<div class="row">
-		<div class="large-3 columns">
-			<div class="cta-header">
-				<a href="/courses/">
-					<i class="icon-book"></i>
-					<h1>Courses</h1>
-					<h2>Study</h2>
-				</a>
-			</div>
-			<p>Discover Courses from Institutions around the world</p>
-			<a href="/courses/">+ search courses</a>
-		</div>
-		<div class="large-3 columns">
-			<div class="cta-header">
-				<a href="/about-ocw/">
-					<i class="icon-question-sign"></i>
-					<h1>About</h1>
-					<h2>Open Education</h2>
-				</a>
-			</div>
-			<p>What is OpenCourseWare and how it empowers Open Education movement</p>
-			<a href="/about-ocw/">+ learn more</a>
-		</div>
-		<div class="large-3 columns">
-			<div class="cta-header">
-				<a href="/resources/webinars/">
-					<i class="icon-group"></i>
-					<h1>Learn</h1>
-					<h2>Our Webinars</h2>
-				</a>
-			</div>
-			<p>We host and organize online webinars featuring leaders in the open education movement.</p>
-			<a href="/resources/webinars/">+ watch and learn</a>			
+<div class="row collapsed">
+	<div class="cta-row">
+		<div class="cta-box show-for-medium-up clearfix">
+			<a href="/courses/" class="wrapper">
+				<h1>Courses</h1>
+				<h3>Study</h3>
+				<p>Discover Courses from Institutions around the world</p>
+				<span class="more">+ search courses</span>
+			</a>
 		</div>
 		
-		<div class="large-3 columns">
-			<div class="cta-header">
-				<a href="http://conference.ocwconsortium.org/">
-					<i class="icon-globe"></i>
-					<h1>OCWC Global</h1>
-					<h2>Our Annual Event</h2>
-				</a>
-			</div>
-			<p>Join scholars and practioners as we discuss this years theme - Open Education for a Multicultural World.</p>
-			<a href="http://conference.ocwconsortium.org/">+ join us</a>			
+		<div class="cta-box show-for-medium-up clearfix">
+			<a href="/about-oec/" class="wrapper">
+				<h1>About</h1>
+				<h3>Open Education</h3>
+				<p>What is OpenCourseWare and how it empowers Open Education movement</p>
+				<span class="more">+ learn more</span>
+			</a>
+		</div>
+
+		<div class="cta-box show-for-medium-up">
+			<a href="/resources/webinars/" class="wrapper">
+				<h1>Learn</h1>
+				<h3>Our Webinars</h3>
+				<p>We host and organize online webinars featuring leaders in the open education movement.</p>
+				<span class="more">+ watch and learn</span>
+			</a>
 		</div>
 		
-		<div class="large-12 columns ocwc-statistics">
-			<i class="icon-file-text"></i> 30&nbsp;000+ Modules <i class="icon-bookmark"></i> 280+ Organizations <i class="icon-globe"></i> 40 Countries <i class="icon-comments-alt"></i> 29 Languages
+		<div class="cta-box show-for-medium-up">
+			<a href="http://conference.oeconsortium.org/" class="wrapper">
+				<h1>OCWC Global</h1>
+				<h3>Our Annual Event</h3>
+				<p>Join scholars and practioners.</p>
+				<span class="more">+ join us</span>
+			</a>
 		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="large-4 columns widget-listing">
-		<div class="header">
-			<h1><a href="/courses/">Latest courses</a></h1>
-		</div>
-		<ul>
-			<?php $course_list = get_latest_courses(); ?>
-			<?php foreach ($course_list as $course) : ?>
-				<li><a href="/courses/view/<?php echo $course->linkhash; ?>/"><?php echo $course->title; ?></a></li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
-
-	<div class="large-4 columns widget-listing in-the-news">
-		<div class="header">
-			<h1>In the News</h1>
-		</div>
-		<ul>
-			<?php $posts = get_newslink_posts(); ?>
-			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-				<li>
-					<a href="<?php the_field('newslink_url'); ?>" target="_blank"><?php echo $post->post_title; ?></a>
-				</li>
-			<?php endwhile; endif; ?>
-		</ul>
-	</div>
-
-	<div class="large-4 columns widget-listing">
-		<div class="header">
-			<h1><a href="/news/">Announcements</a></h1>
-		</div>
+<div class="row collapsed">
+	<div class="small-12 medium-4 columns widget-listing">
+		<h1><a href="/news/">Announcements</a></h1>
 		<ul>
 			<?php $posts = get_announcements_posts(); ?>
 			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
@@ -94,49 +52,35 @@
 			<?php endwhile; endif; ?>
 		</ul>
 	</div>
+	
+	<div class="small-12 medium-4 columns widget-listing">
+		<h1>
+			<a href="/courses/">Twitter Feed</a>
+			<iframe allowtransparency="true" frameborder="0" scrolling="no"
+  					src="//platform.twitter.com/widgets/follow_button.html?screen_name=oeconsortium&show_count=false"
+  					style="width:150px; height:20px;"></iframe>			
+		</h1>
+		<?php echo do_shortcode('[really_simple_twitter username="oeconsortium" consumer_key="'.TW_CONSUMER_KEY.'" consumer_secret="'.TW_CONSUMER_SECRET.'" access_token="'.TW_ACCESS_TOKEN.'" access_token_secret="'.TW_ACCESS_TOKEN_SECRET.'"'.' skip_replies=true date_link=true date_format="l, jS F"]'); ?>
+	</div>
+
+	<div class="small-12 medium-4 columns widget-listing">
+		<h1><a href="/courses/">Latest courses from our members</a></h1>
+		<ul>
+			<?php $course_list = get_latest_courses(); ?>
+			<?php foreach ($course_list as $course) : ?>
+				<li><a href="/courses/view/<?php echo $course->linkhash; ?>/"><?php echo $course->title; ?></a></li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
 </div>
 
-<?php /* ?>
 <div class="row">
-	<div class="large-12 columns home-courses">
-		<h1>Featured courses</h1>
-		<a class="readmore" href="#">+ read more</a>
-	</div>
-	<div class="large-12 columns courses-image-listing">
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>	
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
-		<div class="large-3 columns">
-			<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/course.png" /></a>
-			<a class="title" href="#">Course title</a>
-		</div>
+	<div class="small-12 columns text-center home-stats">
+		<span><i class="icon-file-text"></i> 30&nbsp;000+ Modules</span>
+		<span><i class="icon-bookmark"></i> 280+ Organizations</span>
+		<span><i class="icon-globe"></i> 40 Countries</span>
+		<span><i class="icon-comments-alt"></i> 29 Languages</span>
 	</div>
 </div>
-*/ ?>
 
 <?php get_footer() ?>
