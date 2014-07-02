@@ -61,14 +61,14 @@ h1, h2, h3, h4, h5, p {
 .header-search {
     position: relative;
 
-    @media #{$medium-up} { 
+    @media #{$medium-up} {
 	    margin-top: rem-calc(40);
 	    margin-right: rem-calc(-13);
 	}
 
     border-radius: 5px;
     border: 1px solid lighten($grey, 30);
-    
+
     background-color: #FFFFFF;
 
     input {
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, p {
       position: absolute;
       top: 9px;
       right: 8px;
-      
+
       font-size: rem-calc(16);
       color: $green;
     }
@@ -103,9 +103,9 @@ h1, h2, h3, h4, h5, p {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 
-	a { 
+	a {
 		display: inline-block;
-		
+
 		padding-left: rem-calc(32);
 		padding-right: rem-calc(32);
 
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, p {
 
 		border-left: 1px solid #657eaf;
 	}
-	
+
 	li:last-child a {
 		border-right: 1px solid #657eaf;
 	}
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, p {
 .footer-wrapper {
 	background-color: $green;
 	-webkit-font-smoothing: antialiased;
-	
+
 	li {
 		list-style: none;
 	}
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, p {
 	.sub-menu { display: none }
 
 	color: #FFFFFF;
-	a { 
+	a {
 		display: inline-block;
 		width: 100%;
 		color: #FFFFFF;
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, p {
     line-height: 2;
     color: $green;
 
-    span { 
+    span {
         padding-right: rem-calc(32);
     }
     span:last-child {
@@ -216,27 +216,28 @@ h1, h2, h3, h4, h5, p {
 	$cta-box-height: 220px;
 
 	@include grid-column($columns:3, $collapse:true);
-	
+
 	z-index: 10;
 	position: relative;
 	padding-bottom: rem-calc(50);
 	cursor: pointer;
 
-	a { 
+	a {
 		display: block;
-		color: $grey; 
+		color: $lightgrey;
 	}
 
-	h1, h3 { 
+	h1, h3 {
 		line-height: 1;
 		text-transform: uppercase;
+		color: $lightgrey;
 	}
-	h1 { 
+	h1 {
 		font-size: rem-calc(30);
 		font-weight: bold;
 	}
 	h3 { font-size: rem-calc(20); }
-	
+
 	.wrapper {
 		background-color: #F2F2F2;
 		margin-right: 10px;
@@ -250,7 +251,7 @@ h1, h2, h3, h4, h5, p {
 	&:last-child .wrapper {
 		margin-right: 0;
 	}
-	
+
 	.wrapper:hover {
 		background-color: $green;
 		h1, h3, p, a, .more { color: #FFFFFF; }
@@ -264,6 +265,9 @@ h1, h2, h3, h4, h5, p {
 }
 
 .widget-listing {
+	li a { color: #222; }
+	a:hover { color: #053f91; }
+
 	h1 {
 		display: inline-block;
 		width: 100%;
@@ -272,11 +276,6 @@ h1, h2, h3, h4, h5, p {
 		font-size: rem-calc(16);
 
 		iframe { float: right; }
-	}
-
-	ul {
-		margin-left: 0;
-		list-style: none;
 	}
 
 	li {

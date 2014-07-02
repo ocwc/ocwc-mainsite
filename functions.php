@@ -19,7 +19,7 @@ function oec_setup() {
 add_action( 'after_setup_theme', 'oec_setup' );
 
 function mainsite_scripts() {
-	if ( false ) {
+	if ( true ) {
 		wp_enqueue_script('livereload', 'http://fey:35729/livereload.js', false, '', false);
 	}
 	wp_enqueue_style( 'oec-app', get_template_directory_uri(). '/build/css/app.css' );

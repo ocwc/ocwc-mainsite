@@ -42,7 +42,7 @@
   position: absolute;
   right: 48%;
   bottom: rem-calc(10);
-  z-index: 20;    
+  z-index: 20;
 }
 
 .rslider-buttons_tabs li {
@@ -59,26 +59,23 @@
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
-  background: #ccc;
-  background: rgba(0,0,0, .2);
+
+  background: #afafaf;
   display: inline-block;
   _display: block;
   *display: block;
-  -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-  -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
-  box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+
   width: 9px;
   height: 9px;
   }
 
 .rslider-buttons_here a {
-  background: #222;
-  background: rgba(0,0,0, .8);
-  }
+  background: #dadada;
+}
 
 $slideshow-height: rem-calc(420);
 .slideshow {
-    
+
     li {
         list-style-type: none;
         text-align: center;
@@ -121,8 +118,8 @@ $slideshow-height: rem-calc(420);
             position: absolute;
         }
 
-        img { 
+        img {
             height: $slideshow-height;
-        } 
+        }
     }
 }
