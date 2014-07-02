@@ -168,6 +168,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 .footer-wrapper {
+	margin-top: em-calc(48);
+
 	background-color: $green;
 	-webkit-font-smoothing: antialiased;
 
@@ -195,7 +197,7 @@ h1, h2, h3, h4, h5, p {
 
 /** home **/
 .home-stats {
-    padding: rem-calc(60) 0;
+    padding: rem-calc(60) 0 0 0;
     font-size: rem-calc(24);
     line-height: 2;
     color: $green;
@@ -326,4 +328,15 @@ h1, h2, h3, h4, h5, p {
 		color: $green;
 		text-align: center;
 	}
+}
+
+/** news **/
+.entry-header {
+	margin-bottom: em-calc(10);
+}
+
+.avatar {
+	border-radius: 150px;
+	float: left;
+	margin-right: em-calc(10);
 }

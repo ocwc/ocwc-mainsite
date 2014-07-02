@@ -12,6 +12,16 @@ function oec_register_sidebars() {
 	) );
 
 	register_sidebar( array(
+	   'name' => __( 'News sidebar'),
+	   'id' => 'sidebar-post',
+	   'description' => __( 'News sidebar', 'mainsite' ),
+	   'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	   'after_widget' => "</aside>",
+	   'before_title' => '<h3 class="sidebar-title">',
+	   'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
 	   'name' => __( 'Courses sidebar'),
 	   'id' => 'sidebar-courses',
 	   'description' => __( 'Courses sidebar', 'mainsite' ),

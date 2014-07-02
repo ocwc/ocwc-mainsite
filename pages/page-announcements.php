@@ -8,26 +8,38 @@
 
 <div class="row main-wrapper">
 	<?php if ( have_posts() ) : ?>	
-		<?php get_template_part('partials/header_image', get_post_type()); ?>
-		<div class="large-3 columns">
-			<?php get_template_part('partials/sidebar', get_post_type()); ?>
-		</div>
-		<div class="large-9 columns">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php //get_template_part('partials/content', get_post_type()); ?>
-			<?php endwhile; ?>
+		<div class="small-12 medium-9 columns">
+			<?php 
+				$orig_query = $wp_query;
 
-			<?php $latest_announcments = new WP_Query(array(
-														'posts_per_page' => 5,
-														'post_type' => 'post'
-										));
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$wp_query = new WP_Query(array(
+												'post_type' => 'post',
+												'posts_per_page' => 5,
+												'paged' => $paged	
+											));
 			?>
-			<?php while ( $latest_announcments->have_posts() ) : $latest_announcments->the_post(); ?>
-				<?php get_template_part('partials/content', get_post_type()); ?>
-			<?php endwhile; ?>
+			<?php if ( $wp_query->have_posts() ) : ?>
+				<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+					<?php get_template_part( 'partials/content', get_post_type() ); ?>
+				<?php endwhile; ?>
 
-			<h1>Announcements Archives</h1>
-			<?php wp_get_archives( array( 'type' => 'monthly', 'limit' => 3 ) ); ?>
+				<?php
+					$big = 999999999; // need an unlikely integer
+					echo paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $wp_query->max_num_pages
+					) );
+				?>
+				<?php wp_reset_postdata(); ?>
+				<?php $wp_query = $orig_query; ?>
+
+			<?php endif; ?>
+		</div>
+		<div class="small-12 medium-3 columns">
+			<?php get_template_part('partials/sidebar', 'post'); ?>
 		</div>
 	<?php else : ?>
 		<h1>404 Not found</h1>

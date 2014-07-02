@@ -19,20 +19,18 @@ function oec_setup() {
 add_action( 'after_setup_theme', 'oec_setup' );
 
 function mainsite_scripts() {
-	if ( true ) {
-		wp_enqueue_script('livereload', 'http://fey:35729/livereload.js', false, '', false);
-	}
-	wp_enqueue_style( 'oec-app', get_template_directory_uri(). '/build/css/app.css' );
-	// wp_enqueue_style( 'oec-ocwc', get_template_directory_uri(). '/lib/stylesheets/ocwc.css' );
-	// wp_enqueue_style( 'oec-style', get_template_directory_uri(). '/lib/stylesheets/style.css' );
+	if ( !is_admin() ) {
+		if ( WP_LIVERELOAD ) {
+			wp_enqueue_script('livereload', 'http://fey:35729/livereload.js', false, '', false);
+		}
+		wp_enqueue_style( 'oec-app', get_template_directory_uri(). '/build/css/app.css' );
 
-	if ( is_home() ) {
-		wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
-	}
+		if ( is_home() ) {
+			wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
+		}
 
-	// wp_enqueue_script('angular', get_template_directory_uri().'/lib/javascripts/vendor/angular.min.js', array('jquery'), '', true);
-	// wp_enqueue_script('angular-sanitize', get_template_directory_uri().'/lib/javascripts/vendor/angular-sanitize.min.js', array('angular'), '', true);
-	wp_enqueue_script('script', get_template_directory_uri().'/lib/javascripts/script.js', array('jquery'), '', false);
+		wp_enqueue_script('script', get_template_directory_uri().'/lib/javascripts/script.js', array('jquery'), '', false);
+	}
 }
 add_action( 'wp', 'mainsite_scripts');
 

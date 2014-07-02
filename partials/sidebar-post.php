@@ -1,1 +1,1 @@
-<?php dynamic_sidebar('sidebar-general'); ?>
+<?php dynamic_sidebar('sidebar-post'); ?>
