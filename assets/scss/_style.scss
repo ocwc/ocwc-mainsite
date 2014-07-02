@@ -268,6 +268,8 @@ h1, h2, h3, h4, h5, p {
 	li a { color: #222; }
 	a:hover { color: #053f91; }
 
+	min-height: rem-calc(520);
+
 	h1 {
 		display: inline-block;
 		width: 100%;
@@ -288,5 +290,40 @@ h1, h2, h3, h4, h5, p {
 	.twitter-timestamp {
 		display: block;
 		font-size: rem-calc(12);
+		margin-left: 15px;
+		line-height: 1.8;
+		color: $blue;
+		a { color: $blue; }
+	}
+	.twitter-timestamp {
+	    position:relative;
+	}
+	.twitter-timestamp:before {
+	        position:absolute;
+	        font-family: FontAwesome;
+	        top:0;
+	        left:-15px;
+	        content: "\F017";
+	}
+
+	.more {
+		position: absolute;
+		bottom: 0px;
+
+		display: inline-block;
+		width: 95%;
+		margin-right: rem-calc(10);
+
+		border-top: 1px solid $lightgrey;
+		text-align: center;
+		line-height: rem-calc(32);
+		color: $lightgrey;
+	}
+
+	.newsletter {
+		display: inline-block;
+		width: 100%;
+		color: $green;
+		text-align: center;
 	}
 }
