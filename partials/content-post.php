@@ -1,7 +1,7 @@
 <?php global $wp_query, $paged; ?>
 <header class="entry-header clearfix">
 	<?php if ( has_post_thumbnail() ) : ?>
-		<?php the_post_thumbnail(); ?>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 	<?php endif; ?>
 	
 	<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
