@@ -138,6 +138,7 @@ function filter_wp_title( $title ) {
 	return $filtered_title;
 }
 add_filter( 'wp_title', 'filter_wp_title' );
+add_filter('widget_text', 'do_shortcode');
 
 require get_template_directory() . '/includes/custom_post_types.php';
 require get_template_directory() . '/includes/widgets.php';

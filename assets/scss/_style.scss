@@ -288,26 +288,6 @@ h1, h2, h3, h4, h5, p {
 		font-size: rem-calc(15);
 	}
 
-	.rstw_comma { display: none; }
-	.twitter-timestamp {
-		display: block;
-		font-size: rem-calc(12);
-		margin-left: 15px;
-		line-height: 1.8;
-		color: $blue;
-		a { color: $blue; }
-	}
-	.twitter-timestamp {
-	    position:relative;
-	}
-	.twitter-timestamp:before {
-	        position:absolute;
-	        font-family: FontAwesome;
-	        top:0;
-	        left:-15px;
-	        content: "\F017";
-	}
-
 	.more {
 		position: absolute;
 		bottom: 0px;
@@ -339,4 +319,25 @@ h1, h2, h3, h4, h5, p {
 	border-radius: 150px;
 	float: left;
 	margin-right: em-calc(10);
+}
+
+/** twitter **/
+.rstw_comma { display: none; }
+.twitter-timestamp {
+	display: block;
+	font-size: rem-calc(12);
+	margin-left: 15px;
+	line-height: 1.8;
+	color: $blue;
+	a { color: $blue; }
+}
+.twitter-timestamp {
+    position:relative;
+}
+.twitter-timestamp:before {
+        position:absolute;
+        font-family: FontAwesome;
+        top:0;
+        left:-15px;
+        content: "\F017";
 }
