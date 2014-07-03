@@ -24,15 +24,11 @@
 					<?php get_template_part( 'partials/content', get_post_type() ); ?>
 				<?php endwhile; ?>
 
-				<?php
-					$big = 999999999; // need an unlikely integer
-					echo paginate_links( array(
-						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-						'format' => '?paged=%#%',
-						'current' => max( 1, get_query_var('paged') ),
-						'total' => $wp_query->max_num_pages
-					) );
-				?>
+				<div class="pagination">
+					<span class="previous"><?php next_posts_link('<i class="icon-chevron-sign-left"></i> Previous page'); ?></span>
+					<span class="next"><?php previous_posts_link('Next page <i class="icon-chevron-sign-right"></i>'); ?></span>
+				</div>
+
 				<?php wp_reset_postdata(); ?>
 				<?php $wp_query = $orig_query; ?>
 
