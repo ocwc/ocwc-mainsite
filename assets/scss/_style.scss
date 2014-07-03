@@ -321,6 +321,10 @@ h1, h2, h3, h4, h5, p {
 	margin-right: em-calc(10);
 }
 
+.entry-content {
+	padding-bottom: rem-calc(16);
+}
+
 /** twitter **/
 .rstw_comma { display: none; }
 .twitter-timestamp {
