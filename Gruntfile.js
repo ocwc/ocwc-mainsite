@@ -45,6 +45,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-pixrem');
 
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('build', ['sass', 'pixrem']);
   grunt.registerTask('default', ['build','watch']);
 };
