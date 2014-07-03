@@ -13,6 +13,7 @@
 <div class="entry-content">
 	<?php if ( is_single() || ( $wp_query->current_post === 0 && $paged === 1) ) : ?>
 		<?php the_content(); ?>
+		<span class="social-share"><?php echo do_shortcode(['[ssba]'])[0]; ?></span>
 	<?php else : ?>
 		<?php the_excerpt(); ?>
 	<?php endif; ?>

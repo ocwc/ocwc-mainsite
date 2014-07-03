@@ -14,7 +14,7 @@
 				<?php endwhile; ?>
 			</div>
 			<div class="small-12 medium-4 columns">
-				<?php get_template_part('partials/sidebar', get_post_type()); ?>
+				<?php get_template_part('partials/sidebar', 'post'); ?>
 			</div>
 		<?php else : ?>
 			<h1>404 Not found</h1>
