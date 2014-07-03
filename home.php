@@ -53,9 +53,6 @@
 				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			<?php endwhile; endif; ?>
 		</ul>
-		<a href="/news/newsletter/" class="newsletter"><i class="icon-envelope"></i> Subscribe to our Newsletter</a>
-		<br />
-		<a href="/news/" class="more"><i class="icon-angle-down"></i> more announcements</a>
 	</div>
 	
 	<div class="small-12 medium-4 columns widget-listing">
@@ -66,7 +63,6 @@
   					style="width:150px; height:20px;"></iframe>			
 		</h1>
 		<?php echo do_shortcode('[really_simple_twitter username="oeconsortium" consumer_key="'.TW_CONSUMER_KEY.'" consumer_secret="'.TW_CONSUMER_SECRET.'" access_token="'.TW_ACCESS_TOKEN.'" access_token_secret="'.TW_ACCESS_TOKEN_SECRET.'"'.' skip_replies=true date_link=true date_format="l, jS F"]'); ?>
-		<a href="http://twitter.com/oeconsortium" class="more"><i class="icon-angle-down"></i> more tweets</a>
 	</div>
 
 	<div class="small-12 medium-4 columns widget-listing">
@@ -77,8 +73,24 @@
 				<li><a href="/courses/view/<?php echo $course->linkhash; ?>/"><?php echo $course->title; ?></a></li>
 			<?php endforeach; ?>
 		</ul>
+	</div>
+</div>
+
+<div class="row collapsed">
+	<div class="small-12 medium-4 columns widget-listing">
+		<a href="/news/newsletter/" class="newsletter"><i class="icon-envelope"></i> Subscribe to our Newsletter</a>
+		<br />
+		<a href="/news/" class="more"><i class="icon-angle-down"></i> more announcements</a>
+	</div>
+	<div class="small-12 medium-4 columns widget-listing">
+		<br />
+		<a href="http://twitter.com/oeconsortium" class="more"><i class="icon-angle-down"></i> more tweets</a>
+	</div>
+	<div class="small-12 medium-4 columns widget-listing">
+		<br />
 		<a href="/courses/" class="more"><i class="icon-angle-down"></i> more courses</a>
 	</div>
+
 </div>
 
 <div class="row">

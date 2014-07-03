@@ -270,8 +270,6 @@ h1, h2, h3, h4, h5, p {
 	li a { color: #222; }
 	a:hover { color: #053f91; }
 
-	min-height: rem-calc(520);
-
 	h1 {
 		display: inline-block;
 		width: 100%;
@@ -289,9 +287,6 @@ h1, h2, h3, h4, h5, p {
 	}
 
 	.more {
-		position: absolute;
-		bottom: 0px;
-
 		display: inline-block;
 		width: 95%;
 		margin-right: rem-calc(10);
