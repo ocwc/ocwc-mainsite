@@ -10,8 +10,10 @@
 	<meta name="google-translate-customization" content="d3bf6f511902d7f2-750e02196618cb43-gadc8982319c58076-15">
   	<?php wp_head(); ?>
 
-  	<!--[if lt IE 9]>
+  	<!--[if lte IE 8]>
+  		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/build/css/ie8.css">
   		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+  		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/selectivizr/selectivizr.js"></script>
   		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/respond/dest/respond.min.js"></script>
 	<![endif]-->
 

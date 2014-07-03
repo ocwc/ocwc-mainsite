@@ -11,8 +11,19 @@ module.exports = function (grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'build/css/app.css': 'assets/scss/app.scss'
+          'build/css/app.css': 'assets/scss/app.scss',
+          'build/css/ie8.css': 'assets/scss/ie8.scss',
         }
+      }
+    },
+
+    pixrem: {
+      options: {
+        rootvalue: '14px'
+      },
+      dist: {
+        src: 'build/css/app.css',
+        dest: 'build/css/app.css'
       }
     },
 
@@ -24,7 +35,7 @@ module.exports = function (grunt) {
 
       sass: {
         files: ['assets/scss/*.scss', 'Gruntfile.js'],
-        tasks: ['sass']
+        tasks: ['sass', 'pixrem']
       }
     }
 
@@ -32,6 +43,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-pixrem');
 
   grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','watch']);
