@@ -48,6 +48,7 @@
 		<?php if (!is_page('styles') ) : ?>
 		<div class="row collapse">
 			<div class="small-12 columns navigation">
+				<a class="toggle-menu" href="#">Menu</a>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'navigation-menu',
 				)); ?>

@@ -103,9 +103,44 @@ h1, h2, h3, h4, h5, p {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 
-	a {
-		display: inline-block;
+	.menu {
+	    list-style: none;
+	     *zoom: 1;
+	     position: relative;
+	     left: 5%;
+	     margin-bottom: 0;
 
+	     &:before,
+	     &:after {
+		    content: " ";
+		    display: table;
+	     }
+
+	     &:after {
+	     	clear: both;
+	     }
+	}
+
+	.menu ul {
+		margin-left: 0;
+	}
+
+	.menu li {
+		position: relative;
+		list-style: none;
+	}
+
+	.menu > li.hover > ul {
+		left: 0;
+	}
+
+	.menu li li.hover ul {
+		left: 100%;
+		top: 0;
+	}
+
+	a {
+		*zoom: 1;
 		padding-left: rem-calc(32);
 		padding-right: rem-calc(32);
 
@@ -114,30 +149,52 @@ h1, h2, h3, h4, h5, p {
 
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
+	}
 
+	.menu > li:last-child a {
+		border-right: 1px solid #657eaf;
+	}
+
+	.menu > li {
+		float: left;
 		border-left: 1px solid #657eaf;
 	}
 
-	li:last-child a {
-		border-right: 1px solid #657eaf;
+	.menu > li > a {
+		display: block;
+		cursor: pointer;
+	}
+
+	.menu li ul {
+		position: absolute;
+		left: -99999px;
+		z-index: 100;
+		width: 200%;
+	}
+
+	.menu li li a {
+		display: block;
+		background: $green;
+		position: relative;
+		z-index: 100;
+	}
+
+	.menu li li a:hover {
+		background-color: lighten($green, 10);
+	}
+
+	.menu li li li a {
+		background: yellow;
+		z-index: 200;
+		border-top: 1px solid #FFFFFF;
 	}
 
 	a:hover, li.current-menu-item {
 		background-color: $blue-hover;
 	}
 
-	ul {
-		margin: 0 auto;
-		text-align: center;
-		font-size: 0;
-	}
-
-	#menu-navigation > li {
-		display: inline-block;
-
-		font-size: rem-calc(16);
-		list-style: none;
-		height: 36px;
+	.toggle-menu {
+		display: none;
 	}
 }
 
