@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, p {
 
 .logo {
 	max-width: none;
+	@media #{$small-only} {
+		max-width: 100%;
+		padding-bottom: rem-calc(6);
+	}
 }
 
 .header-row {
@@ -157,6 +161,12 @@ h1, h2, h3, h4, h5, p {
 
     span {
         padding-right: rem-calc(32);
+        @media #{$small-only} {
+			width: 100%;
+			display: block;
+			text-align: left;
+			padding-left: 5%;
+        }
     }
     span:last-child {
         padding-right: 0;

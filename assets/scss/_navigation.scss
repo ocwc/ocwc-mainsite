@@ -7,12 +7,24 @@
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 
+	@media #{$small-only} {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
 	.menu {
 	    list-style: none;
 	     *zoom: 1;
 	     position: relative;
-	     left: 5%;
 	     margin-bottom: 0;
+	     left: 5%;
+
+	     @media #{$small-only} {
+			width: 100%;
+			left: 0;
+			margin-left: 0;
+			display: none;
+	     }
 
 	     &:before,
 	     &:after {
@@ -36,6 +48,10 @@
 
 	.menu > li.hover > ul {
 		left: 0;
+
+		@media #{$small-only} {
+			position: static;
+		}
 	}
 
 	.menu li li.hover ul {
@@ -62,6 +78,11 @@
 	.menu > li {
 		float: left;
 		border-left: 1px solid #657eaf;
+
+		@media #{$small-only} {
+			float: none;
+			border-left: 0;
+		}
 	}
 
 	.menu > li > a {
@@ -99,5 +120,13 @@
 
 	.toggle-menu {
 		display: none;
+		i {
+			float: right;
+			padding-top: rem-calc(8);
+		}
+
+		@media #{$small-only} {
+			display: block;
+		}
 	}
 }

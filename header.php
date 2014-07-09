@@ -3,6 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700|Metrophobic:400' rel='stylesheet' type='text/css'> -->
@@ -48,7 +49,7 @@
 		<?php if (!is_page('styles') ) : ?>
 		<div class="row collapse">
 			<div class="small-12 columns navigation">
-				<a class="toggle-menu" href="#">Menu</a>
+			<a class="toggle-menu" href="#"><span>Menu</span> <i class="icon-reorder"></i></a>
 				<?php wp_nav_menu(array(
 					'theme_location' => 'navigation-menu',
 				)); ?>

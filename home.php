@@ -76,7 +76,7 @@
 	</div>
 </div>
 
-<div class="row collapsed">
+<div class="row collapsed show-for-medium-up">
 	<div class="small-12 medium-4 columns widget-listing">
 		<a href="/news/newsletter/" class="newsletter"><i class="icon-envelope"></i> Subscribe to our Newsletter</a>
 		<br />
@@ -95,10 +95,10 @@
 
 <div class="row">
 	<div class="small-12 columns text-center home-stats">
-		<span><i class="icon-file-text"></i> 30&nbsp;000+ Modules</span>
-		<span><i class="icon-bookmark"></i> 280+ Organizations</span>
-		<span><i class="icon-globe"></i> 40 Countries</span>
-		<span><i class="icon-comments-alt"></i> 29 Languages</span>
+		<span><i class="icon-file-text"></i>&nbsp;30&nbsp;000+ Modules</span>
+		<span><i class="icon-bookmark"></i>&nbsp;280+&nbsp;Organizations</span>
+		<span><i class="icon-globe"></i>&nbsp;40&nbsp;Countries</span>
+		<span><i class="icon-comments-alt"></i>&nbsp;29&nbsp;Languages</span>
 	</div>
 </div>
 
