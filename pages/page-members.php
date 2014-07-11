@@ -28,16 +28,16 @@ add_action('wp_head', 'mainsite_members_custom_head');
 
 <?php get_header(); ?>
 <div class="row main-wrapper">
-	<div class="large-12 columns">
+	<div class="small-12 columns">
 		<div id="map"></div>
 	</div>
-
-	<div class="large-3 columns">
+	<div class="medium-3 show-for-medium-up columns">
+		<p><a class="button medium button_how-to-join" href="/about-ocw/membership/how-to-join/">How To Join</a></p>
 		<?php get_template_part('partials/members-sidebar'); ?>
-
 	</div>
 	<?php if ( have_posts() ) : ?>
-		<div class="large-9 columns">
+		<div class="medium-9 show-for-medium-up columns">
+
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part('partials/content', get_post_type()); ?>
 		<?php endwhile; ?>
