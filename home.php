@@ -33,7 +33,7 @@
 		
 		<div class="cta-box show-for-medium-up">
 			<a href="http://conference.oeconsortium.org/" class="wrapper">
-				<h1>OCWC Global</h1>
+				<h1>OEC Global</h1>
 				<h3>Our Annual Event</h3>
 				<p>Join scholars and practioners.</p>
 				<span class="more">+ join us</span>
