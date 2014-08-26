@@ -21,15 +21,15 @@ add_action( 'after_setup_theme', 'oec_setup' );
 function mainsite_scripts() {
 	if ( !is_admin() ) {
 		if ( WP_LIVERELOAD === true ) {
-			wp_enqueue_script('livereload', 'http://fey:35729/livereload.js', false, '', false);
+			wp_enqueue_script('livereload', WP_LIVERELOAD_URL, false, '', false);
 		}
-		wp_enqueue_style( 'oec-app', get_template_directory_uri(). '/build/css/app.css' );
 
 		if ( is_home() ) {
 			wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
 		}
 
-		wp_enqueue_script('script', get_template_directory_uri().'/lib/javascripts/script.js', array('jquery'), '', false);
+		wp_enqueue_style( 'op-style', get_template_directory_uri().'/css/style.css' );
+		wp_enqueue_script( 'op-script', get_template_directory_uri() . '/js/script.min.js', array('jquery'), '20140815', true );
 	}
 }
 add_action( 'wp', 'mainsite_scripts');
