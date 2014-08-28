@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .footer-wrapper {
-	margin-top: em-calc(48);
+	margin-top: rem-calc(48);
 
 	background-color: $green;
 	-webkit-font-smoothing: antialiased;
@@ -273,13 +273,13 @@ h1, h2, h3, h4, h5, p {
 
 /** news **/
 .entry-header {
-	margin-bottom: em-calc(10);
+	margin-bottom: rem-calc(10);
 }
 
 .avatar {
 	border-radius: 150px;
 	float: left;
-	margin-right: em-calc(10);
+	margin-right: rem-calc(10);
 }
 
 .entry-content {
