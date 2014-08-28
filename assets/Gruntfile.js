@@ -58,7 +58,7 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      grunt: { files: ['scss/*.scss', 'Gruntfile.js', '../*.php'],},
+      grunt: { files: ['scss/*.scss', 'Gruntfile.js', '../*.php', '../partials/*.php'],},
 
       options: {
         livereload: true,
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -86,5 +86,5 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['sass:build', 'jshint', 'uglify']);
   grunt.registerTask('foundation', ['sass:foundation', 'pixrem']);
   grunt.registerTask('default', ['build','watch']);
-  grunt.registerTask('develo', ['sass:develop', 'jshint', 'uglify']);
+  grunt.registerTask('develop', ['sass:develop', 'jshint', 'uglify', 'watch']);
 };

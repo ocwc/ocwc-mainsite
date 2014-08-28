@@ -7,7 +7,7 @@
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 
-	@media #{$small-only} {
+	@media (max-width: $screen-sm-min) {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
@@ -19,7 +19,7 @@
 	     margin-bottom: 0;
 	     left: 5%;
 
-	     @media #{$small-only} {
+	     @media (max-width: $screen-sm-min) {
 			width: 100%;
 			left: 0;
 			margin-left: 0;
@@ -49,7 +49,7 @@
 	.menu > li.hover > ul {
 		left: 0;
 
-		@media #{$small-only} {
+		@media (max-width: $screen-sm-min) {
 			position: static;
 		}
 	}
@@ -79,7 +79,7 @@
 		float: left;
 		border-left: 1px solid #657eaf;
 
-		@media #{$small-only} {
+		@media (max-width: $screen-sm-min) {
 			float: none;
 			border-left: 0;
 		}
@@ -129,7 +129,7 @@
 			padding-top: rem-calc(8);
 		}
 
-		@media #{$small-only} {
+		@media (max-width: $screen-sm-min) {
 			display: block;
 		}
 	}

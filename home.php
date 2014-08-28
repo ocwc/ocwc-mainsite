@@ -2,9 +2,9 @@
 
 <?php get_template_part('partials/home_slideshow'); ?>
 
-<div class="row collapsed">
-	<div class="cta-row">
-		<div class="cta-box show-for-medium-up clearfix">
+<div class="container">
+	<div class="row cta-row">
+		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="/courses/" class="wrapper">
 				<h1>Courses</h1>
 				<h3>Study</h3>
@@ -13,7 +13,7 @@
 			</a>
 		</div>
 		
-		<div class="cta-box show-for-medium-up clearfix">
+		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="/about-oec/" class="wrapper">
 				<h1>About</h1>
 				<h3>Open Education</h3>
@@ -22,7 +22,7 @@
 			</a>
 		</div>
 
-		<div class="cta-box show-for-medium-up">
+		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="/resources/webinars/" class="wrapper">
 				<h1>Learn</h1>
 				<h3>Our Webinars</h3>
@@ -31,7 +31,7 @@
 			</a>
 		</div>
 		
-		<div class="cta-box show-for-medium-up">
+		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="http://conference.oeconsortium.org/" class="wrapper">
 				<h1>OEC Global</h1>
 				<h3>Our Annual Event</h3>
@@ -42,8 +42,8 @@
 	</div>
 </div>
 
-<div class="row collapsed">
-	<div class="small-12 medium-4 columns widget-listing">
+<div class="container">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<h1>
 			<a href="/news/">Announcements</a>
 		</h1>
@@ -55,7 +55,7 @@
 		</ul>
 	</div>
 	
-	<div class="small-12 medium-4 columns widget-listing">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<h1>
 			<a href="/courses/">Twitter Feed</a>
 			<iframe allowtransparency="true" frameborder="0" scrolling="no"
@@ -65,7 +65,7 @@
 		<?php echo do_shortcode('[really_simple_twitter username="oeconsortium" consumer_key="'.TW_CONSUMER_KEY.'" consumer_secret="'.TW_CONSUMER_SECRET.'" access_token="'.TW_ACCESS_TOKEN.'" access_token_secret="'.TW_ACCESS_TOKEN_SECRET.'"'.' skip_replies=true date_link=true date_format="l, jS F"]'); ?>
 	</div>
 
-	<div class="small-12 medium-4 columns widget-listing">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<h1><a href="/courses/">Latest courses from our members</a></h1>
 		<ul>
 			<?php $course_list = get_latest_courses(); ?>
@@ -76,25 +76,24 @@
 	</div>
 </div>
 
-<div class="row collapsed show-for-medium-up">
-	<div class="small-12 medium-4 columns widget-listing">
+<div class="container show-for-sm-up">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<a href="/news/newsletter/" class="newsletter"><i class="icon-envelope"></i> Subscribe to our Newsletter</a>
 		<br />
 		<a href="/news/" class="more"><i class="icon-angle-down"></i> more announcements</a>
 	</div>
-	<div class="small-12 medium-4 columns widget-listing">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<br />
 		<a href="http://twitter.com/oeconsortium" class="more"><i class="icon-angle-down"></i> more tweets</a>
 	</div>
-	<div class="small-12 medium-4 columns widget-listing">
+	<div class="col-xs-12 col-sm-4 widget-listing">
 		<br />
 		<a href="/courses/" class="more"><i class="icon-angle-down"></i> more courses</a>
 	</div>
-
 </div>
 
-<div class="row">
-	<div class="small-12 columns text-center home-stats">
+<div class="container">
+	<div class="col-xs-12 text-center home-stats">
 		<span><i class="icon-file-text"></i>&nbsp;30&nbsp;000+ Modules</span>
 		<span><i class="icon-bookmark"></i>&nbsp;280+&nbsp;Organizations</span>
 		<span><i class="icon-globe"></i>&nbsp;40&nbsp;Countries</span>
