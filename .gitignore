@@ -5,4 +5,4 @@ css/style.css
 css/style.min.css
 css/*.map
 js/*
-
+build/
