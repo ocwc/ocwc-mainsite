@@ -20,11 +20,11 @@
 	<div class="header-container-wrapper">
 			<div class="header-row">
 				<div class="container">
-					<div class="show-for-xs-up col-sm-2 pull-right text-center tab members">
+					<div class="show-for-xs-up col-sm-3 col-md-2 pull-right text-center tab members">
 						<a href="http://members.oeconsortium.org" class="member-portal">Members Portal</a>
 					</div>
 
-					<div class="show-for-xs-up col-sm-2 pull-right tab translation">
+					<div class="show-for-xs-up col-sm-3 col-md-2 pull-right tab translation">
 						<?php get_template_part('partials/translate_widget'); ?>
 					</div>
 				</div>
@@ -34,7 +34,7 @@
 			<div class="col-xs-12 col-sm-4 pull-left">
 				<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="The Open Education Consortium" class="logo" /></a>
 			</div>
-			<div class="col-xs-12 col-sm-3 pull-right search-form-row">
+			<div class="show-for-xs-up col-sm-4 col-md-3 pull-right search-form-row">
 				<form class="header-search" method="GET" action="/courses/search/">
 					<input placeholder="Search for open courses ..." name="search">
 					<i class="icon-search header-search-icon"></i>
@@ -45,6 +45,10 @@
 		<div class="container">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header visible-xs-block">
+					<form class="header-search" method="GET" action="/courses/search/">
+						<input placeholder="Search for open courses ..." name="search">
+					</form>
+
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-menu">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
