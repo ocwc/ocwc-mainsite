@@ -43,6 +43,8 @@ h1, h2, h3, h4, h5, p {
 	}
 
 	.members {
+		margin-right: 15px;
+
 		background-color: $green;
 		border-bottom-right-radius: 5px;
 	}
@@ -59,6 +61,12 @@ h1, h2, h3, h4, h5, p {
 		color: #FFFFFF;
 		line-height: 2.5;
 
+	}
+}
+
+.search-form-row {
+	@media #{$sm-up} {
+		margin-right: 15px;
 	}
 }
 

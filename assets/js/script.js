@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
-    
+    console.log('blah');
+        
     if ( $(".rslides").length > 0 ) {
         $(".rslides").responsiveSlides({
             speed: 2000,

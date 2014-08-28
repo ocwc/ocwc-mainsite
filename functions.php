@@ -147,3 +147,8 @@ require get_template_directory() . '/includes/images.php';
 
 require get_template_directory() . '/courses/functions.php';
 require get_template_directory() . '/members/functions.php';
+
+/**
+ * Custom Menu Walker for Bootstrap 3
+ */
+require get_template_directory() . '/lib/wp_bootstrap_navwalker.php';
