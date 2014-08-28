@@ -1,5 +1,5 @@
 <div class="footer-wrapper">
-	<div class="row">
+	<div class="container">
 		<?php dynamic_sidebar('footer'); ?>
 		<?php dynamic_sidebar('footer-wide'); ?>
   	</div>
