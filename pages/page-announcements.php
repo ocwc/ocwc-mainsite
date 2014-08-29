@@ -6,9 +6,9 @@
 	
 <?php get_header() ?>
 
-<div class="row main-wrapper">
+<div class="main-wrapper container">
 	<?php if ( have_posts() ) : ?>	
-		<div class="small-12 medium-8 columns">
+		<div class="col-xs-12 col-sm-8">
 			<?php 
 				$orig_query = $wp_query;
 
@@ -34,7 +34,7 @@
 
 			<?php endif; ?>
 		</div>
-		<div class="small-12 medium-4 columns">
+		<div class="col-xs-12 col-sm-4">
 			<?php get_template_part('partials/sidebar', 'post'); ?>
 		</div>
 	<?php else : ?>

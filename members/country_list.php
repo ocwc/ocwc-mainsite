@@ -2,17 +2,17 @@
 	$members = get_country_members();
 ?>
 <?php get_header(); ?>
-	<div class="row">
-		<div class="large-3 columns">
+	<div class="container">
+		<div class="col-xs-12 col-sm-3">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
 
-		<div class="large-9 columns">
+		<div class="col-xs-12 col-sm-9">
 			<header class="entry-header">
 				<h1 class="entry-title">Members in <?php echo str_replace('%20', ' ', get_query_var('members_country_name')); ?></h1>
 				<div class="entry-meta"></div>
 			</header>
-			<table>
+			<table class="table table-striped table-bordered table-hover">
 			<?php foreach ($members as $member) : ?>
 				<tr>
 					<td class="tableblue"><a href="/members/view/<?php echo $member->id; ?>/"><?php echo $member->name; ?></a></td>

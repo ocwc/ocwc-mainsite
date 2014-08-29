@@ -3,19 +3,19 @@
 ?>
 
 <?php get_header(); ?>
-	<div class="row">
-		<div class="large-3 columns">
+	<div class="container">
+		<div class="col-xs-12 col-sm-3">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
 
-		<div class="large-9 columns">
+		<div class="col-xs-12 col-sm-9">
 			<h1><?php echo $member->name; ?></h1>
-			<p class="large-8 columns"><?php echo nl2br($member->description); ?></p>
+			<p class="col-xs-8"><?php echo nl2br($member->description); ?></p>
 			<?php if ( $member->logo_small ) : ?>
-				<p class="large-4 columns"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" /></p>
+				<p class="col-xs-4"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" /></p>
 			<?php endif; ?>
 
-			<p class="large-12 columns">
+			<p class="col-xs-12">
 			<?php if ( $member->main_website ) : ?>
 				<strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
 			<?php endif;?>

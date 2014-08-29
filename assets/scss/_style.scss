@@ -4,6 +4,10 @@ h1, h2, h3, h4, h5, p {
 	-webkit-font-smoothing: antialiased;
 }
 
+.btn-square {
+	border-radius: 0;
+}
+
 /* header */
 
 /** top row **/
@@ -118,11 +122,17 @@ h1, h2, h3, h4, h5, p {
 
 /** sidebar **/
 .sidebar {
-	padding: rem-calc(12) rem-calc(20);
+	padding-top: 30px;
 
-	ul { margin-left: 0; }
+	ul { 
+		margin-left: 0; 
+		padding-left: 0;
+	}
 	li { list-style: none; }
-	a { color: $grey; }
+	a { 
+		color: $grey; 
+		line-height: 1.5;
+	}
 
 	& > ul > li { margin-bottom: rem-calc(16); }
 	& > ul > li > a {
@@ -291,12 +301,22 @@ h1, h2, h3, h4, h5, p {
 /** news **/
 .entry-header {
 	margin-bottom: rem-calc(10);
+
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .avatar {
 	border-radius: 150px;
 	float: left;
 	margin-right: rem-calc(10);
+
+	img {
+		height: 50px;
+		width: 50px;
+	}
 }
 
 .entry-content {
@@ -343,8 +363,11 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* membership */
-.button_how-to-join {
-	margin-left: rem-calc(36);
-	margin-bottom: 0;
+.button_how-to-join {	
+	margin-top: 20px;
 	line-height: 1.5;
+}
+
+.country-list {
+	padding-left: 20px;
 }

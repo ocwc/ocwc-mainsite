@@ -6,14 +6,14 @@
 <?php get_header() ?>
 
 <div class="main-wrapper">
-	<div class="row">
+	<div class="container">
 		<?php if ( have_posts() ) : ?>	
-			<div class="small-12 medium-8 columns">
+			<div class="col-xs-12 col-sm-8">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part('partials/content', get_post_type()); ?>
 				<?php endwhile; ?>
 			</div>
-			<div class="small-12 medium-4 columns">
+			<div class="col-xs-12 col-sm-4">
 				<?php get_template_part('partials/sidebar', 'post'); ?>
 			</div>
 		<?php else : ?>
