@@ -2,14 +2,14 @@
 	$courses = get_category_courses();
 ?>
 <?php get_header(); ?>
-<div class="row main-wrapper">
-	<div class="large-3 columns">
+<div class="container main-wrapper">
+	<div class="col-xs-12 col-sm-3">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
-	<div class="large-9 columns">
+	<div class="col-xs-12 col-sm-9">
 		<?php if ( $courses->count ) : ?>
 			<h1><?php echo urldecode(get_query_var('category_name')); ?></h1>
-			<table>
+			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<th class="tableblue">Course Title</th>
 					<th>Language</th>

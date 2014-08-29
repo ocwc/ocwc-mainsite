@@ -6,12 +6,12 @@
 	$languages = get_api_results("/languages/");
 ?>
 <?php get_header(); ?>
-<div class="row main-wrapper">
-	<div class="large-3 columns">
+<div class="container main-wrapper">
+	<div class="col-xs-12 col-sm-3">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
 	<?php if ( have_posts() ) : ?>	
-		<div class="large-9 columns">
+		<div class="col-xs-12 col-sm-9">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part('partials/content', get_post_format()); ?>
 			<?php endwhile; ?>

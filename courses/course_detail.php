@@ -4,11 +4,11 @@
 	$custom_title = $course->title . ' | ' . $course->provider_name;
 ?>
 <?php get_header(); ?>
-<div class="row main-wrapper">
-	<div class="large-3 columns">
+<div class="container main-wrapper">
+	<div class="col-xs-12 col-sm-3">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
-	<div class="large-9 columns">
+	<div class="col-xs-12 col-sm-9">
 		<h1><?php echo $course->title; ?></h1>
 		<p><?php echo $course->description; ?></p>
 

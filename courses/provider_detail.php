@@ -3,16 +3,16 @@
 	$provider_courses = get_provider_courses();
 ?>
 <?php get_header(); ?>
-<div class="row main-wrapper">
+<div class="container main-wrapper">
 	<?php get_template_part('partials/header_image', get_post_type()); ?>
-	<div class="large-3 columns">
+	<div class="col-xs-12 col-sm-3">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>
-	<div class="large-9 columns">
+	<div class="col-xs-12 col-sm-9">
 		<h1><?php echo $provider->name; ?></h1>
 
 		<?php if ( $provider_courses->count ) : ?>
-			<table>
+			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<th class="tableblue">Course Title</th>
 					<th>Language</th>
