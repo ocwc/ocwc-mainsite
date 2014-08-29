@@ -8,7 +8,6 @@
 
 <div class="row main-wrapper">
 	<?php if ( have_posts() ) : ?>	
-		<?php get_template_part('partials/header_image', get_post_type()); ?>
 		<div class="col-xs-12 col-sm-3">
 			<?php get_template_part('partials/sidebar', get_post_type()); ?>
 		</div>

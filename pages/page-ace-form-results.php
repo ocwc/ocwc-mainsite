@@ -40,13 +40,13 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if ( post_password_required( $post ) ) : ?>
 				<div class="row main-wrapper">
-					<div class="large-6 columns">
+					<div class="col-xs-6">
 						<?php get_template_part('partials/content', get_post_type()); ?>
 					</div>
 				</div>
 			<?php else : ?>
 				<div class="row main-wrapper">
-					<div class="large-6 columns">
+					<div class="col-xs-6">
 					<?php get_template_part('partials/content', get_post_type()); ?>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 						?>
 
 						<div class="row">
-							<div class="small-12 columns">
+							<div class="col-xs-12">
 								<label ng-repeat="category in categories" class="category-list">
 									<input 
 										type="checkbox" 
@@ -102,7 +102,7 @@
 						</div>
 
 						<div class="row" ng-repeat="entry in ( entries | filter:hasSelectedCategory )" ng-cloak>
-							<div class="small-8 columns form-entry">
+							<div class="col-xs-8 form-entry">
 								<h2>Entry #{{ entry.id }}</h2>
 								<ul>
 									<li ng-repeat="field in entry.items" ng-class="getHeaderType(field)">

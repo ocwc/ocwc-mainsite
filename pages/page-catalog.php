@@ -6,7 +6,6 @@ $categories = get_api_results("/categories/");
 ?>
 <?php get_header(); ?>
 <div class="container main-wrapper">
-	<?php get_template_part('partials/header_image', get_post_type()); ?>
 	<div class="col-xs-12 col-sm-3">
 		<?php dynamic_sidebar('sidebar-courses'); ?>
 	</div>

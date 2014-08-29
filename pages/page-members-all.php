@@ -8,7 +8,6 @@
 ?>
 <?php get_header(); ?>
 	<div class="container main-wrapper">
-		<?php get_template_part('partials/header_image', get_post_type()); ?>
 		<div class="col-xs-12 col-sm-3">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
@@ -20,7 +19,7 @@
 
 			<p><i class="icon-star"></i> = Sustaining Member</p>			
 
-			<div class="col-xs-6 columns">
+			<div class="col-xs-6">
 				<ul>
 					<h2>Institutions of Higher Education</h2>
 				<?php foreach ($member_list->{'Institutions of Higher Education'} as $member) : ?>
@@ -33,7 +32,7 @@
 				<?php endforeach; ?>
 				</ul>
 			</div>
-			<div class="col-xs-6 columns">
+			<div class="col-xs-6">
 				<?php foreach (array('Associate Consortia', 'Organizational Members', 'Corporate Members') as $key) : ?>
 					<ul>
 					<h2><?php echo $key; ?></h2>
