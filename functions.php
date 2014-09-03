@@ -29,7 +29,7 @@ function mainsite_scripts() {
 		}
 
 		wp_enqueue_style( 'op-style', get_template_directory_uri().'/css/style.css' );
-		wp_enqueue_script( 'op-script', get_template_directory_uri() . '/js/script.min.js', array('jquery'), '20140815', true );
+		wp_enqueue_script( 'op-script', get_template_directory_uri() . '/js/script.min.js', array('jquery'), '20140815', false );
 	}
 }
 add_action( 'wp', 'mainsite_scripts');
