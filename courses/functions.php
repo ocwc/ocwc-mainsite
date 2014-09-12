@@ -5,6 +5,7 @@
 function mainsite_courses_query_vars($query_vars){
 	/* courses */
 	$query_vars[] = 'course_id';
+	$query_vars[] = 'course_search';
 	$query_vars[] = 'provider_id';
 	$query_vars[] = 'member_id';
 	$query_vars[] = 'language_name';
@@ -40,8 +41,10 @@ function mainsite_url_rewrite_templates() {
 			return get_template_directory() . '/courses/course_category_list.php';
 		});
 	}
-	if ( array_key_exists('pagename', $wp_query->query) AND 
-		 $wp_query->query['pagename'] === 'courses/search' ) {
+
+	if ( ( array_key_exists('pagename', $wp_query->query) AND
+            $wp_query->query['pagename'] === 'courses/search' ) OR ( get_query_var('course_search') )
+		) {
 			$wp_query->is_404 = false;
 			status_header( '200' );
 
@@ -62,7 +65,7 @@ function mainsite_url_rewrite_templates() {
 		});
 	}
 
-	if ( array_key_exists('pagename', $wp_query->query) AND 
+	if ( array_key_exists('pagename', $wp_query->query) AND
 		 $wp_query->query['pagename'] === 'members/member-list' ) {
 		add_filter( 'template_include', function() {
 			return get_template_directory() . '/members/member-list.php';
@@ -85,12 +88,12 @@ function mainsite_courses_rewrites_init() {
         'index.php?category_name=$matches[1]',
     	'top' );
     add_rewrite_rule(
-        'providers/(\w+)/?$',
-        'index.php?provider_id=$matches[1]',
+        'courses/search/?$',
+        'index.php?course_search=1',
     	'top' );
     add_rewrite_rule(
-    	'courses/search/$',
-    	'index.php?course_search=1',
+        'providers/(\w+)/?$',
+        'index.php?provider_id=$matches[1]',
     	'top' );
     add_rewrite_rule(
         'members/view/(\w+)/?$',
