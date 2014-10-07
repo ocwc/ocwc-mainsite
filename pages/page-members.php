@@ -2,6 +2,7 @@
 /*
 	Template name: Page Members
 */
+
 function mainsite_members_custom_head() { 
 	?>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
@@ -21,7 +22,7 @@ function mainsite_members_custom_head() {
 	<script type="text/javascript">
 		var members_site_domain = '<?php echo MEMBERS_API_URL; ?>';
 	</script>
-<?
+<?php
 }
 add_action('wp_head', 'mainsite_members_custom_head');
 ?>
