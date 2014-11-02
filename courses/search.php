@@ -23,7 +23,7 @@
 			<?php foreach ($results['results'] as $course) : ?>
 				<tr>
 					<td class="tableblue"><a href="<?php echo $course->link; ?>" target="_blank"><?php echo $course->title; ?></a></td>
-					<td><?php echo $course->language; ?></td>
+					<td><?php echo implode(', ', $course->language); ?></td>
 					<td><?php echo $course->source; ?></td>
 					<td><a href="/courses/view/<?php echo $course->id; ?>/" target="_blank">Details</a></td>
 				</tr>
@@ -32,4 +32,6 @@
 		<?php endif; ?>
 	</div>
 </div>
+
+<?php get_template_part('partials/_search_footer'); ?>
 <?php get_footer(); ?>

@@ -13,10 +13,31 @@
 		<p><?php echo $course->description; ?></p>
 
 		<p>
-			<strong>Author:</strong> <?php echo $course->author; ?><br />
-			<strong>Link:</strong> <a href="<?php echo $course->linkurl; ?>"><?php echo $course->linkurl; ?></a><br />
-			<strong>Provider:</strong> <a href="/providers/<?php echo $course->provider; ?>/"><?php echo $course->provider_name; ?></a>
+			<strong>Author:</strong> <?php echo $course->author; ?><br />			
+			<strong>Organization:</strong> <a href="/providers/<?php echo $course->provider; ?>/"><?php echo $course->provider_name; ?></a>
+		</p>
+
+		<?php if ( $course->categories ) : ?>
+			<strong>Categories:</strong>
+			<ul>
+				<?php foreach ($course->categories as $cat) : ?>
+					<li><?php echo str_replace('/', ' / ', str_replace('All/', '', $cat)); ?></li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
+
+		<?php if ( $course->merlot_id ) : ?>
+		<p>
+			<a href="http://www.merlot.org/merlot/viewMaterial.htm?id=<?php echo $course->merlot_id; ?>" target="_blank">
+				View More Information about the Course on MERLOT
+			</a>
+		</p>
+		<?php endif; ?>
+		<p>
+			<a href="<?php echo $course->linkurl; ?>" class="btn btn-lg btn-primary" target="_blank">View Course</a>
 		</p>
 	</div>
 </div>
+
+<?php get_template_part('partials/_search_footer'); ?>
 <?php get_footer(); ?>

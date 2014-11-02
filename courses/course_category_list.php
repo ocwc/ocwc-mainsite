@@ -8,7 +8,7 @@
 	</div>
 	<div class="col-xs-12 col-sm-9">
 		<?php if ( $courses->count ) : ?>
-			<h1><?php echo urldecode(get_query_var('category_name')); ?></h1>
+			<h1><?php echo $courses->title; ?></h1>
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
 					<th class="tableblue">Course Title</th>
@@ -18,7 +18,9 @@
 				<?php foreach ($courses->results as $course) : ?>
 					<tr>
 						<td class="tableblue"><a href="<?php echo $course->linkurl; ?>" target="_blank"><?php echo $course->title; ?></a></td>
-						<td><?php echo $course->language; ?></td>
+						<td>
+
+						<?php echo implode(', ', $course->language); ?></td>
 						<td><a href="/courses/view/<?php echo $course->linkhash; ?>/" target="_blank"><i class="icon-search"></i> Details</a></td>
 					</tr>
 				<?php endforeach; ?>
@@ -35,4 +37,6 @@
 		<?php endif; ?>
 	</div>
 </div>
+
+<?php get_template_part('partials/_search_footer'); ?>
 <?php get_footer(); ?>
