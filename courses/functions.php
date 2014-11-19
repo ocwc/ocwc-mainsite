@@ -193,7 +193,7 @@ function get_search_results() {
 
 		$url = DATA_API_URL."/courses/search/?" . http_build_query($data);
 
-		$result = wp_remote_get( $url );
+		$result = wp_remote_get( $url, array( 'timeout' => 120, 'httpversion' => '1.1' ) );
 		$response = wp_remote_retrieve_body( $result );
 		
 		$object = json_decode($response);
