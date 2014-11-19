@@ -321,11 +321,11 @@ h1, h2, h3, h4, h5, p {
 }
 
 .entry-content {
-	padding-bottom: rem-calc(16);
+	margin-bottom: rem-calc(16);
 }
 
 .pagination {
-	padding-top: rem-calc(12);
+	margin-top: rem-calc(12);
 	line-height: rem-calc(32);
 
 	a { vertical-align: top; color: $lightgrey; }

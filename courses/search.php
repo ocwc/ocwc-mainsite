@@ -23,12 +23,28 @@
 			<?php foreach ($results['results'] as $course) : ?>
 				<tr>
 					<td class="tableblue"><a href="<?php echo $course->link; ?>" target="_blank"><?php echo $course->title; ?></a></td>
-					<td><?php echo implode(', ', $course->language); ?></td>
+					<?php if ( is_string($course->language) ) : ?>
+						<td><?php echo $course->language; ?></td>
+					<?php else : ?>
+						<td><?php echo implode(', ', $course->language); ?></td>
+					<?php endif; ?>
+
 					<td><?php echo $course->source; ?></td>
 					<td><a href="/courses/view/<?php echo $course->id; ?>/" target="_blank">Details</a></td>
 				</tr>
 			<?php endforeach; ?>
 			</table>
+
+			<div class="pagination col-sm-12">
+				<?php if ( array_key_exists ( 'next_page', $results ) ) : ?>
+					<a href="/courses/search/?<?php echo $results['next_page']; ?>" class="next-page pull-right">Next Page »</a>
+				<?php endif; ?>
+
+				<?php if ( array_key_exists ( 'previous_page', $results ) ) : ?>
+					<a href="?<?php echo $results['previous_page']; ?>" class="previous-page pull-left">« Previous Page</a>
+				<?php endif; ?>
+			</div>			
+
 		<?php endif; ?>
 	</div>
 </div>

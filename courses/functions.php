@@ -10,7 +10,7 @@ function mainsite_courses_query_vars($query_vars){
 	$query_vars[] = 'member_id';
 	$query_vars[] = 'language_name';
 	$query_vars[] = 'search';
-
+	$query_vars[] = 'legacy';
 
 	/* members */
 	$query_vars[] = 'members_country_name';
@@ -180,17 +180,42 @@ function get_category_courses() {
 
 function get_search_results() {
 	if ( get_query_var('search') ) {
-		$q = urlencode(get_query_var('search'));
-		$url = DATA_API_URL."/courses/search/?q=$q";
+
+		$legacy = ( get_query_var('legacy') ) ? get_query_var('legacy') : 0;
+		$page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+		$query = get_query_var('search');
+
+		$data = array(
+			'q' => $query,
+			'legacy' => $legacy,
+			'page' => $page
+		);
+
+		$url = DATA_API_URL."/courses/search/?" . http_build_query($data);
+
 		$result = wp_remote_get( $url );
 		$response = wp_remote_retrieve_body( $result );
 		
 		$object = json_decode($response);
-		return array(
-			'results' => $object,
-			'count' => sizeof($object),
-			'query' => wp_kses($q, '')
-		);
+
+		$data = array(
+					'results' => $object->documents,
+					'count' => sizeof($object),
+					'legacy' => $legacy,
+					'query' => wp_kses($query, '')
+				);
+
+		if ( $legacy ) {
+			if ( array_key_exists('next_page', $object) ) {
+				$data['next_page'] = str_replace('q=', 'search=', $object->next_page);
+			}
+
+			if ( array_key_exists('previous_page', $object) ) {
+				$data['previous_page'] = str_replace('q=', 'search=', $object->previous_page);
+			}
+		}
+
+		return $data;
 	}
 }
 
