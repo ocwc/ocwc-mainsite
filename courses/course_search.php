@@ -9,7 +9,7 @@
 		<div class="col-sm-12">
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" name="legacy" <?php if ( get_query_var('search') ) : ?>checked<?php endif; ?> >Use legacy search
+					<input type="checkbox" name="legacy" <?php if ( get_query_var('legacy') === 'on' ) : ?>checked<?php endif; ?> >Use legacy search
 				</label>
 			</div>
 		</div>

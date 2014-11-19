@@ -205,14 +205,12 @@ function get_search_results() {
 					'query' => wp_kses($query, '')
 				);
 
-		if ( $legacy ) {
-			if ( array_key_exists('next_page', $object) ) {
-				$data['next_page'] = str_replace('q=', 'search=', $object->next_page);
-			}
+		if ( array_key_exists('next_page', $object) ) {
+			$data['next_page'] = str_replace('q=', 'search=', $object->next_page);
+		}
 
-			if ( array_key_exists('previous_page', $object) ) {
-				$data['previous_page'] = str_replace('q=', 'search=', $object->previous_page);
-			}
+		if ( array_key_exists('previous_page', $object) ) {
+			$data['previous_page'] = str_replace('q=', 'search=', $object->previous_page);
 		}
 
 		return $data;
