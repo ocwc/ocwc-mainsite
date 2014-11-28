@@ -17,7 +17,7 @@
 				<thead>
 					<th class="tableblue">Course Title</th>
 					<th>Language</th>
-					<th>Source</th>
+					<th>Author</th>
 					<th>Details</th>
 				</thead>
 			<?php foreach ($results['results'] as $course) : ?>
