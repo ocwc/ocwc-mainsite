@@ -123,6 +123,7 @@ require get_template_directory() . '/includes/custom_post_types.php';
 require get_template_directory() . '/includes/widgets.php';
 require get_template_directory() . '/includes/sidebars.php';
 require get_template_directory() . '/includes/images.php';
+require get_template_directory() . '/includes/actions.php';
 
 require get_template_directory() . '/courses/functions.php';
 require get_template_directory() . '/members/functions.php';
