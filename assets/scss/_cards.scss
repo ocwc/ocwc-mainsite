@@ -1,0 +1,98 @@
+.infomap-card {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.infomap-card-icon {
+	padding: 10px;
+	color: #FFFFFF;
+	
+	font-size: 30px;
+	border-radius: 50%;
+
+	background-color: black;
+	.infomap-color-blue & {
+		background-color: $blue;
+	}
+}
+
+.infomap-card-title {
+	font-size: 25px;
+
+	.infomap-color-blue & {
+		color: $blue;
+	}
+}
+
+.infomap-card-itemList {
+	border: 1px solid $gray-light;
+	border-radius: 3px;
+}
+
+.infomap-card-item:hover {
+	color: white;
+
+	.infomap-color-blue & {
+		background-color: $blue;
+	}
+}
+
+.infomap-card-item a {
+	display: block;
+	width: 100%;
+	min-height: 41px;
+
+	color: $gray-light;
+	
+	line-height: 40px;
+}
+
+.infomap-card-item:hover a {
+	color: white;
+	text-decoration: none;
+}
+
+.infomap-card-item .fa {
+	color: $gray-light;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.infomap-card-item:hover .fa {
+	color: white;
+}
+
+.infomap-resource-wrapper {
+	position: relative;
+}
+
+.infomap-resource {
+	background-color: $blue;
+
+	min-height: 190px;
+
+	border-radius: 5px;
+}
+
+.infomap-resource-title {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
+	display: block;
+	padding: 20px;
+	
+	color: white;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.infomap-resource-title:hover {
+	color: white;
+}
+
+.infomap-resource-source {
+	position: absolute;
+	bottom: 20px;
+	right: 35px;
+}
