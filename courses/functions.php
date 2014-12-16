@@ -196,7 +196,7 @@ function get_search_results() {
 		$result = wp_remote_get( $url, array( 'timeout' => 120, 'httpversion' => '1.1' ) );
 		$response = wp_remote_retrieve_body( $result );
 		
-		$object = json_decode($response);
+		$object = json_decode( $response );
 
 		$data = array(
 					'results' => $object->documents,
