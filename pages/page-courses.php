@@ -2,8 +2,6 @@
 /*
 	Template name: Page Course
 */
-
-	$stats = get_api_results("/courses/stats/");
 ?>
 <?php get_header(); ?>
 <div class="container main-wrapper">
@@ -16,9 +14,6 @@
 				<?php get_template_part('partials/content', get_post_type()); ?>
 			<?php endwhile; ?>
 
-			<?php /*
-			<p>We are currently tracking <strong><?php echo $stats->courses ?> courses</strong> from <strong><?php echo $stats->providers; ?> providers</strong>.</p>
-			*/ ?>
 			<?php get_template_part('courses/course_search'); ?>
 		</div>
 	<?php endif; ?>

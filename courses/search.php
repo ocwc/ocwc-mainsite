@@ -2,16 +2,15 @@
 	$results = get_search_results();
 ?><?php get_header(); ?>
 <div class="container main-wrapper">
-	<div class="col-xs-12 col-sm-3">
-		<?php dynamic_sidebar('sidebar-courses'); ?>
-	</div>
-	<div class="col-xs-12 col-sm-9">
-		<h1>Search results for <?php echo $results['query']; ?></h1>
+	<div class="col-sm-12">
+		<h1>Open Educational Resources about <i><?php echo $results['query']; ?></i></h1>
 
 		<?php get_template_part('courses/course_search'); ?>	
 		
-		<?php if ( $results['count'] === 0 ) : ?>
-			No results. Please try again with a more general query.
+		<?php if ( ! $results['results'] ) : ?>
+			<div class="col-sm-10 col-sm-offset-1">
+				No results. Please check spelling and try a more general query. You can also browse <a href="http://www.merlot.org/merlot/index.htm" target="_blank">MERLOT</a> database.
+			</div>
 		<?php else : ?>
 			<table class="table table-striped table-bordered table-hover">
 				<thead>
