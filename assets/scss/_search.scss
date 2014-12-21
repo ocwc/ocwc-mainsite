@@ -1,0 +1,26 @@
+.course-short {
+	margin-bottom: 20px;
+}
+
+.course-meta {
+	margin-bottom: 10px;
+}
+
+.course-meta dt {
+	display: inline-block;
+	float: left;
+
+	width: 15%;
+}
+
+.course-meta dd {
+	display: inline-block;
+	float: left;
+
+	width: 80%;
+}
+
+.course-meta .course-categories {
+	padding-left: 0;
+	list-style-position: inside;
+}

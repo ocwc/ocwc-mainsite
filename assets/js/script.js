@@ -34,4 +34,11 @@ jQuery(document).ready(function($) {
         $('.menu').toggle();
     });
 
+    $('.js-course-show-full-description').click(function(event) {
+        $(this).parent('.js-course-description-short').hide();
+        $(this).parent().siblings('.js-course-description-full').show();
+
+        return true;
+    });
+
 });

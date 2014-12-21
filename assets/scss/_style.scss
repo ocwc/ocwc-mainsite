@@ -328,16 +328,6 @@ h1, h2, h3, h4, h5, p {
 	margin-top: rem-calc(12);
 	line-height: rem-calc(32);
 
-	a { vertical-align: top; color: $lightgrey; }
-	i {
-		font-size: rem-calc(32);
-
-	}
-
-	a:hover {
-		color: $green;
-	}
-
 	.previous { float: left; }
 	.next { float: right; }
 }

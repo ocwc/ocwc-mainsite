@@ -20,10 +20,6 @@ add_action( 'after_setup_theme', 'oec_setup' );
 
 function mainsite_scripts() {
 	if ( !is_admin() ) {
-		if ( WP_LIVERELOAD === true ) {
-			wp_enqueue_script('livereload', WP_LIVERELOAD_URL, false, '', false);
-		}
-
 		if ( is_home() ) {
 			wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
 		}
