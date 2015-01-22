@@ -15,6 +15,8 @@ function oec_setup() {
 
 	add_image_size( 'slideshow-image-large', 1050, 420, true);
 	add_image_size( 'header-image', 1080, 130, true);
+
+	add_image_size( 'medium-square', 300, 300, true);
 }
 add_action( 'after_setup_theme', 'oec_setup' );
 

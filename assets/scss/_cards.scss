@@ -1,10 +1,46 @@
+.audience-background {
+	.audience-blue      & { background-color: $blue     ; }
+	.audience-green	 	& { background-color: $green	 ; }
+	.audience-turquoise & { background-color: $turquoise; }
+	.audience-blueLight & { background-color: $blueLight; }
+	.audience-greenBlue & { background-color: $greenBlue; }
+}
+
+.audience-backgroundHover {
+	.audience-blue      &:hover { background-color: $blue     ; }
+	.audience-green	 	&:hover { background-color: $green	 ; }
+	.audience-turquoise &:hover { background-color: $turquoise; }
+	.audience-blueLight &:hover { background-color: $blueLight; }
+	.audience-greenBlue &:hover { background-color: $greenBlue; }
+}
+
+.audience-color {
+	.audience-blue      & { color: $blue     ; }
+	.audience-green	 	& { color: $green	 ; }
+	.audience-turquoise & { color: $turquoise; }
+	.audience-blueLight & { color: $blueLight; }
+	.audience-greenBlue & { color: $greenBlue; }
+}
+
+.audience-colorHover {
+	.audience-blue      &:hover { color: $blue     ; }
+	.audience-green	 	&:hover { color: $green	 ; }
+	.audience-turquoise &:hover { color: $turquoise; }
+	.audience-blueLight &:hover { color: $blueLight; }
+	.audience-greenBlue &:hover { color: $greenBlue; }
+}
+
+.text-blue {
+	color: $blue;
+}
+
 .infomap-card {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
 
 .infomap-card-icon {
-	display: block;
+	display: inline-block;
 	width: 60px;
 	height: 60px;
 	
@@ -12,22 +48,14 @@
 	padding: 8px;
 	
 	color: #FFFFFF;
-	
 	font-size: 30px;
-	border-radius: 50%;
+	text-align: center;
 
-	background-color: black;
-	.infomap-color-blue & {
-		background-color: $blue;
-	}
+	border-radius: 50%;
 }
 
 .infomap-card-title {
 	font-size: 25px;
-
-	.infomap-color-blue & {
-		color: $blue;
-	}
 }
 
 .infomap-card-itemList {
@@ -114,4 +142,11 @@
 	position: absolute;
 	bottom: 20px;
 	right: 35px;
+}
+
+/*
+ * Topic page
+ */
+.audienceHeaderIcon {
+
 }

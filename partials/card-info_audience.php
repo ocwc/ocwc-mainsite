@@ -12,10 +12,10 @@
 ?>
 
 <?php if ( $custom_query->have_posts() ) : ?>
-	<div class="col-sm-4 infomap-card infomap-color-blue">
+	<div class="col-sm-4 infomap-card audience-<?php the_field('audience_color'); ?>">
 		<div class="infomap-card-title text-center">
-			<span class="infomap-card-icon"><i class="fa <?php the_field('audience_icon'); ?>"></i></span>
-			<div class="infomap-card-title"><?php the_title(); ?></div>
+			<span class="infomap-card-icon audience-background"><i class="fa <?php the_field('audience_icon'); ?>"></i></span>
+			<div class="infomap-card-title audience-color"><?php the_title(); ?></div>
 			<div class="infomap-card-subtitle"><?php get_field('audience_subtitle'); ?></div>
 		</div>
 
@@ -23,7 +23,7 @@
 
 		<div class="infomap-card-itemList">
 			<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-			<div class="infomap-card-item">
+			<div class="infomap-card-item audience-backgroundHover">
 				<a href="<?php the_permalink(); ?>">
 					<span class="infomap-card-itemBullet"><i class="fa fa-chevron-right"></i></span>
 					<span class="infomap-card-itemTitle"><?php the_title(); ?></span>
