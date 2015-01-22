@@ -27,6 +27,7 @@
 					</div>
 				</div>
 			<?php endforeach; ?>
+			</div>
 		<?php endif; ?>
 
 	<?php endforeach; ?>
