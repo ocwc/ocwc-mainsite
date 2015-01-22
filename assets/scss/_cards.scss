@@ -4,7 +4,13 @@
 }
 
 .infomap-card-icon {
-	padding: 10px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	
+	margin: 0 auto 5px auto;
+	padding: 8px;
+	
 	color: #FFFFFF;
 	
 	font-size: 30px;
@@ -25,6 +31,8 @@
 }
 
 .infomap-card-itemList {
+	margin-top: 5px;
+
 	border: 1px solid $gray-light;
 	border-radius: 3px;
 }
@@ -60,6 +68,17 @@
 
 .infomap-card-item:hover .fa {
 	color: white;
+}
+
+.infomap-card-itemBullet {
+	float: left;
+	width: 30px;
+	text-align: center;
+}
+
+.infomap-card-itemTitle {
+	display: block;
+	margin-left: 30px;
 }
 
 .infomap-resource-wrapper {

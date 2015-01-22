@@ -18,6 +18,9 @@ get_header(); ?>
 	?>
 
 	<div class="row">
+		<div class="col-sm-12">
+		<h1 class="entry-title">Information Map</h1>
+		</div>
 		<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 			<?php get_template_part('partials/card', get_post_type()); ?>
 		<?php endwhile; ?>
