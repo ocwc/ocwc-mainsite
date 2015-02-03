@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 <div class="container main-wrapper">
 	<div class="col-xs-12 col-sm-3">
-		<?php dynamic_sidebar('sidebar-courses'); ?>
+		<?php get_template_part('sidebar', 'courses'); ?>
 	</div>
 	<div class="col-xs-12 col-sm-9">
 		<h1><?php echo $course->title; ?></h1>
