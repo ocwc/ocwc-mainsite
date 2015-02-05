@@ -54,43 +54,55 @@
 
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <?php $categories = array(
-                    'Individual - Leadership', 'Individual - Educator', 'Outstanding Site',
-                    'Outstanding Course', 'Open MOOC', 'Creative Innovation',
-                    'Student Engagement', 'Open Research',
-                );
-            ?>
+<?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+        <?php if ( post_password_required( $post ) ) : ?>
+            <div class="row main-wrapper">
+                <div class="col-xs-6">
+                    <?php get_template_part('partials/content', get_post_type()); ?>
+                </div>
+            </div>
+        <?php else : ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <?php $categories = array(
+                                'Individual - Leadership', 'Individual - Educator', 'Outstanding Site',
+                                'Outstanding Course', 'Open MOOC', 'Creative Innovation',
+                                'Student Engagement', 'Open Research',
+                            );
+                        ?>
 
-            <?php foreach ($categories as $category) : ?>
-                <h1><?php echo $category; ?></h1>
+                        <?php foreach ($categories as $category) : ?>
+                            <h1><?php echo $category; ?></h1>
 
-                <?php foreach ($entries as $entry) : ?>
+                            <?php foreach ($entries as $entry) : ?>
 
-                    <?php if ( $entry['values'][17]['value'] === $category ) : ?>
-                        <h2 id="<?php echo 'form-' . $entry['id']; ?>"><a href="#<?php echo 'form-' . $entry['id']; ?>">Submission #<?php echo $entry['id']; ?> (<?php echo $category; ?>)</a></h2>
+                                <?php if ( $entry['values'][17]['value'] === $category ) : ?>
+                                    <h2 id="<?php echo 'form-' . $entry['id']; ?>"><a href="#<?php echo 'form-' . $entry['id']; ?>">Submission #<?php echo $entry['id']; ?> (<?php echo $category; ?>)</a></h2>
 
-                        <dl>
-                        <?php foreach ($entry['values'] as $field) : ?>
-                            <?php if ( $field['type'] == 'section' ) : ?>
-                                <h3><?php echo $field['label'] ?></h3>
-                            <?php else : ?>
-                                <?php if ( $field['value'] ) : ?>
-                                    <dt><?php echo $field['label'] ?></dt>
-                                    <dd><?php echo $field['value'] ?></dd>
+                                    <dl>
+                                    <?php foreach ($entry['values'] as $field) : ?>
+                                        <?php if ( $field['type'] == 'section' ) : ?>
+                                            <h3><?php echo $field['label'] ?></h3>
+                                        <?php else : ?>
+                                            <?php if ( $field['value'] ) : ?>
+                                                <dt><?php echo $field['label'] ?></dt>
+                                                <dd><?php echo $field['value'] ?></dd>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    </dl>
+                                    <hr />
                                 <?php endif; ?>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                        </dl>
-                        <hr />
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                            <?php endforeach; ?>
 
-            <?php endforeach; ?>
-        </div>
-    </div>
-</div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
