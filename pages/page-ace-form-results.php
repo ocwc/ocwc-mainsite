@@ -4,134 +4,93 @@
 */
 ?>
 <?php get_header(); ?>
-	<style type="text/css">
-		p {
-			font-size: 1em;
-			white-space: pre-wrap;
-		}
 
-		li { 
-			list-style: none;
-			margin-left: -1.2em;
-		}
-		.field-type-desc {
-			/*list-style: none;*/
-			
-			color: #436c89;
-			margin-top: 10px;
-		}
+<?php
+    $form = GFFormsModel::get_form_meta( 4 );
 
-		.form-entry a {
-			max-width: 550px; 
-			overflow: hidden; 
-    		text-overflow: ellipsis; 
-    		white-space: nowrap; 
-			display: inline-block;
-			vertical-align: bottom;    		
-		}
+    $entries = array();
+    $values= array();
 
-		.category-list {
-			float: left;
-			margin-left: 15px;
-		}
+    foreach ( GFAPI::get_entries( 4 ) as $entry) {
 
-	</style>
-	<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php if ( post_password_required( $post ) ) : ?>
-				<div class="row main-wrapper">
-					<div class="col-xs-6">
-						<?php get_template_part('partials/content', get_post_type()); ?>
-					</div>
-				</div>
-			<?php else : ?>
-				<div class="row main-wrapper">
-					<div class="col-xs-6">
-					<?php get_template_part('partials/content', get_post_type()); ?>
-					</div>
-				</div>
+        foreach( $form['fields'] as $field ) {
 
-				<div ng-app="ninjaResultApp" ng-controller="NinjaResultController">
-					<?php
-						$subs = ninja_forms_get_all_subs( 1 );
-						$fields = ninja_forms_get_fields_by_form_id( 1 );
+            if ( $field['id'] === 1 ) {
 
-						$json_data = [];
-						foreach ($subs as $sub_id => $sub) {
-							$submission_data = array(); 
-							$data = unserialize($sub['data']);
-							$user_values = array();
-							foreach ($data as $key => $value) {
-								$user_values[$value['field_id']] = $value['user_value'];
-							}
+                $values[$field['id']] = array(
+                    'id'    => $field['id'],
+                    'label' => "Nominator's Name",
+                    'value' => $entry['1.3'] . ' ' . $entry['1.6'],
+                );
 
-							foreach ( $fields as $field_id => $field ) {
-								$user_value = $user_values[$field['id']];
-								if ($user_value == '') { 
-									continue;
-								}
+            } elseif ( $field['id'] === 5 ) {
 
-								$submission_data[] = array(
-									"label" => $field['data']['label'],
-									"value" => $user_value,
-									"type" => $field['type']
-								);
-							}
+                $values[$field['id']] = array(
+                    'id'    => $field['id'],
+                    'label' => "Nominee's Name",
+                    'value' => $entry["5.3"] . " " . $entry["5.6"],
+                );
 
-							$json_data[] = array(
-									"id" => $sub['id'],
-									"items" => array_values($submission_data)
-								);
-						}
+            } else {
 
-						echo '<script>';
-						echo 'var ninja_form_entries = '.json_encode(array_values($json_data), JSON_PRETTY_PRINT).';';
-						echo '</script>';
-						?>
+                $values[$field['id']] = array(
+                    'id'    => $field['id'],
+                    'label' => $field['label'],
+                    'value' => $entry[ $field['id'] ],
+                );
 
-						<div class="row">
-							<div class="col-xs-12">
-								<label ng-repeat="category in categories" class="category-list">
-									<input 
-										type="checkbox" 
-										name="category[]" 
-										value="selectedCategory.indexOf(category)"
-										ng-click="toggleCategory(category)"> {{ category }}
-								</label>
-							</div>
-						</div>
+            }
 
-						<div class="row" ng-repeat="entry in ( entries | filter:hasSelectedCategory )" ng-cloak>
-							<div class="col-xs-8 form-entry">
-								<h2>Entry #{{ entry.id }}</h2>
-								<ul>
-									<li ng-repeat="field in entry.items" ng-class="getHeaderType(field)">
-										<span ng-if="showDesc(field)">
-											{{ field.label }}
-										</span>
-										<span ng-if="showText(field) || showList(field)">
-											<strong>{{ field.label}}:</strong>
-											<span ng-bind-html="field.value | to_trusted "></span>
-										</span>
-										<span ng-if="showTextArea(field)">
-											<p ng-bind-html="field.value | to_trusted "></p>
-										</span>
-										<span ng-if="showUpload(field) && field.value">
-											<strong>{{ field.label }}:</strong><br />
-											<span ng-repeat="(key, file) in field.value">
-												<a href="{{ file.file_url }}" target="_blank">{{ file.user_file_name }}</a>
-											</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-				</div>
+            $values[$field['id']]['type'] = $field['type'];
 
-				<script type="text/javascript" src="<?php echo get_template_directory_uri().'/lib/javascripts/angular/ninjaresult-script.js'; ?>"></script>
-			<?php endif; ?>
-		<?php endwhile; ?>
-	<?php else : ?>
-		<h1>404 Not found</h1>
-	<?php endif; ?>
+        }
+
+        $entries[] = array(
+                    'id' => $entry['id'],
+                    'values' => $values
+                    );
+
+    }
+
+?>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <?php $categories = array(
+                    'Individual - Leadership', 'Individual - Educator', 'Outstanding Site',
+                    'Outstanding Course', 'Open MOOC', 'Creative Innovation',
+                    'Student Engagement', 'Open Research',
+                );
+            ?>
+
+            <?php foreach ($categories as $category) : ?>
+                <h1><?php echo $category; ?></h1>
+
+                <?php foreach ($entries as $entry) : ?>
+
+                    <?php if ( $entry['values'][17]['value'] === $category ) : ?>
+                        <h2 id="<?php echo 'form-' . $entry['id']; ?>"><a href="#<?php echo 'form-' . $entry['id']; ?>">Submission #<?php echo $entry['id']; ?> (<?php echo $category; ?>)</a></h2>
+
+                        <dl>
+                        <?php foreach ($entry['values'] as $field) : ?>
+                            <?php if ( $field['type'] == 'section' ) : ?>
+                                <h3><?php echo $field['label'] ?></h3>
+                            <?php else : ?>
+                                <?php if ( $field['value'] ) : ?>
+                                    <dt><?php echo $field['label'] ?></dt>
+                                    <dd><?php echo $field['value'] ?></dd>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                        </dl>
+                        <hr />
+                    <?php endif; ?>
+                <?php endforeach; ?>
+
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
 <?php get_footer(); ?>
