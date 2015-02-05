@@ -57,9 +57,11 @@
 <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
         <?php if ( post_password_required( $post ) ) : ?>
-            <div class="row main-wrapper">
-                <div class="col-xs-6">
-                    <?php get_template_part('partials/content', get_post_type()); ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <?php get_template_part('partials/content', get_post_type()); ?>
+                    </div>
                 </div>
             </div>
         <?php else : ?>
