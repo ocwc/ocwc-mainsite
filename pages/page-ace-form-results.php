@@ -9,9 +9,11 @@
     $form = GFFormsModel::get_form_meta( 4 );
 
     $entries = array();
-    $values= array();
+    $values = array();
 
-    foreach ( GFAPI::get_entries( 4 ) as $entry) {
+    $paging = array('offset' => 0, 'page_size' => 200 );
+
+    foreach ( GFAPI::get_entries( 4, null, null, $paging ) as $entry) {
 
         foreach( $form['fields'] as $field ) {
 
@@ -71,7 +73,7 @@
                         <?php $categories = array(
                                 'Outstanding Site',
                                 'Outstanding Course', 'Open MOOC', 'Creative Innovation',
-                                'Student Engagement', 'Open Research',
+                                'Student Engagement', 'Open Research'
                             );
                         ?>
 
