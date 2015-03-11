@@ -13,6 +13,8 @@ jQuery(document).ready(function($) {
         $(this).next(':hidden').show();
         $(this).find(':hidden').show();
         $(this).hide();
+
+        return false;
     });
 
     /* navigation menu */
