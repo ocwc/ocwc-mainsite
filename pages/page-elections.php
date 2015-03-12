@@ -23,10 +23,14 @@
 					<li><strong><?php echo $candidate->candidate_first_name ?> <?php echo $candidate->candidate_last_name ?></strong>, <?php echo $candidate->organization ?> <a href="#" class="show_more">(more information)</a>
 						<ul style="display:none;">
 							<li><strong>Job Title</strong><br /><?php echo $candidate->candidate_job_title; ?></li>
-							<li><strong>Biography</strong><br /><?php echo nl2br($candidate->biography); ?></li>
-							<li><strong>Vision</strong><br /><?php echo nl2br($candidate->vision); ?></li>
-							<li><strong>Ideas</strong><br /><?php echo nl2br($candidate->ideas); ?></li>
-							<li><strong>Expertise</strong><br /><?php echo nl2br($candidate->expertise); ?></li>
+							<?php if ( $candidate->biography ) : ?>
+								<li><strong>Biography</strong><br /><?php echo nl2br($candidate->biography); ?></li>
+								<li><strong>Vision</strong><br /><?php echo nl2br($candidate->vision); ?></li>
+								<li><strong>Ideas</strong><br /><?php echo nl2br($candidate->ideas); ?></li>
+								<li><strong>Expertise</strong><br /><?php echo nl2br($candidate->expertise); ?></li>
+							<?php else : ?>
+								<li><?php echo nl2br($candidate->reason); ?></li>
+							<?php endif; ?>
 						</ul>
 					</li>
 				<?php endforeach; ?>
