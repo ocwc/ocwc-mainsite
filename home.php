@@ -33,7 +33,7 @@
 		
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="http://conference.oeconsortium.org/" class="wrapper">
-				<h1>OEC Global</h1>
+				<h1>OE Global</h1>
 				<h3>Our Annual Event</h3>
 				<p>Join scholars and practioners.</p>
 				<span class="more">+ join us</span>
