@@ -26,28 +26,29 @@
 		</div>
 	<?php endif; ?>
 
-	<?php if ( get_field('topic_questions') ) : ?>
-		<?php foreach (get_field('topic_questions') as $post) : ?>
-			<?php setup_postdata($post); ?>
+	<?php if ( have_rows('topic_content') ) : ?>
+		<?php while ( have_rows('topic_content') ) : the_row(); ?>
+			<?php if ( get_row_layout() === 'question' ) : ?>
 
-			<div class="row">
-				<div class="col-md-10">
-					<h2 class="audience-color"><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				</div>
-			</div>		
-
-			<?php if ( get_field('question_resources') ) : ?>
 				<div class="row">
-				<?php global $resource; ?>
-				<?php foreach (get_field('question_resources') as $resource) : ?>
-					<?php get_template_part('partials/_resource_item'); ?>
-				<?php endforeach; ?>
+					<div class="col-md-10">
+						<h2 class="audience-color"><?php the_sub_field('question_title') ?></h2>
+						<?php the_sub_field('question_answer'); ?>
+					</div>
 				</div>
-			<?php endif; ?>
 
-		<?php endforeach; ?>
-		<?php wp_reset_postdata(); ?>
+				<?php if ( get_sub_field('external_resources') ) : ?>
+					<div class="row">
+					<?php global $resource; ?>
+					<?php foreach ( get_sub_field('external_resources') as $resource ) : ?>
+						<?php get_template_part('partials/_resource_item'); ?>
+					<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+
+
+			<?php endif; ?>
+		<?php endwhile; ?>
 	<?php endif; ?>
 
 	<?php if ( get_field('topic_related_resources') ) : ?>
