@@ -62,4 +62,18 @@
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
+
+	<div id="discourse-comments"></div>
+
+	<script type="text/javascript">
+	  var discourseUrl = "http://community.oeconsortium.org/",
+	      discourseEmbedUrl = 'http://www.oeconsortium.org/<?php the_permalink(); ?>';
+
+	  (function() {
+	    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+	      d.src = discourseUrl + 'javascripts/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+	  })();
+	</script>
+
 </div>
