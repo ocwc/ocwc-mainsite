@@ -67,7 +67,7 @@
 
 	<script type="text/javascript">
 	  var discourseUrl = "http://community.oeconsortium.org/",
-	      discourseEmbedUrl = 'http://www.oeconsortium.org/<?php the_permalink(); ?>';
+	      discourseEmbedUrl = '<?php the_permalink(); ?>';
 
 	  (function() {
 	    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
