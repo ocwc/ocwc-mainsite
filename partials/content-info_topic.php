@@ -1,6 +1,7 @@
 <?php $audience = get_field('audience'); ?>
 
 <header class="entry-header audience-<?php the_field('audience_color', $audience); ?>">
+	<h4><i class="fa fa-angle-left"></i> <a href="/open-information-center/">Info Center</a></h4>
 	<h2 class="audienceHeader audience-color">
 		<span class="infomap-card-icon audience-background"><i class="fa <?php the_field('audience_icon', $audience); ?>"></i></span>
 		<?php echo $audience->post_title; ?>
