@@ -64,6 +64,8 @@
 		</div>
 	<?php endif; ?>
 
+
+	<h2 class="discourse-title">Join discussion on this topic</h2>
 	<div id="discourse-comments"></div>
 
 	<script type="text/javascript">
