@@ -29,11 +29,12 @@
 
 	<?php if ( have_rows('topic_content') ) : ?>
 		<?php while ( have_rows('topic_content') ) : the_row(); ?>
+			<div class="topic-answer">
 			<?php if ( get_row_layout() === 'question' ) : ?>
 
 				<div class="row">
 					<div class="col-md-10">
-						<h2 class="audience-color"><?php the_sub_field('question_title') ?></h2>
+						<h3 class="audience-color"><?php the_sub_field('question_title') ?></h3>
 						<?php the_sub_field('question_answer'); ?>
 					</div>
 				</div>
@@ -46,9 +47,8 @@
 					<?php endforeach; ?>
 					</div>
 				<?php endif; ?>
-
-
 			<?php endif; ?>
+			</div>
 		<?php endwhile; ?>
 	<?php endif; ?>
 
