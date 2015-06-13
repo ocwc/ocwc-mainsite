@@ -1,15 +1,22 @@
 <?php $audience = get_field('audience'); ?>
 
 <header class="entry-header audience-<?php the_field('audience_color', $audience); ?>">
-	<h4><i class="fa fa-angle-left"></i> <a href="/open-information-center/">Info Center</a></h4>
-	<h2 class="audienceHeader audience-color">
-		<span class="infomap-card-icon audience-background"><i class="fa <?php the_field('audience_icon', $audience); ?>"></i></span>
-		<?php echo $audience->post_title; ?>
-	</h2>
+	<h4><i class="fa fa-angle-left"></i> <a href="/open-information-center/">Open Education Info Center</a></h4>
 
-	<h1 class="entry-title audience-color"><?php the_title(); ?></h1>
+	<div class="row">
+		<div class="col-sm-9">
+			<h1 class="entry-title audience-color">
+				<span class="infomap-card-icon audience-background"><i class="fa <?php the_field('audience_icon', $audience); ?>"></i></span>
+				<?php echo $audience->post_title; ?>: <?php the_title(); ?>
+			</h1>
+		</div>
+		<div class="col-sm-3">
+			<h2 class="audienceHeader audience-color">
+			</h2>
+		</div>
+	</div>
 </header>
-<div class="entry-content audience-<?php the_field('audience_color', $audience); ?>">
+<div class="entry-content topic-content audience-<?php the_field('audience_color', $audience); ?>">
 	<?php if ( get_field('audience_image', $audience ) ) : ?>
 		<div class="row">
 			<div class="col-sm-9">
@@ -28,28 +35,31 @@
 	<?php endif; ?>
 
 	<?php if ( have_rows('topic_content') ) : ?>
-		<?php while ( have_rows('topic_content') ) : the_row(); ?>
-			<div class="topic-answer">
-			<?php if ( get_row_layout() === 'question' ) : ?>
+		<div class="topic-answer-list">
+			<?php while ( have_rows('topic_content') ) : the_row(); ?>
+				<div class="topic-answer">
+					<?php if ( get_row_layout() === 'question' ) : ?>
+						<div class="row">
+							<div class="col-md-10">
+								<h3 class="audience-color"><?php the_sub_field('question_title') ?></h3>
+								<?php the_sub_field('question_answer'); ?>
+							</div>
+						</div>
 
-				<div class="row">
-					<div class="col-md-10">
-						<h3 class="audience-color"><?php the_sub_field('question_title') ?></h3>
-						<?php the_sub_field('question_answer'); ?>
-					</div>
+						<?php if ( get_sub_field('external_resources') ) : ?>
+							<div class="row">
+							<?php global $resource; ?>
+							<?php foreach ( get_sub_field('external_resources') as $resource ) : ?>
+								<?php get_template_part('partials/_resource_item'); ?>
+							<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+
+						<div class="topic-design-lineend"></div>
+					<?php endif; ?>
 				</div>
-
-				<?php if ( get_sub_field('external_resources') ) : ?>
-					<div class="row">
-					<?php global $resource; ?>
-					<?php foreach ( get_sub_field('external_resources') as $resource ) : ?>
-						<?php get_template_part('partials/_resource_item'); ?>
-					<?php endforeach; ?>
-					</div>
-				<?php endif; ?>
-			<?php endif; ?>
-			</div>
-		<?php endwhile; ?>
+			<?php endwhile; ?>
+		</div>
 	<?php endif; ?>
 
 	<?php if ( get_field('topic_related_resources') ) : ?>

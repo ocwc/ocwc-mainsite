@@ -1,13 +1,14 @@
 <?php global $resource; ?>
 
 <?php 
-	if ( strpos($resource['url'], 'youtube') ) {
-		$source_type = 'youtube';
+	$source_type = 'web';
 
+	if ( strpos($resource['url'], 'youtube') ) {
 		parse_str( parse_url( $resource['url'], PHP_URL_QUERY ), $vars );
-		$youtube_id = $vars['v'];
-	} else {
-		$source_type = 'web';
+		if ( array_key_exists('v', $vars) ) {
+			$source_type = 'youtube';
+			$youtube_id = $vars['v'];
+		}
 	}
 ?>
 

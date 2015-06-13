@@ -172,8 +172,58 @@
 
 .topic-answer {
 	margin-bottom: 30px;
+	margin-left: 40px;
+
+	position: relative;
+	overflow: visible;
+}
+
+.topic-answer:before {
+	content: "";
+
+	position: absolute;
+    left: -40px;
+    top: 30px;
+
+
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border: 6px solid $green;
+	background-color: #FFFFFF;
+}
+
+.topic-answer:after {
+	content: "";
+
+	position: absolute;
+    left: -33px;
+    top: 49px;
+    bottom: -62px;
+
+    display: block;
+    height: auto;
+    width: 6px;
+    background-color: $green;
+}
+
+.topic-design-lineend {
+	display: none;
+}
+
+.topic-answer-list > :last-child .topic-design-lineend {
+	position: absolute;
+    bottom: -62px;
+    left: -39px;
+    
+    display: block;
+    width: 18px;
+    height: 4px;
+	
+	background-color: $green;
 }
 
 .discourse-title {
-	margin-top: 60px;
+	margin-top: 90px;
 }
