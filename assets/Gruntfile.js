@@ -36,6 +36,7 @@ module.exports = function (grunt) {
         files: {
           '../js/script.min.js': [
             'bower_components/fingerprint/fingerprint.js',
+            'bower_components/handlebars/handlebars.min.js',
             'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
             'js/dropdowns-enhancement.js',
             'js/script.js'

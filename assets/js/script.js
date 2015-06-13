@@ -1,3 +1,7 @@
+Handlebars.registerHelper('limit', function (arr, limit) {
+  return arr.slice(0, limit);
+});
+
 jQuery(document).ready(function($) {        
     if ( $(".rslides").length > 0 ) {
         $(".rslides").responsiveSlides({
@@ -42,5 +46,15 @@ jQuery(document).ready(function($) {
 
         return true;
     });
+
+    if ( $('.js-community').length ) {
+        $.get('http://community.oeconsortium.org/latest.json?max_posts=5', function(data) {
+            var source = $(".js-community-template").html();
+            var template = Handlebars.compile(source);
+            var html    = template(data);
+
+            $('.js-community').html(html);
+        });
+    }
 
 });
