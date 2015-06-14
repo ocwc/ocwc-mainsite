@@ -27,6 +27,8 @@ get_header(); ?>
 		</div>
 		<?php wp_reset_postdata(); ?>
 
+		<?php get_template_part('partials/_event', 'latest'); ?>
+
 		<?php get_template_part('partials/_community', 'latest'); ?>
 	</div>
 </div>
