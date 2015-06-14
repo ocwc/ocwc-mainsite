@@ -268,7 +268,7 @@ function oec_posttype_event() {
 		'has_archive'         => false,
 		'exclude_from_search' => true,
 		'publicly_queryable'  => false,
-		'rewrite'             => false,
+		'rewrite'             => $rewrite,
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'event', $args );
