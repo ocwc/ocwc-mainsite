@@ -134,7 +134,7 @@ function oeic_save_event ( $entry=null, $form=null ) {
     $post_id = wp_insert_post( $post_entry, true );
 
     $start_date = date_create_from_format( 'Y-m-d', $entry[3] );
-    $end_date = date_create_from_format( 'Y-m-d', $entry[3] );
+    $end_date = date_create_from_format( 'Y-m-d', $entry[4] );
 
     update_field( 'event_startdate', $start_date->format('Ymd'), $post_id );
     update_field( 'event_enddate', $end_date->format('Ymd'), $post_id );

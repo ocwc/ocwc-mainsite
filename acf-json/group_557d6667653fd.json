@@ -15,8 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "Y-m-d",
-            "return_format": "Y-m-d",
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
             "first_day": 1
         },
         {
@@ -32,8 +32,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
             "first_day": 1
         },
         {
@@ -149,5 +149,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1434291855
+    "modified": 1434296576
 }

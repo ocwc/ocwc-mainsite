@@ -265,9 +265,9 @@ function oec_posttype_event() {
 		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-tickets-alt',
 		'can_export'          => false,
-		'has_archive'         => false,
+		'has_archive'         => true,
 		'exclude_from_search' => true,
-		'publicly_queryable'  => false,
+		'publicly_queryable'  => true,
 		'rewrite'             => $rewrite,
 		'capability_type'     => 'page',
 	);

@@ -2,7 +2,7 @@
 
 <div class="main-wrapper">
 	<div class="container">
-		<?php if ( have_posts() ) : ?>	
+		<?php if ( have_posts() ) : ?>
 			<?php if ( 'info_topic' === get_post_type() ) : ?>
 				<div class="col-sm-12">
 					<?php while ( have_posts() ) : the_post(); ?>
