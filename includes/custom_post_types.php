@@ -101,7 +101,7 @@ function oec_posttype_infoaudience() {
 		'not_found_in_trash'  => 'Not found in Trash',
 	);
 	$rewrite = array(
-		'slug'                => 'audience',
+		'slug'                => '/info-center/audience',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -149,7 +149,7 @@ function oec_posttype_infotopic() {
 		'not_found_in_trash'  => 'Not found in Trash',
 	);
 	$rewrite = array(
-		'slug'                => 'topic',
+		'slug'                => '/info-center/topic',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -196,7 +196,7 @@ function oec_posttype_infoquestion() {
 		'not_found_in_trash'  => 'Not found in Trash',
 	);
 	$rewrite = array(
-		'slug'                => 'question',
+		'slug'                => '/info-center/question',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -245,8 +245,8 @@ function oec_posttype_event() {
 	);
 
 	$rewrite = array(
-		'slug'                => 'event',
-		'with_front'          => true,
+		'slug'                => '/info-center/event',
+		'with_front'          => false,
 		'pages'               => true,
 		'feeds'               => true,
 	);
