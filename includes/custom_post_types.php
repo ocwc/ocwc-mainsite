@@ -243,6 +243,14 @@ function oec_posttype_event() {
 		'not_found'           => 'No Events found',
 		'not_found_in_trash'  => 'No Events found in Trash',
 	);
+
+	$rewrite = array(
+		'slug'                => 'event',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+	);
+
 	$args = array(
 		'label'               => 'event',
 		'description'         => '',
