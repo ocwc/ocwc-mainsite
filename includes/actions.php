@@ -118,3 +118,32 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
     return $truncate;
  
 }
+
+function oeic_save_event ( $entry=null, $form=null ) {
+    global $post;
+
+    $post_entry = array( 
+                    'post_title'    => $entry[9],
+                    'post_status'   => 'draft',
+                    'post_author'   => 1,
+                    'post_content'  => $entry[10],
+                    'post_type'     => 'event',
+
+    );
+    
+    $post_id = wp_insert_post( $post_entry, true );
+
+    $start_date = date_create_from_format( 'Y-m-d', $entry[3] );
+    $end_date = date_create_from_format( 'Y-m-d', $entry[3] );
+
+    update_field( 'event_startdate', $start_date->format('Ymd'), $post_id );
+    update_field( 'event_enddate', $end_date->format('Ymd'), $post_id );
+    update_post_meta( $post_id, 'event_url', $entry[5] );
+
+    update_post_meta( $post_id, 'event_contact_name', $entry['6.3'] . ' ' . $entry['6.6']  );
+    update_post_meta( $post_id, 'event_contact_email', $entry[7] );
+    update_post_meta( $post_id, 'event_country', $entry[11] );
+    update_post_meta( $post_id, 'event_city', $entry[12] );
+}
+
+add_action('gform_post_submission_10', 'oeic_save_event', 10, 2);

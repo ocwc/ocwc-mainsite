@@ -28,7 +28,7 @@ function oec_posttype_slideshow() {
 		'show_in_nav_menus'   => false,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 5,
-		'menu_icon'           => '',
+		'menu_icon'           => 'dashicons-feedback',
 		'can_export'          => false,
 		'has_archive'         => false,
 		'exclude_from_search' => true,
@@ -41,6 +41,7 @@ function oec_posttype_slideshow() {
 add_action( 'init', 'oec_posttype_slideshow', 0 );
 
 
+/*
 function oec_posttype_newslink() {
 	$labels = array(
 		'name'                => 'News links',
@@ -80,7 +81,7 @@ function oec_posttype_newslink() {
 	register_post_type( 'newslink', $args );	
 }
 add_action( 'init', 'oec_posttype_newslink', 0 );
-
+*/
 
 function oec_posttype_infoaudience() {
 
@@ -224,3 +225,44 @@ function oec_posttype_infoquestion() {
 }
 add_action( 'init', 'oec_posttype_infoquestion', 0 );
 
+
+
+function oec_posttype_event() {
+	$labels = array(
+		'name'                => 'Events',
+		'singular_name'       => 'Event',
+		'menu_name'           => 'Events',
+		'parent_item_colon'   => 'Parent Event:',
+		'all_items'           => 'All Events',
+		'view_item'           => 'View Event',
+		'add_new_item'        => 'Add New Event',
+		'add_new'             => 'New Event',
+		'edit_item'           => 'Edit Event',
+		'update_item'         => 'Update Event',
+		'search_items'        => 'Search Events',
+		'not_found'           => 'No Events found',
+		'not_found_in_trash'  => 'No Events found in Trash',
+	);
+	$args = array(
+		'label'               => 'event',
+		'description'         => '',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => false,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-tickets-alt',
+		'can_export'          => false,
+		'has_archive'         => false,
+		'exclude_from_search' => true,
+		'publicly_queryable'  => false,
+		'rewrite'             => false,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'event', $args );
+}
+add_action( 'init', 'oec_posttype_event', 0 );
