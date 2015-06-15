@@ -21,9 +21,8 @@ get_header(); ?>
 								));
 		?>
 
-		<div class="row">
+		<div class="row voffset-15">
 			<div class="col-sm-12">
-			<h2 class="entry-title">Quick Guides</h2>
 			</div>
 			<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 				<?php get_template_part('partials/card', get_post_type()); ?>
