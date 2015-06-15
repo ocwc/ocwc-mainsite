@@ -13,7 +13,11 @@ get_header(); ?>
 
 		<?php $custom_query = new WP_Query(array(
 									'post_type' => 'info_audience',
-									'posts_per_page' => -1
+									'posts_per_page' => -1,
+
+									'meta_key' => 'object_order',
+									'orderby' => 'meta_value',
+									'order' => 'ASC'
 								));
 		?>
 

@@ -7,7 +7,10 @@
 									'value' => get_the_ID(),
 									'compare' => '='
 								)
-							)
+							),
+							'meta_key' => 'object_order',
+							'orderby' => 'meta_value',
+							'order' => 'ASC'
 						));
 ?>
 
