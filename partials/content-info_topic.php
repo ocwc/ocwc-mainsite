@@ -1,7 +1,7 @@
 <?php $audience = get_field('audience'); ?>
 
 <header class="entry-header audience-<?php the_field('audience_color', $audience); ?>">
-	<h4><i class="fa fa-angle-left"></i> <a href="/open-information-center/">Open Education Info Center</a></h4>
+	<?php get_template_part('partials/_oeic_header'); ?>
 
 	<div class="row">
 		<div class="col-sm-12">

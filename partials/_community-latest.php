@@ -22,7 +22,7 @@
 	</div>
 </script>
 
-<div class="row">
+<div class="row voffset-15">
 	<h2>Latest Forum Posts by Community members</h2>
 	<div class="js-community"></div>
 </div>
