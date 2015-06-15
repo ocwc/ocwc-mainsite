@@ -14,7 +14,7 @@
 ?>
 
 
-<div class="row voffset-30">
+<div class="voffset-30">
 	<h2>Upcoming Open Education Events</h2>
 
 	<table class="table table-striped table-bordered">
