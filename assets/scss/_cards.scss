@@ -194,8 +194,14 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 10px;
-	border: 6px solid $green;
+	border: 6px solid;
 	background-color: #FFFFFF;
+
+	.audience-blue      & { border-color: $blue     ; }
+	.audience-green	 	& { border-color: $green	; }
+	.audience-turquoise & { border-color: $turquoise; }
+	.audience-blueLight & { border-color: $blueLight; }
+	.audience-greenBlue & { border-color: $greenBlue; }
 }
 
 .topic-answer:after {
@@ -209,7 +215,12 @@
     display: block;
     height: auto;
     width: 6px;
-    background-color: $green;
+
+	.audience-blue      & { background-color: $blue     ; }
+	.audience-green	 	& { background-color: $green	; }
+	.audience-turquoise & { background-color: $turquoise; }
+	.audience-blueLight & { background-color: $blueLight; }
+	.audience-greenBlue & { background-color: $greenBlue; }
 }
 
 .topic-design-lineend {
@@ -225,9 +236,17 @@
     width: 18px;
     height: 4px;
 	
-	background-color: $green;
+	.audience-blue      & { background-color: $blue     ; }
+	.audience-green	 	& { background-color: $green	; }
+	.audience-turquoise & { background-color: $turquoise; }
+	.audience-blueLight & { background-color: $blueLight; }
+	.audience-greenBlue & { background-color: $greenBlue; }
 }
 
 .discourse-title {
 	margin-top: 90px;
+}
+
+.relatedResources-wrapper {
+	padding-top: 30px;
 }

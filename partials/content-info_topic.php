@@ -4,15 +4,11 @@
 	<h4><i class="fa fa-angle-left"></i> <a href="/open-information-center/">Open Education Info Center</a></h4>
 
 	<div class="row">
-		<div class="col-sm-9">
+		<div class="col-sm-12">
 			<h1 class="entry-title audience-color">
 				<span class="infomap-card-icon audience-background"><i class="fa <?php the_field('audience_icon', $audience); ?>"></i></span>
 				<?php echo $audience->post_title; ?>: <?php the_title(); ?>
 			</h1>
-		</div>
-		<div class="col-sm-3">
-			<h2 class="audienceHeader audience-color">
-			</h2>
 		</div>
 	</div>
 </header>
@@ -63,7 +59,7 @@
 	<?php endif; ?>
 
 	<?php if ( get_field('topic_related_resources') ) : ?>
-		<div class="row">
+		<div class="row relatedResources-wrapper">
 			<div class="col-sm-12">
 				<h2>Related resources</h2>
 			</div>
@@ -75,7 +71,7 @@
 	<?php endif; ?>
 
 
-	<h2 class="discourse-title">Join discussion on this topic</h2>
+	<h2 class="discourse-title">Join discussion on <?php the_title(); ?></h2>
 	<div id="discourse-comments"></div>
 
 	<script type="text/javascript">
