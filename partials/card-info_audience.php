@@ -8,9 +8,10 @@
 									'compare' => '='
 								)
 							),
-							'meta_key' => 'object_order',
-							'orderby' => 'meta_value',
-							'order' => 'ASC'
+							
+							// 'meta_key' => 'object_order',
+							'orderby' => 'meta_value title',
+							'order' => 'DESC'
 						));
 ?>
 
