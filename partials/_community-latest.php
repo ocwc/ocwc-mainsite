@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<a class="btn btn-primary" 
-					href="http://community.oeconsortium.org/">Join Open Education Community</a>
+					href="http://community.oeconsortium.org/">Join Discussion</a>
 			</div>
 		</div>
 	</div>
