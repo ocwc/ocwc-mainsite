@@ -73,7 +73,7 @@
                         <?php $categories = array(
                                 'Outstanding Site',
                                 'Outstanding Course', 'Open MOOC', 'Creative Innovation',
-                                'Student Engagement', 'Open Research'
+                                'Open Research'
                             );
                         ?>
 
