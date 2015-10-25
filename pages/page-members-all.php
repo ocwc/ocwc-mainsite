@@ -33,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-6">
-                    <?php foreach (array('Associate Consortia', 'Organizational Members', 'Corporate Members') as $key) : ?>
+                    <?php foreach (array('Associate Consortia', 'Organizational Members', 'Corporate Members', 'Sustaining Members') as $key) : ?>
                         <ul class="list-unstyled">
                         <h2><?php echo $key; ?></h2>
                         <?php foreach ($member_list->$key as $member) : ?>
