@@ -12,12 +12,12 @@
 				<span class="more">+ search courses</span>
 			</a>
 		</div>
-		
+
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="/about-oec/" class="wrapper">
 				<h1>About</h1>
 				<h3>Open Education</h3>
-				<p>What is OpenCourseWare and how it empowers Open Education movement</p>
+				<p>What is Open Education and how does it address important trends in global education?</p>
 				<span class="more">+ learn more</span>
 			</a>
 		</div>
@@ -30,12 +30,12 @@
 				<span class="more">+ watch and learn</span>
 			</a>
 		</div>
-		
+
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="http://conference.oeconsortium.org/" class="wrapper">
 				<h1>OE Global</h1>
-				<h3>Our Annual Event</h3>
-				<p>Join scholars and practioners.</p>
+                <h3>Our Annual Event</h3>
+                <p>Join the conversation! Meet scholars and practitioners at the Open Education Global conference.</p>
 				<span class="more">+ join us</span>
 			</a>
 		</div>
@@ -54,13 +54,13 @@
 			<?php endwhile; endif; ?>
 		</ul>
 	</div>
-	
+
 	<div class="col-xs-12 col-sm-4 widget-listing">
 		<h1>
 			<a href="/courses/">Twitter Feed</a>
 			<iframe allowtransparency="true" frameborder="0" scrolling="no"
   					src="//platform.twitter.com/widgets/follow_button.html?screen_name=oeconsortium&show_count=false"
-  					style="width:150px; height:20px;"></iframe>			
+  					style="width:150px; height:20px;"></iframe>
 		</h1>
 		<?php echo do_shortcode('[really_simple_twitter username="oeconsortium" consumer_key="'.TW_CONSUMER_KEY.'" consumer_secret="'.TW_CONSUMER_SECRET.'" access_token="'.TW_ACCESS_TOKEN.'" access_token_secret="'.TW_ACCESS_TOKEN_SECRET.'"'.' skip_replies=true date_link=true date_format="l, jS F"]'); ?>
 	</div>
