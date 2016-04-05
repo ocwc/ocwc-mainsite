@@ -6,7 +6,7 @@
 		<div class="col-sm-2">
 			<button type="submit" class="btn btn-primary btn-block">Search</button>
 		</div>
-		<div class="col-sm-12">
+		<div class="col-sm-12 hidden">
 			<div class="checkbox">
 				<label>
 					<input type="checkbox" name="legacy" <?php if ( get_query_var('legacy') === 'on' ) : ?>checked<?php endif; ?> >Search OEC member courses only
