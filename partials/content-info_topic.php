@@ -70,6 +70,7 @@
 		</div>
 	<?php endif; ?>
 
+    <?php /*
 	<h2 class="discourse-title">Join discussion on <?php the_title(); ?></h2>
 	<div id="discourse-comments"></div>
 
@@ -83,5 +84,6 @@
 	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
 	  })();
 	</script>
+    */ ?>
 
 </div>
