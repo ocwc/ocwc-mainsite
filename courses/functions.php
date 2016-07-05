@@ -181,7 +181,8 @@ function get_category_courses() {
 function get_search_results() {
     if ( get_query_var('search') ) {
 
-        $legacy = ( get_query_var('legacy') ) ? get_query_var('legacy') : 0;
+        // $legacy = ( get_query_var('legacy') ) ? get_query_var('legacy') : 0;
+        $legacy = 0;
         $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
         $query = get_query_var('search');
 
