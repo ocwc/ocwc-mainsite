@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, p {
 	border-radius: 0;
 }
 
+.responsive-image {
+	max-width: 100%;
+	height: auto;
+}
+
 /* header */
 
 /** top row **/
@@ -124,13 +129,13 @@ h1, h2, h3, h4, h5, p {
 .sidebar {
 	padding-top: 30px;
 
-	ul { 
-		margin-left: 0; 
+	ul {
+		margin-left: 0;
 		padding-left: 0;
 	}
 	li { list-style: none; }
-	a { 
-		color: $grey; 
+	a {
+		color: $grey;
 		line-height: 1.5;
 	}
 
@@ -358,7 +363,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 /* membership */
-.button_how-to-join {	
+.button_how-to-join {
 	margin-top: 20px;
 	line-height: 1.5;
 }
@@ -395,3 +400,4 @@ h1, h2, h3, h4, h5, p {
 .boffset-20 { margin-bottom: 20px; }
 .boffset-30 { margin-bottom: 30px; }
 .boffset-35 { margin-bottom: 35px; }
+

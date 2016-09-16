@@ -4,18 +4,18 @@
 
 <?php get_header(); ?>
 	<div class="container">
-		<div class="col-xs-12 col-sm-3">
+		<div class="col-sm-3">
 			<?php get_template_part('partials/members-sidebar'); ?>
 		</div>
 
-		<div class="col-xs-12 col-sm-9">
+		<div class="col-sm-9">
 			<h1><?php echo $member->name; ?></h1>
-			<p class="col-xs-8"><?php echo nl2br($member->description); ?></p>
+			<p class="col-sm-8"><?php echo nl2br($member->description); ?></p>
 			<?php if ( $member->logo_small ) : ?>
-				<p class="col-xs-4"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" /></p>
+				<p class="col-sm-4"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" class="responsive-image" /></p>
 			<?php endif; ?>
 
-			<p class="col-xs-12">
+			<p class="col-sm-12">
 			<?php if ( $member->main_website ) : ?>
 				<strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
 			<?php endif;?>
