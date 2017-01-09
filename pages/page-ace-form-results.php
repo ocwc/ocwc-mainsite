@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 
 <?php
-    $form = GFFormsModel::get_form_meta( 12 );
+    $form = GFFormsModel::get_form_meta( 14 );
 
     $entries = array();
     $values = array();
