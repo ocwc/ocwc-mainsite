@@ -13,7 +13,7 @@
 
     $paging = array('offset' => 0, 'page_size' => 200 );
 
-    foreach ( GFAPI::get_entries( 12, null, null, $paging ) as $entry) {
+    foreach ( GFAPI::get_entries( 14, null, null, $paging ) as $entry) {
 
         foreach( $form['fields'] as $field ) {
 
