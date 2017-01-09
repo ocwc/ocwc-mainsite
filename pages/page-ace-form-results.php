@@ -7,14 +7,12 @@
 
 <?php
     $form = GFFormsModel::get_form_meta( 14 );
-
     $entries = array();
     $values = array();
 
     $paging = array('offset' => 0, 'page_size' => 200 );
 
     foreach ( GFAPI::get_entries( 14, null, null, $paging ) as $entry) {
-
         foreach( $form['fields'] as $field ) {
 
             if ( $field['id'] === 1 ) {
@@ -71,9 +69,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <?php $categories = array(
-                                'Outstanding Site',
-                                'Outstanding Course', 'Open MOOC', 'Creative Innovation',
-                                'Open Research'
+                                'Individual Award',
+                                'OER Award',
+                                'Project Award'
                             );
                         ?>
 
@@ -82,13 +80,19 @@
 
                             <?php foreach ($entries as $entry) : ?>
 
-                                <?php if ( $entry['values'][17]['value'] === $category ) : ?>
+                                <?php if ( $entry['values'][43]['value'] === $category ) : ?>
                                     <h2 id="<?php echo 'form-' . $entry['id']; ?>"><a href="#<?php echo 'form-' . $entry['id']; ?>">Submission #<?php echo $entry['id']; ?> (<?php echo $category; ?>)</a></h2>
 
                                     <dl>
                                     <?php foreach ($entry['values'] as $field) : ?>
                                         <?php if ( $field['type'] == 'section' ) : ?>
                                             <h3><?php echo $field['label'] ?></h3>
+                                        <?php elseif ( $field['type'] == 'fileupload' ) : ?>
+                                            <dt><?php echo $field['label'] ?></dt>
+                                            <dd>
+                                                <?php $link = trim(stripcslashes($field['value']), '[]"'); ?>
+                                                <a href="<?php echo $link; ?>"><?php echo $link; ?></a>
+                                            </dd>
                                         <?php else : ?>
                                             <?php if ( $field['value'] ) : ?>
                                                 <dt><?php echo $field['label'] ?></dt>
