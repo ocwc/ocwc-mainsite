@@ -22,12 +22,21 @@ function mainsite_url_rewrite_templates() {
     global $wp_query;
 
     if ( get_query_var( 'course_id' ) ) {
-        $wp_query->is_404 = false;
-        status_header( '200' );
+        global $course;
 
-        add_filter( 'template_include', function() {
-            return get_template_directory() . '/courses/course_detail.php';
-        });
+
+        $course = get_course_detail();
+        if ( $course->detail === 'Not found.' ) {
+            $wp_query->is_404 = true;
+            status_header( '404' );
+        } else {
+            status_header( '200' );
+            $wp_query->is_404 = false;
+
+            add_filter( 'template_include', function() {
+                return get_template_directory() . '/courses/course_detail.php';
+            });
+        }
     }
     if ( get_query_var( 'provider_id' ) ) {
         $wp_query->is_404 = false;

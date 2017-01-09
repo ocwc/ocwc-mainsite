@@ -1,5 +1,5 @@
 <?php
-	$course = get_course_detail();
+    global $course;
 	global $custom_title;
 	$custom_title = $course->title . ' | ' . $course->provider_name;
 ?>
@@ -13,7 +13,7 @@
 		<p><?php echo $course->description; ?></p>
 
 		<p>
-			<strong>Author:</strong> <?php echo $course->author; ?><br />			
+			<strong>Author:</strong> <?php echo $course->author; ?><br />
 			<strong>Organization:</strong> <a href="/providers/<?php echo $course->provider; ?>/"><?php echo $course->provider_name; ?></a>
 		</p>
 
