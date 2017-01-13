@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <?php $categories = array(
-                                'Individual Award',
+                                // 'Individual Award',
                                 'OER Award',
                                 'Project Award'
                             );
