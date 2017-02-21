@@ -1,7 +1,7 @@
 <?php
 
 function exclude_category( $query ) {
-    if ( ! is_admin() && $query->is_home() && $query->is_main_query() ) {
+    if ( $query->is_page(2403) && $query->is_main_query() ) {
         $query->set( 'cat', '-557' );
     }
 }
