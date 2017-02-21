@@ -25,14 +25,14 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
         if (strlen(preg_replace('/<.*?>/', '', $text)) <= $length) {
             return $text;
         }
- 
+
         // splits all html-tags to scanable lines
         preg_match_all('/(<.+?>)?([^<>]*)/s', $text, $lines, PREG_SET_ORDER);
- 
+
             $total_length = strlen($ending);
             $open_tags = array();
             $truncate = '';
- 
+
         foreach ($lines as $line_matchings) {
             // if there is any html-tag in this line, handle it and add it (uncounted) to the output
             if (!empty($line_matchings[1])) {
@@ -54,7 +54,7 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
                 // add html-tag to $truncate'd text
                 $truncate .= $line_matchings[1];
             }
- 
+
             // calculate the length of the plain text part of the line; handle entities as one character
             $content_length = strlen(preg_replace('/&[0-9a-z]{2,8};|&#[0-9]{1,7};|&#x[0-9a-f]{1,6};/i', ' ', $line_matchings[2]));
             if ($total_length+$content_length> $length) {
@@ -81,7 +81,7 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
                 $truncate .= $line_matchings[2];
                 $total_length += $content_length;
             }
- 
+
             // if the maximum length is reached, get off the loop
             if($total_length>= $length) {
                 break;
@@ -94,7 +94,7 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
             $truncate = substr($text, 0, $length - strlen($ending));
         }
     }
- 
+
     // if the words shouldn't be cut in the middle...
     if (!$exact) {
         // ...search the last occurance of a space...
@@ -104,25 +104,25 @@ function truncate($text, $length = 100, $ending = '...', $exact = true, $conside
             $truncate = substr($truncate, 0, $spacepos);
         }
     }
- 
+
     // add the defined ending to the text
     $truncate .= $ending;
- 
+
     if($considerHtml) {
         // close all unclosed html-tags
         foreach ($open_tags as $tag) {
             $truncate .= '</' . $tag . '>';
         }
     }
- 
+
     return $truncate;
- 
+
 }
 
 function oeic_save_event ( $entry=null, $form=null ) {
     global $post;
 
-    $post_entry = array( 
+    $post_entry = array(
                     'post_title'    => $entry[9],
                     'post_status'   => 'draft',
                     'post_author'   => 1,
@@ -130,7 +130,7 @@ function oeic_save_event ( $entry=null, $form=null ) {
                     'post_type'     => 'event',
 
     );
-    
+
     $post_id = wp_insert_post( $post_entry, true );
 
     $start_date = date_create_from_format( 'Y-m-d', $entry[3] );
