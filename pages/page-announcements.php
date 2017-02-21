@@ -3,20 +3,21 @@
 	Template name: Announcements page
 */
 ?>
-	
+
 <?php get_header() ?>
 
 <div class="main-wrapper container">
-	<?php if ( have_posts() ) : ?>	
+	<?php if ( have_posts() ) : ?>
 		<div class="col-xs-12 col-sm-8">
-			<?php 
+			<?php
 				$orig_query = $wp_query;
 
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$wp_query = new WP_Query(array(
 												'post_type' => 'post',
 												'posts_per_page' => 5,
-												'paged' => $paged	
+												'paged' => $paged,
+                                                'cat' => '-557'
 											));
 			?>
 			<?php if ( $wp_query->have_posts() ) : ?>
@@ -40,6 +41,6 @@
 	<?php else : ?>
 		<h1>404 Not found</h1>
 	<?php endif; ?>
-</div>	
+</div>
 
 <?php get_footer() ?>
