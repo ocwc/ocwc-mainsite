@@ -34,9 +34,9 @@
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="http://www.cafepress.com/oeconsortium" target="_blank" class="wrapper">
 				<h1>OE Store</h1>
-                <h3>Official Merchandise</h3>
-                <p>Show your support for Open Education movement.</p>
-				<span class="more">+ join us</span>
+                <h3>Merchandise</h3>
+                <p>Your shop for open merchandise and accessories.</p>
+				<span class="more">+ shop now</span>
 			</a>
 		</div>
 	</div>
