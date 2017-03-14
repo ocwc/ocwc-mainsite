@@ -32,10 +32,10 @@
 		</div>
 
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="http://conference.oeconsortium.org/" class="wrapper">
-				<h1>OE Global</h1>
-                <h3>Our Annual Event</h3>
-                <p>Join the conversation! Meet scholars and practitioners at the Open Education Global conference.</p>
+			<a href="http://www.cafepress.com/oeconsortium" target="_blank" class="wrapper">
+				<h1>OE Store</h1>
+                <h3>Official Merchandise</h3>
+                <p>Show your support for Open Education movement.</p>
 				<span class="more">+ join us</span>
 			</a>
 		</div>
