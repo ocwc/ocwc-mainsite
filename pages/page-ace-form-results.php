@@ -12,7 +12,7 @@
 
     $paging = array('offset' => 0, 'page_size' => 200 );
 
-    foreach ( GFAPI::get_entries( 14, null, null, $paging ) as $entry) {
+    foreach ( GFAPI::get_entries( 15, null, null, $paging ) as $entry) {
         foreach( $form['fields'] as $field ) {
 
             if ( $field['id'] === 1 ) {
@@ -52,6 +52,7 @@
 
     }
 
+//    var_dump($entries);
 ?>
 
 <?php if ( have_posts() ) : ?>
@@ -69,9 +70,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <?php $categories = array(
-                                // 'Individual Award',
-                                'OER Award',
-                                'Project Award'
+                                'INDIVIDUAL AWARDS',
+                                'STUDENT AWARD',
+                                'RESOURCES / TOOLS / PRACTICES AWARDS'
                             );
                         ?>
 
@@ -80,7 +81,7 @@
 
                             <?php foreach ($entries as $entry) : ?>
 
-                                <?php if ( $entry['values'][43]['value'] === $category ) : ?>
+                                <?php if ( $entry['values'][46]['value'] === $category ) : ?>
                                     <h2 id="<?php echo 'form-' . $entry['id']; ?>"><a href="#<?php echo 'form-' . $entry['id']; ?>">Submission #<?php echo $entry['id']; ?> (<?php echo $category; ?>)</a></h2>
 
                                     <dl>
