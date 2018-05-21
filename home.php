@@ -14,10 +14,10 @@
 		</div>
 
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="/about-oec/" class="wrapper">
+			<a href="/humans-of-oer/" class="wrapper">
 				<h1>About</h1>
-				<h3>Open Education</h3>
-				<p>What is Open Education and how does it address important trends in global education?</p>
+				<h3>Humans of OER</h3>
+				<p>Feature Stories, Interviews, and Achievements in Open Education</p>
 				<span class="more">+ learn more</span>
 			</a>
 		</div>
