@@ -15,8 +15,8 @@
 
 		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
 			<a href="/humans-of-oer/" class="wrapper">
-				<h1>About</h1>
-				<h3>Humans of OER</h3>
+				<h1>Humans of OER</h1>
+				<h3></h3>
 				<p>Feature Stories, Interviews, and Achievements in Open Education</p>
 				<span class="more">+ learn more</span>
 			</a>
