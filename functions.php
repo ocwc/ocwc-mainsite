@@ -129,6 +129,8 @@ require get_template_directory() . '/includes/shortcodes.php';
 require get_template_directory() . '/courses/functions.php';
 require get_template_directory() . '/members/functions.php';
 
+require get_template_directory() . '/includes/anniversary.php';
+
 /**
  * Custom Menu Walker for Bootstrap 3
  */
