@@ -44,7 +44,7 @@
                     "key": "field_5b153d47c2bc7",
                     "label": "Year",
                     "name": "year",
-                    "type": "text",
+                    "type": "number",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -57,7 +57,9 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 },
                 {
                     "key": "field_5b153ce40c176",
@@ -159,5 +161,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1528118746
+    "modified": 1528371216
 }
