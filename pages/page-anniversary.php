@@ -24,6 +24,12 @@
             <img src="/ann10-static/img/oec-logo2.svg"/>
         </div>
     </div>
+
+    <div class="grid-x grid-margin-x show-for-small-only header-mobile">
+        <div class="auto cell text-center">
+            <img src="/ann10-static/img/oec-logo2.svg"/>
+        </div>
+    </div>
 </div>
 
 <div class="grid-container">
@@ -37,7 +43,7 @@
 <?php if ( have_rows( 'ann_years', 'option' ) ) : ?>
     <?php $first_pass = true; ?>
     <?php while ( have_rows( 'ann_years', 'option' ) ) : the_row(); ?>
-        <?php $year = intval(get_sub_field( 'year' )); ?>
+        <?php $year = intval( get_sub_field( 'year' ) ); ?>
 
         <div class="background year-<?= $year; ?>">
             <div class="grid-container stories">
@@ -57,8 +63,15 @@
                 <?php $entries_count = count( get_sub_field( 'entries' ) ); ?>
                 <?php while ( have_rows( 'entries' ) ) : the_row(); ?>
                     <div class="grid-x">
-                        <div class="medium-6 cell">
-                            <div class="left bullet
+                        <div class="
+                                <?php if ( $c % 2 ) : ?>
+                                medium-6
+                                <?php else : ?>
+                                medium-offset-6 medium-3
+                                <?php endif; ?>
+                                cell">
+                            <div class="bullet
+                                        <?= $c % 2 ? 'left' : ''; ?>
                                         <?= $c === $entries_count ? 'last' : ''; ?>
                                         <?= $c === $entries_count && $year === 2008 ? 'text-end' : ''; ?>
                                         ">
