@@ -27,19 +27,19 @@ $white: #FFFFFF;
         clear: both;
     }
 
-    h1 { 
+    h1 {
         font-size: emCalc(28px);
         line-height: 1.2;
         display: block;
         margin: 0;
     }
 
-    h2 { 
+    h2 {
         display: inline-block;
-        font-size: emCalc(12px); 
+        font-size: emCalc(12px);
         text-transform: uppercase;
     }
-    
+
     .cta-header i {
         color: $blue;
         float: left;
@@ -85,13 +85,13 @@ $white: #FFFFFF;
 }
 
 .in-the-news {
-    p { 
+    p {
         font-size: emCalc(12px);
-        display: inline-block; 
+        display: inline-block;
         width: 100%;
         margin-bottom: emCalc(10px);
     }
-    .date, .link { 
+    .date, .link {
         display: inline-block;
         font-size: emCalc(12px);
     }
