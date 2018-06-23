@@ -3,7 +3,6 @@
         <h2 class="home-h2">Highlighted Projects</h2>
     </div>
 
-
     <?php while ( have_rows( 'home_projects', 'option' ) ) : the_row(); ?>
         <?php $image = get_sub_field( 'image' ); ?>
         <a href="<?php the_sub_field( 'url' ); ?>"

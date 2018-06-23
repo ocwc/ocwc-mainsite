@@ -391,12 +391,76 @@ h1, h2, h3, h4, h5, p {
 	top: 10px;
 	font-size: 20px;
 	max-width: 50%;
-	
+
 	@media #{$md-up} {
 		top: 25px;
 		font-size: 30px;
 		max-width: 100%;
 	}
+}
+
+.home-social {
+	@media #{$md-up} {
+		margin-top: 70px;
+	}
+}
+
+.home-social > a {
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+.home-about {
+	margin-top: 70px;
+	padding-bottom: 30px;
+	background-color: #F5F5F5;
+
+	.home-header {
+		margin-top: 5px;
+		border-bottom: none;
+	}
+}
+
+.home-map {
+	margin-top: 30px;
+	margin-bottom: 5px;
+	padding-top: 10%;
+	padding-left: 18%;
+	height: 250px;
+
+	background: url('../images/home-map.png') no-repeat;
+	background-size: contain;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 1.25;
+
+	@media #{$md-up} {
+		padding-top: 14%;
+		padding-left: 24%;
+		height: 370px;
+		font-size: 40px;
+	}
+}
+
+.home-map__stats-left {
+	float: left;
+	margin-right: 20px;
+
+	text-align: right;
+	color: $green;
+}
+
+.home-map__stats-right {
+	float: left;
+	color: $blue;
+}
+
+.home-members__logo {
+	//float: left;
+	width: 200px;
 }
 
 /** news **/
