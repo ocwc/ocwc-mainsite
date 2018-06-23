@@ -459,8 +459,10 @@ h1, h2, h3, h4, h5, p {
 }
 
 .home-members__logo {
-	//float: left;
-	width: 200px;
+	width: 170px;
+	@media #{$md-up} {
+		width: 200px;
+	}
 }
 
 /** news **/
