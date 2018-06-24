@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <div class="home-header">
-        <h2 class="home-h2">Highlighted Projects</h2>
+        <h2 class="home-h2">Monthly Open Education Newsletter</h2>
     </div>
 
     <p>Join 7000+ subscribers and let us find relevant news for
