@@ -1,9 +1,9 @@
 <div class="col-md-6">
     <div class="home-map">
         <p class="home-map__stats-left">
-            325<br/>
-            40<br />
-            25
+            243<br/>
+            44<br />
+            29
         </p>
         <p class="home-map__stats-right">
             Institutions<br/>
