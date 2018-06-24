@@ -12,7 +12,7 @@
         </p>
     </div>
     <p>
-        <a class="btn btn-success" href="#">View All Members</a>
-        <a class="btn btn-success" href="#">Become A Member</a>
+        <a class="btn btn-success" href="/members/">View All Members</a>
+        <a class="btn btn-success" href="/about-oec/membership/how-to-join/">Become A Member</a>
     </p>
 </div>

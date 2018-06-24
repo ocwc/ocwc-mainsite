@@ -5,5 +5,5 @@
 
     <?php the_field( 'home_about', 'option' ); ?>
 
-    <a class="btn btn-primary" href="#">Why join?</a>
+    <a class="btn btn-primary" href="/about-oec/membership/membership-faqs/">Why join?</a>
 </div>
