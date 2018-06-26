@@ -12,6 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Education Consortium Celebrates 10th Anniversary</title>
     <link rel="stylesheet" href="/ann10-static/css/app.css">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Open Education Consortium Celebrates 10th Anniversary">
+    <meta property="og:site_name" content="OE Consortium">
+    <meta property="og:url" content="http://www.oeconsortium.org/10th-anniversary/">
+    <meta property="og:image" content="http://www.oeconsortium.org/ann10-static/img/facebook.jpg">
+    <meta property="article:published_time" content="2018-07-02">
+    <meta property="article:author" content="https://www.facebook.com/oeconsortium">
 </head>
 <body>
 
