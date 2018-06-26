@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <div class="home-header">
-        <h2 class="home-h2">Follow Us on These Sites</h2>
+        <h2 class="home-h2">Follow Us</h2>
     </div>
 
     <p class="text-center home-social">
@@ -11,6 +11,9 @@
         <a href="https://www.facebook.com/oeconsortium">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-facebook.svg"/>
         </a>
-    </p>
 
+        <a href="https://www.youtube.com/channel/UC-jcvZ6z94387QDu52g9VNA">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-youtube.svg"/>
+        </a>
+    </p>
 </div>

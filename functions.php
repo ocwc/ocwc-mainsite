@@ -22,11 +22,13 @@ add_action( 'after_setup_theme', 'oec_setup' );
 
 function mainsite_scripts() {
 	if ( !is_admin() ) {
+        $theme = wp_get_theme();
+
 		if ( is_home() ) {
 			wp_enqueue_script('responsiveslides', get_template_directory_uri().'/lib/javascripts/plugins/responsiveslides.min.js', array('jquery'), '', true);
 		}
 
-		wp_enqueue_style( 'op-style', get_template_directory_uri().'/css/style.css' );
+		wp_enqueue_style( 'op-style', get_template_directory_uri().'/css/style.css', array(), $theme->get( 'Version' ) );
 		wp_enqueue_script( 'op-script', get_template_directory_uri() . '/js/script.min.js', array('jquery'), '20140815', false );
 	}
 }
