@@ -1,104 +1,35 @@
 <?php get_header() ?>
 
-<?php get_template_part('partials/home_slideshow'); ?>
+<?php get_header() ?>
+
+<?php get_template_part( 'partials/_home_highlights' ); ?>
 
 <div class="container">
-	<div class="row cta-row">
-		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="/courses/" class="wrapper">
-				<h1>Courses</h1>
-				<h3>Study</h3>
-				<p>Discover Courses from Institutions around the world</p>
-				<span class="more">+ search courses</span>
-			</a>
-		</div>
+    <div class="row">
+        <?php get_template_part( 'partials/_home_news' ); ?>
+        <?php get_template_part( 'partials/_home_projects' ); ?>
+    </div>
 
-		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="/humans-of-oer/" class="wrapper">
-				<h1>Humans of OER</h1>
-				<h3></h3>
-				<p>Feature Stories, Interviews, and Achievements in Open Education</p>
-				<span class="more">+ learn more</span>
-			</a>
-		</div>
-
-		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="/resources/webinars/" class="wrapper">
-				<h1>Learn</h1>
-				<h3>Our Webinars</h3>
-				<p>We host and organize online webinars featuring leaders in the open education movement.</p>
-				<span class="more">+ watch and learn</span>
-			</a>
-		</div>
-
-		<div class="col-sm-3 show-for-medium-up cta-box clearfix">
-			<a href="http://www.cafepress.com/oeconsortium" target="_blank" class="wrapper">
-				<h1>OE Store</h1>
-                <h3>Merchandise</h3>
-                <p>Your shop for open merchandise and accessories.</p>
-				<span class="more">+ shop now</span>
-			</a>
-		</div>
-	</div>
+    <div class="row">
+        <?php get_template_part( 'partials/_home_newsletter' ); ?>
+        <?php get_template_part( 'partials/_home_social' ); ?>
+    </div>
 </div>
+
+<div class="home-about">
+    <div class="container">
+        <div class="row">
+            <?php get_template_part( 'partials/_home_about' ); ?>
+            <?php get_template_part( 'partials/_home_map' ); ?>
+        </div>
+    </div>
+</div>
+
 
 <div class="container">
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<h1>
-			<a href="/news/">Announcements</a>
-		</h1>
-		<ul>
-			<?php $posts = get_announcements_posts(); ?>
-			<?php if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post(); ?>
-				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-			<?php endwhile; endif; ?>
-		</ul>
-	</div>
-
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<h1>
-			<a href="/courses/">Twitter Feed</a>
-			<iframe allowtransparency="true" frameborder="0" scrolling="no"
-  					src="//platform.twitter.com/widgets/follow_button.html?screen_name=oeconsortium&show_count=false"
-  					style="width:150px; height:20px;"></iframe>
-		</h1>
-		<?php echo do_shortcode('[really_simple_twitter username="oeconsortium" consumer_key="'.TW_CONSUMER_KEY.'" consumer_secret="'.TW_CONSUMER_SECRET.'" access_token="'.TW_ACCESS_TOKEN.'" access_token_secret="'.TW_ACCESS_TOKEN_SECRET.'"'.' skip_replies=true date_link=true date_format="l, jS F"]'); ?>
-	</div>
-
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<h1><a href="/courses/">Latest courses from our members</a></h1>
-		<ul>
-			<?php $course_list = get_latest_courses(); ?>
-			<?php foreach ($course_list as $course) : ?>
-				<li><a href="/courses/view/<?php echo $course->linkhash; ?>/"><?php echo $course->title; ?></a></li>
-			<?php endforeach; ?>
-		</ul>
-	</div>
-</div>
-
-<div class="container show-for-sm-up">
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<a href="/news/newsletter/" class="newsletter"><i class="icon-envelope"></i> Subscribe to our Newsletter</a>
-		<br />
-		<a href="/news/" class="more"><i class="icon-angle-down"></i> more announcements</a>
-	</div>
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<br />
-		<a href="http://twitter.com/oeconsortium" class="more"><i class="icon-angle-down"></i> more tweets</a>
-	</div>
-	<div class="col-xs-12 col-sm-4 widget-listing">
-		<br />
-		<a href="/courses/" class="more"><i class="icon-angle-down"></i> more courses</a>
-	</div>
-</div>
-
-<div class="container">
-	<div class="col-xs-12 text-center home-stats">
-		<span><i class="icon-file-text"></i>&nbsp;30&nbsp;000+ Modules</span>
-		<span><i class="icon-bookmark"></i>&nbsp;280+&nbsp;Organizations</span>
-		<span><i class="icon-globe"></i>&nbsp;40&nbsp;Countries</span>
-		<span><i class="icon-comments-alt"></i>&nbsp;29&nbsp;Languages</span>
-	</div>
+    <div class="row">
+        <?php get_template_part( 'partials/_home_members' ); ?>
+    </div>
 </div>
 
 <?php get_footer() ?>
