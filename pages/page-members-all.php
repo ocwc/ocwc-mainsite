@@ -33,7 +33,7 @@ $member_list = get_member_list();
         <div class="show-for-sm-up col-sm-12">
             <div id="map"></div>
         </div>
-        
+
         <div class="col-sm-3">
             <?php get_template_part('partials/members-sidebar'); ?>
         </div>
@@ -47,7 +47,7 @@ $member_list = get_member_list();
             <div class="row">
                 <div class="col-sm-6">
                     <ul class="list-unstyled">
-                        <h2>Institutions of Higher Education</h2>
+                        <h2>Higher Education</h2>
                     <?php foreach ($member_list->{'Institutions of Higher Education'} as $member) : ?>
                         <li>
                             <a href="/members/view/<?php echo $member->id; ?>/">
@@ -59,7 +59,7 @@ $member_list = get_member_list();
                     </ul>
                 </div>
                 <div class="col-sm-6">
-                    <?php foreach (array('Associate Consortia', 'Organizational Members', 'Corporate Members', 'Sustaining Members') as $key) : ?>
+                    <?php foreach (array('Sustaining Members', 'Associate Consortia', 'Organizational Members', 'Corporate Members') as $key) : ?>
                         <ul class="list-unstyled">
                         <h2><?php echo $key; ?></h2>
                         <?php foreach ($member_list->$key as $member) : ?>
