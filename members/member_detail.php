@@ -20,9 +20,40 @@
 				<strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
 			<?php endif;?>
 			<?php if ( $member->ocw_website ) : ?>
-				<strong>OCW Website:</strong> <a href="<?php echo $member->ocw_website; ?>" target="_blank"><?php echo $member->ocw_website ?></a><br />
+				<strong>OER/OCW Website:</strong> <a href="<?php echo $member->ocw_website; ?>" target="_blank"><?php echo $member->ocw_website ?></a><br />
 			<?php endif;?>
 			</p>
+
+            <?php if ( $member->initiative_description1 ) : ?>
+                <h2 class="col-sm-10">Initiative(s)</h2>
+                <p class="col-sm-10">
+                    <?= $member->initiative_description1 ?>
+                    <?php if ( $member->initiative_url1 ) : ?>
+                    <br /><a class="btn btn-primary" href="<?= $member->initiative_url1; ?>">View Initiative</a>
+                    <?php endif; ?>
+                    <br /><br />
+                </p>
+            <?php endif; ?>
+
+            <?php if ( $member->initiative_description2 ) : ?>
+                <p class="col-sm-10">
+                    <?= $member->initiative_description2 ?>
+                    <?php if ( $member->initiative_url2 ) : ?>
+                        <br /><a class="btn btn-primary" href="<?= $member->initiative_url2; ?>">View Initiative</a>
+                    <?php endif; ?>
+                    <br /><br />
+                </p>
+            <?php endif; ?>
+
+            <?php if ( $member->initiative_description3 ) : ?>
+                <p class="col-sm-10">
+                    <?= $member->initiative_description3 ?>
+                    <?php if ( $member->initiative_url3 ) : ?>
+                        <br /><a class="btn btn-primary" href="<?= $member->initiative_url3; ?>">View Initiative</a>
+                        <br /><br />
+                    <?php endif; ?>
+                </p>
+            <?php endif; ?>
 		</div>
 	</div>
 <?php get_footer(); ?>

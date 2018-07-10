@@ -2,17 +2,7 @@ Handlebars.registerHelper('limit', function (arr, limit) {
   return arr.slice(0, limit);
 });
 
-jQuery(document).ready(function($) {        
-    if ( $(".rslides").length > 0 ) {
-        $(".rslides").responsiveSlides({
-            speed: 2000,
-            timeout: 4000,
-            pause: true,
-            pager: true,
-            namespace: 'rslider-buttons'
-        });
-    }
-
+jQuery(document).ready(function($) {
     $('.show_more').on('click', function(){
         $(this).next(':hidden').show();
         $(this).find(':hidden').show();
@@ -46,15 +36,5 @@ jQuery(document).ready(function($) {
 
         return true;
     });
-
-    if ( $('.js-community').length ) {
-        $.get('http://community.oeconsortium.org/latest.json?max_posts=5', function(data) {
-            var source = $(".js-community-template").html();
-            var template = Handlebars.compile(source);
-            var html    = template(data);
-
-            $('.js-community').html(html);
-        });
-    }
 
 });
