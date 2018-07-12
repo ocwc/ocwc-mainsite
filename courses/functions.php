@@ -190,15 +190,13 @@ function get_category_courses() {
 function get_search_results() {
     if ( get_query_var('search') ) {
 
-        // $legacy = ( get_query_var('legacy') ) ? get_query_var('legacy') : 0;
-        $legacy = 0;
         $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
         $query = get_query_var('search');
 
         $data = array(
             'q' => $query,
-            'legacy' => $legacy,
-            'page' => $page
+            'page' => $page,
+            DATA_API_EXTRA_ARG => 1
         );
 
         $url = DATA_API_URL."/courses/search/?" . http_build_query($data);
@@ -211,7 +209,6 @@ function get_search_results() {
         $data = array(
                     'results' => $object->documents,
                     'count' => sizeof($object),
-                    'legacy' => $legacy,
                     'query' => wp_kses($query, '')
                 );
 
