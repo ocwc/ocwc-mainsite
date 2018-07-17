@@ -12,7 +12,7 @@
 			<h1><?php echo $member->name; ?></h1>
 			<p class="col-sm-8"><?php echo nl2br($member->description); ?></p>
 			<?php if ( $member->logo_small ) : ?>
-				<p class="col-sm-4"><img src="<?php echo MEMBERS_MEDIA . $member->logo_small; ?>" class="responsive-image" /></p>
+				<p class="col-sm-4"><img src="<?php echo $member->logo_small; ?>" class="responsive-image" /></p>
 			<?php endif; ?>
 
 			<p class="col-sm-12">
