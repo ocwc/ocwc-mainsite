@@ -1,6 +1,6 @@
 <div class="col-sm-12">
     <div class="home-header">
-        <h2 class="home-h2">Supporting Members</h2>
+        <h2 class="home-h2">Sustaining Members</h2>
     </div>
 
     <p class="text-justify">

@@ -16,12 +16,12 @@
 			<?php endif; ?>
 
 			<p class="col-sm-12">
-			<?php if ( $member->main_website ) : ?>
-				<strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
-			<?php endif;?>
-			<?php if ( $member->ocw_website ) : ?>
-				<strong>OER/OCW Website:</strong> <a href="<?php echo $member->ocw_website; ?>" target="_blank"><?php echo $member->ocw_website ?></a><br />
-			<?php endif;?>
+                <?php if ( $member->ocw_website ) : ?>
+                    <strong>OER/OCW Website:</strong> <a href="<?php echo $member->ocw_website; ?>" target="_blank"><?php echo $member->ocw_website ?></a><br />
+                <?php endif;?>
+                <?php if ( $member->main_website ) : ?>
+                    <strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
+                <?php endif;?>
 			</p>
 
             <?php if ( $member->initiative_description1 ) : ?>
