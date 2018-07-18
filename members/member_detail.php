@@ -20,7 +20,7 @@
                     <strong>OER/OCW Website:</strong> <a href="<?php echo $member->ocw_website; ?>" target="_blank"><?php echo $member->ocw_website ?></a><br />
                 <?php endif;?>
                 <?php if ( $member->main_website ) : ?>
-                    <strong>Main Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
+                    <strong>Institution Website:</strong> <a href="<?php echo $member->main_website; ?>" target="_blank"><?php echo $member->main_website ?></a><br />
                 <?php endif;?>
 			</p>
 
