@@ -26,6 +26,7 @@
 
             <?php if ( $member->initiative_description1 ) : ?>
                 <h2 class="col-sm-10">Initiative(s)</h2>
+                <h3><?= $member->initiative_title1 ?></h3>
                 <p class="col-sm-10">
                     <?= $member->initiative_description1 ?>
                     <?php if ( $member->initiative_url1 ) : ?>
@@ -36,6 +37,7 @@
             <?php endif; ?>
 
             <?php if ( $member->initiative_description2 ) : ?>
+                <h3><?= $member->initiative_title2 ?></h3>
                 <p class="col-sm-10">
                     <?= $member->initiative_description2 ?>
                     <?php if ( $member->initiative_url2 ) : ?>
@@ -46,6 +48,7 @@
             <?php endif; ?>
 
             <?php if ( $member->initiative_description3 ) : ?>
+                <h3><?= $member->initiative_title3 ?></h3>
                 <p class="col-sm-10">
                     <?= $member->initiative_description3 ?>
                     <?php if ( $member->initiative_url3 ) : ?>
