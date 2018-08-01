@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 	Template name: API - Header
 */
@@ -7,7 +7,7 @@
 		<div class="header-row">
 			<div class="container">
 				<div class="show-for-xs-up col-sm-3 col-md-2 pull-right text-center tab members">
-					<a href="http://members.oeconsortium.org" class="member-portal">Members Portal</a>
+					<a href="https://members.oeconsortium.org" class="member-portal">Members Portal</a>
 				</div>
 
 				<div class="show-for-xs-up col-sm-3 col-md-2 pull-right tab translation">
@@ -15,7 +15,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 	<div class="container">
 		<div class="col-xs-12 col-sm-4 pull-left">
 			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="The Open Education Consortium" class="logo" /></a>
@@ -42,7 +42,7 @@
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-			<?php 
+			<?php
 	            wp_nav_menu( array(
 	                'menu'              => 'navigation-menu',
 	                'theme_location'    => 'navigation-menu',

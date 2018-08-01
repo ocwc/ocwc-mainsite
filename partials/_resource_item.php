@@ -16,7 +16,7 @@
 	<div
 		class="infomap-resource <?php echo $source_type; ?>"
 		<?php if ( $source_type === 'youtube' ) : ?>
-            style="background-image: url('http://img.youtube.com/vi/<?php echo $youtube_id; ?>/0.jpg');"
+            style="background-image: url('https://img.youtube.com/vi/<?php echo $youtube_id; ?>/0.jpg');"
         <?php else : ?>
             <?php
                 $url_stripped = str_replace('https://', '', $resource['url']);

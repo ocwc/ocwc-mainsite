@@ -5,11 +5,11 @@
 
 function mainsite_members_custom_head() {
     ?>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
-    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/Leaflet.markercluster/MarkerCluster.css" />
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/lib/javascripts/plugins/Leaflet.markercluster/MarkerCluster.Default.css" />

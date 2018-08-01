@@ -28,7 +28,7 @@
 
 		<?php if ( $course->merlot_id ) : ?>
 		<p>
-			<a href="http://www.merlot.org/merlot/viewMaterial.htm?id=<?php echo $course->merlot_id; ?>" target="_blank">
+			<a href="https://www.merlot.org/merlot/viewMaterial.htm?id=<?php echo $course->merlot_id; ?>" target="_blank">
 				View More Information about the Course on MERLOT
 			</a>
 		</p>

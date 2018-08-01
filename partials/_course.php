@@ -13,7 +13,7 @@
 				<?php echo $course->title; ?>
 			</a>
 		</h2>
-	
+
 		<div class="course-meta col-sm-12">
 			<dl>
 				<dt>Language:</dt>
@@ -46,7 +46,7 @@
 				<?php if ( $course->merlot_id ) : ?>
 					<dt>MERLOT</dt>
 					<dd>
-						<a href="http://www.merlot.org/merlot/viewMaterial.htm?id=<?php echo $course->merlot_id; ?>" target="_blank">
+						<a href="https://www.merlot.org/merlot/viewMaterial.htm?id=<?php echo $course->merlot_id; ?>" target="_blank">
 							View More Information about the Course in MERLOT
 						</a>
 					</dd>
