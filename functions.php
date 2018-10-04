@@ -127,6 +127,7 @@ require get_template_directory() . '/includes/images.php';
 require get_template_directory() . '/includes/actions.php';
 require get_template_directory() . '/includes/filters.php';
 require get_template_directory() . '/includes/shortcodes.php';
+require get_template_directory() . '/includes/extras.php';
 
 require get_template_directory() . '/courses/functions.php';
 require get_template_directory() . '/members/functions.php';

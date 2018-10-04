@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="24px" viewBox="0 0 33 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-view-more</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button/more" transform="translate(-28.000000, -32.000000)" fill-rule="nonzero">
+            <g id="arrow-view-more" transform="translate(28.000000, 32.000000)">
+                <rect id="Rectangle-2" fill="#588F1B" x="0" y="11.4782609" width="32" height="1.04347826"></rect>
+                <polyline id="Rectangle" stroke="#588F1B" stroke-linecap="round" stroke-linejoin="round"
+                          points="21.0285714 0 31.5428571 12 21.0285714 24"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

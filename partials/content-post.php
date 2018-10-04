@@ -13,8 +13,6 @@
 <div class="entry-content">
 	<?php if ( is_single() || ( $wp_query->current_post === 0 && $paged === 1) ) : ?>
 		<?php the_content(); ?>
-		<span class="social-share"><?php echo do_shortcode(['[ssba]'])[0]; ?></span>
-
 		<?php if ( is_single() ) : ?>
 			<div class="pagination">
 				<span class="previous"><?php next_post_link('%link', '<i class="icon-chevron-sign-left"></i> Previous'); ?></span>
