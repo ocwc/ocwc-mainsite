@@ -10,16 +10,19 @@
 
                 <div class="col-xs-12 col-sm-8">
                     <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part( 'partials/content_ed', 'full' ); ?>
+                        <?php get_template_part( 'partials/content_ed', 'full' ); ?>
                     <?php endwhile; ?>
 
                     <?php $custom_query = new WP_Query( array(
                         'post_type'      => 'post',
                         'cat'            => 562,
                         'posts_per_page' => 5,
-                        'post__not_in'   => array($post->ID)
-                    )); ?>
-
+                        'post__not_in'   => array( $post->ID )
+                    ) ); ?>
+                    <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+                        <?php get_template_part( 'partials/fragment', 'title' ); ?>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
                 </div>
             <?php else: ?>
                 <div class="col-xs-12 col-sm-8">
