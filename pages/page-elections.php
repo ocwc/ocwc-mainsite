@@ -28,6 +28,9 @@
 								<li><strong>Vision</strong><br /><?php echo nl2br($candidate->vision); ?></li>
 								<li><strong>Ideas</strong><br /><?php echo nl2br($candidate->ideas); ?></li>
 								<li><strong>Expertise</strong><br /><?php echo nl2br($candidate->expertise); ?></li>
+                                <?php if ( $candidate->expertise_other ) : ?>
+                                    <li><strong>Other Expertise</strong><br /><?php echo nl2br($candidate->expertise_other); ?></li>
+                                <?php endif; >
 							<?php else : ?>
 								<li><?php echo nl2br($candidate->reason); ?></li>
 							<?php endif; ?>

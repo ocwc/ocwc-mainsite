@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <div class="home-header">
-        <h2 class="home-h2">Highlighted Projects</h2>
+        <h2 class="home-h2">Highlighted Activities</h2>
     </div>
 
     <?php while ( have_rows( 'home_projects', 'option' ) ) : the_row(); ?>
