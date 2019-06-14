@@ -70,8 +70,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <?php $categories = array(
-                                'INDIVIDUAL AWARDS',
-                                'STUDENT AWARD',
+//                                'INDIVIDUAL AWARDS',
+//                                'STUDENT AWARD',
                                 'RESOURCES / TOOLS / PRACTICES AWARDS'
                             );
                         ?>
