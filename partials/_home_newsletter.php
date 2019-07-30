@@ -1,9 +1,9 @@
 <div class="col-md-6">
     <div class="home-header">
-        <h2 class="home-h2">Monthly Open Education Newsletter</h2>
+        <h2 class="home-h2">Quarterly Open Education Newsletter</h2>
     </div>
 
-    <p>Join 7000+ subscribers and let us find relevant news for
+    <p>Join 9000+ subscribers and let us find relevant news for
         you. <a href="/news/newsletter/">View archives</a> to see what we'll send you.</p>
 
 
