@@ -20,12 +20,6 @@
 		<div class="col-xs-12 col-sm-4 pull-left">
 			<a href="/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="The Open Education Consortium" class="logo" /></a>
 		</div>
-		<div class="show-for-xs-up col-sm-4 col-md-3 pull-right search-form-row">
-			<form class="header-search" method="GET" action="/courses/search/">
-				<input placeholder="Search for open courses ..." name="search">
-				<i class="icon-search header-search-icon"></i>
-			</form>
-		</div>
 	</div>
 
 	<div class="container">
