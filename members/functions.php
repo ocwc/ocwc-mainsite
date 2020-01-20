@@ -17,10 +17,10 @@ function get_country_members() {
 }
 
 function get_member_list() {
-    $url      = MEMBERS_API_URL . "/organization/group_by/membership_type/list/?format=json";
-    $response = wp_remote_retrieve_body( wp_remote_get( $url ) );
+        $url      = MEMBERS_API_URL . "/organization/group_by/membership_type/list/?format=json";
+        $response = wp_remote_retrieve_body( wp_remote_get( $url ) );
 
-    return json_decode( $response );
+        return json_decode( $response );
 }
 
 function get_member_detail() {

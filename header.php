@@ -11,5 +11,9 @@
   	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+    <div class="oeglobal-notice">
+        We are now <strong>OE GLOBAL</strong>.<br />
+        You are viewing archived content. Please visit <a href="https://www.oeglobal.org">oeglobal.org</a> for our new site.
+    </div>
 	<?php include('pages/page-api-header.php'); ?>
 

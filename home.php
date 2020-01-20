@@ -1,7 +1,5 @@
 <?php get_header() ?>
 
-<?php get_header() ?>
-
 <?php get_template_part( 'partials/_home_highlights' ); ?>
 
 <div class="container">
